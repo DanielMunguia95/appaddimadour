@@ -26,7 +26,7 @@ public class frmLabo extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jtbPrincipalPanel = new javax.swing.JTabbedPane();
+        jtbPrincipalPanelWAAM = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
         lblNumDaffaire = new javax.swing.JLabel();
         lblOperateur = new javax.swing.JLabel();
@@ -50,7 +50,7 @@ public class frmLabo extends javax.swing.JFrame {
         jTxtObjectfis = new javax.swing.JTextArea();
         btnPanel1_Save = new javax.swing.JButton();
         txtHeure = new javax.swing.JTextField();
-        cmbLabo = new javax.swing.JComboBox<>();
+        cmbLabo = new javax.swing.JComboBox<String>();
         jLabel25 = new javax.swing.JLabel();
         jLabel29 = new javax.swing.JLabel();
         txtNomLabo = new javax.swing.JTextField();
@@ -61,7 +61,7 @@ public class frmLabo extends javax.swing.JFrame {
         jtxtResultats = new javax.swing.JTextArea();
         lblObjectif2 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        Panel2_Tron_cmbIdFiche = new javax.swing.JComboBox<>();
+        Panel2_Tron_cmbIdFiche = new javax.swing.JComboBox<String>();
         jLabel1 = new javax.swing.JLabel();
         Panel2_Tron_lblReference = new javax.swing.JLabel();
         Panel2_Tron_TxtRef1 = new javax.swing.JTextField();
@@ -96,7 +96,7 @@ public class frmLabo extends javax.swing.JFrame {
         Panel2_Tron_TxtSchema6 = new javax.swing.JTextField();
         Panel2_Tron_TxtObser6 = new javax.swing.JTextField();
         jPanel3 = new javax.swing.JPanel();
-        Panel3_cmbLabo = new javax.swing.JComboBox<>();
+        Panel3_cmbLabo = new javax.swing.JComboBox<String>();
         Panel3_lblLabo = new javax.swing.JLabel();
         Panel3txtObservation1 = new javax.swing.JTextField();
         Panel3txtObservation2 = new javax.swing.JTextField();
@@ -145,7 +145,7 @@ public class frmLabo extends javax.swing.JFrame {
         jLabel15 = new javax.swing.JLabel();
         Panel4txtFait1 = new javax.swing.JTextField();
         Panel4txtFait3 = new javax.swing.JTextField();
-        Panel4cmbLabo = new javax.swing.JComboBox<>();
+        Panel4cmbLabo = new javax.swing.JComboBox<String>();
         Panel4txtGamme1 = new javax.swing.JTextField();
         Panel4lblLabo = new javax.swing.JLabel();
         Panel4txtObservation1 = new javax.swing.JTextField();
@@ -166,7 +166,7 @@ public class frmLabo extends javax.swing.JFrame {
         Panel5txtReactif3 = new javax.swing.JTextField();
         Panel5txtReactif5 = new javax.swing.JTextField();
         Panel5txtReactif2 = new javax.swing.JTextField();
-        jComboBox4 = new javax.swing.JComboBox<>();
+        jComboBox4 = new javax.swing.JComboBox<String>();
         Panel5txtTemp2 = new javax.swing.JTextField();
         Panel5txtTemp1 = new javax.swing.JTextField();
         Panel5lblTemp = new javax.swing.JLabel();
@@ -200,7 +200,7 @@ public class frmLabo extends javax.swing.JFrame {
         jTextField87 = new javax.swing.JTextField();
         jTextField88 = new javax.swing.JTextField();
         jTextField89 = new javax.swing.JTextField();
-        jComboBox5 = new javax.swing.JComboBox<>();
+        jComboBox5 = new javax.swing.JComboBox<String>();
         jTextField91 = new javax.swing.JTextField();
         jTextField92 = new javax.swing.JTextField();
         jTextField93 = new javax.swing.JTextField();
@@ -273,7 +273,7 @@ public class frmLabo extends javax.swing.JFrame {
 
         txtHeure.setNextFocusableComponent(txtNumFiche);
 
-        cmbLabo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select Item" }));
+        cmbLabo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select Item" }));
 
         jLabel25.setText("Id Fiche");
 
@@ -449,7 +449,7 @@ public class frmLabo extends javax.swing.JFrame {
                         .addContainerGap())))
         );
 
-        jtbPrincipalPanel.addTab("Labo", jPanel1);
+        jtbPrincipalPanelWAAM.addTab("Labo", jPanel1);
 
         Panel2_Tron_cmbIdFiche.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -744,7 +744,7 @@ public class frmLabo extends javax.swing.JFrame {
                 .addGap(252, 252, 252))
         );
 
-        jtbPrincipalPanel.addTab("Tronçonnage ", jPanel2);
+        jtbPrincipalPanelWAAM.addTab("Tronçonnage ", jPanel2);
 
         Panel3_lblLabo.setText("Labo");
 
@@ -1030,7 +1030,7 @@ public class frmLabo extends javax.swing.JFrame {
                 .addContainerGap(328, Short.MAX_VALUE))
         );
 
-        jtbPrincipalPanel.addTab("Enrobage ", jPanel3);
+        jtbPrincipalPanelWAAM.addTab("Enrobage ", jPanel3);
 
         Panel4txtObservation4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1267,7 +1267,7 @@ public class frmLabo extends javax.swing.JFrame {
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
-        jtbPrincipalPanel.addTab("Polissage", jPanel4);
+        jtbPrincipalPanelWAAM.addTab("Polissage", jPanel4);
 
         Panel5txtObservation4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1498,7 +1498,7 @@ public class frmLabo extends javax.swing.JFrame {
                 .addContainerGap(404, Short.MAX_VALUE))
         );
 
-        jtbPrincipalPanel.addTab("Attaque chimique", jPanel5);
+        jtbPrincipalPanelWAAM.addTab("Attaque chimique", jPanel5);
 
         jLabel23.setText("Macro-micrographie/ mesure");
 
@@ -1571,7 +1571,7 @@ public class frmLabo extends javax.swing.JFrame {
             }
         });
 
-        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         jTextField91.setText("jTextField2");
         jTextField91.addActionListener(new java.awt.event.ActionListener() {
@@ -1712,19 +1712,19 @@ public class frmLabo extends javax.swing.JFrame {
                 .addGap(94, 94, 94))
         );
 
-        jtbPrincipalPanel.addTab("Observation ", jPanel6);
+        jtbPrincipalPanelWAAM.addTab("Observation ", jPanel6);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jtbPrincipalPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jtbPrincipalPanelWAAM, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jtbPrincipalPanel)
+                .addComponent(jtbPrincipalPanelWAAM)
                 .addContainerGap())
         );
 
@@ -2337,7 +2337,7 @@ public class frmLabo extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField95;
     public javax.swing.JTextArea jTxtObjectfis;
     public javax.swing.JTextArea jTxtObjectfis1;
-    public javax.swing.JTabbedPane jtbPrincipalPanel;
+    public javax.swing.JTabbedPane jtbPrincipalPanelWAAM;
     public javax.swing.JTextArea jtxtResultats;
     public javax.swing.JLabel lblDate;
     public javax.swing.JLabel lblFicheEssaiAss;

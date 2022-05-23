@@ -8,6 +8,11 @@ import static Controleur.CtrlLogin.mostrarFrm;
 import Modele.DB.QueryLabo;
 import Modele.Labo;
 import Vue.frmLabo;
+//WAAM
+import Vue.frmWam;
+import Modele.WaamCabecer;
+import Modele.DB.QueryWaam;
+import static Controleur.CtrlLogin.mostrarFrmWaam;
 import Vue.frmMenu;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -26,6 +31,7 @@ public class CtrlMenu implements ActionListener {
         this.user = user;
 
         this.frmMenu.btnMenuLabo.addActionListener(this);
+        this.frmMenu.btnMenuWaam.addActionListener(this);
     }
 
     public void iniciar() {
@@ -47,6 +53,18 @@ public class CtrlMenu implements ActionListener {
 
             ctrlLabo.iniciar();
             mostrarFrm(frmLabo);
+            frmMenu.setVisible(false);
+        }
+        if (e.getSource().equals(frmMenu.btnMenuWaam)) {
+            WaamCabecer waam = new WaamCabecer();
+
+            QueryWaam queryWaam = new QueryWaam();
+            frmWam frmWaam = new frmWam();
+
+            CtrlWaam ctrlWaam = new CtrlWaam(waam, queryWaam, frmWaam, user);
+
+            ctrlWaam.iniciar();
+            mostrarFrmWaam(frmWaam);
             frmMenu.setVisible(false);
         }
        }

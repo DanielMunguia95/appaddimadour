@@ -29,7 +29,9 @@
                   <Component id="btnMenuLabo" max="32767" attributes="0"/>
                   <Component id="jLabel1" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace pref="267" max="32767" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="btnMenuWaam" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="194" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -39,7 +41,10 @@
               <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="btnMenuLabo" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="btnMenuLabo" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnMenuWaam" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
               <EmptySpace pref="199" max="32767" attributes="0"/>
           </Group>
       </Group>
@@ -58,6 +63,17 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Menu"/>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnMenuWaam">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Waam"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMenuWaamActionPerformed"/>
+      </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
     </Component>
   </SubComponents>
 </Form>

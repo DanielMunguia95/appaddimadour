@@ -28,12 +28,20 @@ public class frmMenu extends javax.swing.JFrame {
 
         btnMenuLabo = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        btnMenuWaam = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         btnMenuLabo.setText("Labo");
 
         jLabel1.setText("Menu");
+
+        btnMenuWaam.setText("Waam");
+        btnMenuWaam.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMenuWaamActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -44,7 +52,9 @@ public class frmMenu extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(btnMenuLabo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(267, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(btnMenuWaam, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(194, 194, 194))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -52,12 +62,18 @@ public class frmMenu extends javax.swing.JFrame {
                 .addGap(33, 33, 33)
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
-                .addComponent(btnMenuLabo)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnMenuLabo)
+                    .addComponent(btnMenuWaam))
                 .addContainerGap(199, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnMenuWaamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenuWaamActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnMenuWaamActionPerformed
 
     /**
      * @param args the command line arguments
@@ -96,6 +112,7 @@ public class frmMenu extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnMenuLabo;
+    public javax.swing.JButton btnMenuWaam;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
