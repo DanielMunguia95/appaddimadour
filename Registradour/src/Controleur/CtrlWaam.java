@@ -94,8 +94,8 @@ public class CtrlWaam implements ActionListener {
         try {
             labs = queryWaam.getAllWaam();
             frmWam.cmbWaam.removeAllItems();
-            //frmWam.Panel2_Tron_cmbIdFiche.removeAllItems();
-            //frmWam.Panel3_cmbLabo.removeAllItems();
+            frmWam.cmbWaamParametros.removeAllItems();
+            frmWam.cmbWaamResultados.removeAllItems();
             if (labs != null) {
                 labs.forEach(z -> frmWam.cmbWaam.addItem(z));
                 labs.forEach(x -> frmWam.cmbWaamParametros.addItem(x));
