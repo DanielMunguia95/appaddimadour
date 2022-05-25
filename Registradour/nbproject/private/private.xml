@@ -3,15 +3,17 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/Users/admon/Desktop/Munguia/Registradour/src/Controleur/CtrlWaam.java</file>
             <file>file:/C:/Users/admon/Desktop/Munguia/Registradour/src/Controleur/CtrlWaamResultados.java</file>
             <file>file:/C:/Users/admon/Desktop/Munguia/Registradour/src/Modele/DB/QueryDepotParametros.java</file>
             <file>file:/C:/Users/admon/Desktop/Munguia/Registradour/src/Controleur/CtrlDepotParametros.java</file>
-            <file>file:/C:/Users/admon/Desktop/Munguia/Registradour/src/Controleur/CtrlDepotResultado.java</file>
+            <file>file:/C:/Users/admon/Desktop/Munguia/Registradour/src/Vue/frmWam.java</file>
             <file>file:/C:/Users/admon/Desktop/Munguia/Registradour/src/Controleur/CtrlDepot.java</file>
+            <file>file:/C:/Users/admon/Desktop/Munguia/Registradour/src/Vue/frmDepot.java</file>
             <file>file:/C:/Users/admon/Desktop/Munguia/Registradour/src/Modele/DB/QueryDepotResultado.java</file>
             <file>file:/C:/Users/admon/Desktop/Munguia/Registradour/src/Modele/DB/QueryDepot.java</file>
+            <file>file:/C:/Users/admon/Desktop/Munguia/Registradour/src/Controleur/CtrlWaaParametros.java</file>
             <file>file:/C:/Users/admon/Desktop/Munguia/Registradour/src/Controleur/CtrLaboTon.java</file>
-            <file>file:/C:/Users/admon/Desktop/Munguia/Registradour/src/Modele/DB/QueryWaamResultado.java</file>
         </group>
     </open-files>
 </project-private>
