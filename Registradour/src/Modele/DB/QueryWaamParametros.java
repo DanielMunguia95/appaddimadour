@@ -117,7 +117,7 @@ public class QueryWaamParametros extends Connexion {
         ResultSet rs = null;
         PreparedStatement ps = null;
         String sql = "SELECT leySinergica1, leySinergica2, leySinergica3, leySinergica4, leySinergica5, leySinergica6, leySinergica7, leySinergica8, leySinergica9, leySinergica10, leySinergicaTotal, velRobto1, velRobto2, velRobto3, velRobto4, velRobto5, velRobto6, velRobto7, velRobto8, velRobto9, velRobto10, velRobtoTotal, boquillaPza1, boquillaPza2, boquillaPza3, boquillaPza4, boquillaPza5, boquillaPza6, boquillaPza7, boquillaPza8, boquillaPza9, boquillaPza10, boquillaPzaTotal, temperatura1, temperatura2, temperatura3, temperatura4, temperatura5, temperatura6, temperatura7, temperatura8, temperatura9, temperatura10, temperaturaTotal, temporizador1, temporizador2, temporizador3, temporizador4, temporizador5, temporizador6, temporizador7, temporizador8, temporizador9, temporizador10, temporizadorTotal, y1, y2, y3, y4, y5, y6, y7, y8, y9, y10, yTotal, z1, z2, z3, z4, z5, z6, z7, z8, z9, z10, zTotal, alturaArco1, alturaArco2, alturaArco3, alturaArco4, alturaArco5, alturaArco6, alturaArco7, alturaArco8, alturaArco9, alturaArco10, alturaArcoTotal, arcoDinamico1, arcoDinamico2, arcoDinamico3, arcoDinamico4, arcoDinamico5, arcoDinamico6, arcoDinamico7, arcoDinamico8, arcoDinamico9, arcoDinamico10, arcoDinamicoTotal, arcoPulsado1, arcoPulsado2, arcoPulsado3, arcoPulsado4, arcoPulsado5, arcoPulsado6, arcoPulsado7, arcoPulsado8, arcoPulsado9, arcoPulsado10, arcoPulsadoTotal, preGas, postGas, quemado, velocidadCable1, velocidadCable2, velocidadCable3, velocidadCable4, velocidadCable5, velocidadCable6, velocidadCable7, velocidadCable8, velocidadCable9, velocidadCable10, velocidadCableTotal, comentarios, referencias1, referencias2, referencias3, referencias4, referencias5, referencias6, referencias7, referencias8, referencias9, referencias10, referenciasTotal"
-                + " FROM waam WHERE numeroFiche=?";
+                + " FROM depot WHERE numeroFiche=?";
 
         try {
             ps = con.prepareStatement(sql);
@@ -352,7 +352,7 @@ public class QueryWaamParametros extends Connexion {
                 ps.setString(51, Waam.getTemporizador7()== null ? "" : Waam.getTemporizador7());
                 ps.setString(52, Waam.getTemporizador8()== null ? "" : Waam.getTemporizador8());
                 ps.setString(53, Waam.getTemporizador9()== null ? "" : Waam.getTemporizador9());
-                ps.setString(54, Waam.getTemporizador9()== null ? "" : Waam.getTemporizador9());
+                ps.setString(54, Waam.getTemporizador10()== null ? "" : Waam.getTemporizador10());
                 ps.setString(55, Waam.getTemporizadorTotal()== null ? "" : Waam.getTemporizadorTotal());
                 ps.setString(56, Waam.getY1()== null ? "" : Waam.getY1());
                 ps.setString(57, Waam.getY2()== null ? "" : Waam.getY2());

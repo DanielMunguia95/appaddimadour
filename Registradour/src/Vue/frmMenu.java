@@ -29,6 +29,7 @@ public class frmMenu extends javax.swing.JFrame {
         btnMenuLabo = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         btnMenuWaam = new javax.swing.JButton();
+        btnMenuDepot = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -43,6 +44,13 @@ public class frmMenu extends javax.swing.JFrame {
             }
         });
 
+        btnMenuDepot.setText("Depot");
+        btnMenuDepot.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMenuDepotActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -54,7 +62,9 @@ public class frmMenu extends javax.swing.JFrame {
                     .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addComponent(btnMenuWaam, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(194, 194, 194))
+                .addGap(18, 18, 18)
+                .addComponent(btnMenuDepot, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(113, 113, 113))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -64,7 +74,8 @@ public class frmMenu extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnMenuLabo)
-                    .addComponent(btnMenuWaam))
+                    .addComponent(btnMenuWaam)
+                    .addComponent(btnMenuDepot))
                 .addContainerGap(199, Short.MAX_VALUE))
         );
 
@@ -74,6 +85,10 @@ public class frmMenu extends javax.swing.JFrame {
     private void btnMenuWaamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenuWaamActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnMenuWaamActionPerformed
+
+    private void btnMenuDepotActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenuDepotActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnMenuDepotActionPerformed
 
     /**
      * @param args the command line arguments
@@ -111,6 +126,7 @@ public class frmMenu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JButton btnMenuDepot;
     public javax.swing.JButton btnMenuLabo;
     public javax.swing.JButton btnMenuWaam;
     private javax.swing.JLabel jLabel1;

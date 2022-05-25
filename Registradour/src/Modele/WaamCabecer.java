@@ -12,7 +12,7 @@ package Modele;
  */
 public class WaamCabecer {
     //encabezado
-    private int idWaam;
+    private int idDepot;
     private String date;
     private String heure;
     private String machine;
@@ -173,8 +173,14 @@ public class WaamCabecer {
     private String resultados;
     
     
-    public void setIdWaam(int idLabo) {
-        this.idWaam = idLabo;
+   
+
+    public int getIdDepot() {
+        return idDepot;
+    }
+
+    public void setIdDepot(int idDepot) {
+        this.idDepot = idDepot;
     }
 
     public void setDate(String date) {
@@ -803,9 +809,6 @@ public class WaamCabecer {
     
     
 
-    public int getIdWaam() {
-        return idWaam;
-    }
 
     public String getDate() {
         return date;

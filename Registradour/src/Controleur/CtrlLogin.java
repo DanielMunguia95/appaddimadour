@@ -8,6 +8,7 @@ import Modele.Login;
 import Modele.DB.QueryLabo;
 import Vue.frmLabo;
 import Vue.frmWam;
+import Vue.frmDepot;
 import Vue.frmLogin1;
 import Vue.frmMenu;
 import javax.swing.JOptionPane;
@@ -77,6 +78,11 @@ public class CtrlLogin implements ActionListener {
     
     public static void mostrarFrmWaam(frmWam frmWaam) {
         frmWaam.setVisible(true);
+
+    }
+    
+    public static void mostrarFrmDepot(frmDepot frmDepot) {
+        frmDepot.setVisible(true);
 
     }
 

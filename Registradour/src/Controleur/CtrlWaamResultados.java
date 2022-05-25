@@ -43,7 +43,7 @@ public class CtrlWaamResultados implements ActionListener {
         //SE AGREGAN LAS PROPIEDADES DE LOS COMPONENTES
         frmWam.setTitle("Waam");
         frmWam.setLocationRelativeTo(null);
-        //getAllLabs();
+        getAllLabs();
     }
     
     public void getAllLabs() {
@@ -51,12 +51,12 @@ public class CtrlWaamResultados implements ActionListener {
         try {
             labs = queryWaamResultado.getAllWaam();
             frmWam.cmbWaamResultados.removeAllItems();
-            //frmWam.Panel2_Tron_cmbIdFiche.removeAllItems();
-            //frmWam.Panel3_cmbLabo.removeAllItems();
+            frmWam.cmbWaamParametros.removeAllItems();
+            frmWam.cmbWaam.removeAllItems();
             if (labs != null) {
                 labs.forEach(z -> frmWam.cmbWaamResultados.addItem(z));
-//                labs.forEach(x -> frmWam.cmbWaamResultados.addItem(x));
-//                labs.forEach(y -> frmWam.Panel3_cmbLabo.addItem(y));
+                labs.forEach(x -> frmWam.cmbWaam.addItem(x));
+                labs.forEach(y -> frmWam.cmbWaamParametros.addItem(y));
 
             } else {
                 frmWam.cmbWaam.addItem("Acune valeur");

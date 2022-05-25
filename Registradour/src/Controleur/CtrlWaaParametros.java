@@ -64,14 +64,13 @@ public class CtrlWaaParametros implements ActionListener {
         List<String> labs = new ArrayList<>();
         try {
             labs = queryWaamParametros.getAllWaam();
+            frmWam.cmbWaam.removeAllItems();
             frmWam.cmbWaamParametros.removeAllItems();
-            //frmWam.Panel2_Tron_cmbIdFiche.removeAllItems();
-            //frmWam.Panel3_cmbLabo.removeAllItems();
+            frmWam.cmbWaamResultados.removeAllItems();
             if (labs != null) {
-                labs.forEach(z -> frmWam.cmbWaamParametros.addItem(z));
-//                labs.forEach(x -> frmWam.Panel2_Tron_cmbIdFiche.addItem(x));
-//                labs.forEach(y -> frmWam.Panel3_cmbLabo.addItem(y));
-
+                labs.forEach(z -> frmWam.cmbWaam.addItem(z));
+                labs.forEach(x -> frmWam.cmbWaamParametros.addItem(x));
+                labs.forEach(y -> frmWam.cmbWaamResultados.addItem(y));
             } else {
                 frmWam.cmbWaam.addItem("Acune valeur");
             }
@@ -542,7 +541,4 @@ public class CtrlWaaParametros implements ActionListener {
             a.printStackTrace();
         }
     }
-    
-    
-    
 }

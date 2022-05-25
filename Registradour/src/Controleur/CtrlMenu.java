@@ -12,7 +12,15 @@ import Vue.frmLabo;
 import Vue.frmWam;
 import Modele.WaamCabecer;
 import Modele.DB.QueryWaam;
+
+//Depot
+import Vue.frmDepot;
+import Modele.depotCabecer;
+import Modele.DB.QueryDepot;
+
 import static Controleur.CtrlLogin.mostrarFrmWaam;
+
+import static Controleur.CtrlLogin.mostrarFrmDepot;
 import Vue.frmMenu;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -32,6 +40,7 @@ public class CtrlMenu implements ActionListener {
 
         this.frmMenu.btnMenuLabo.addActionListener(this);
         this.frmMenu.btnMenuWaam.addActionListener(this);
+        this.frmMenu.btnMenuDepot.addActionListener(this);
     }
 
     public void iniciar() {
@@ -65,6 +74,18 @@ public class CtrlMenu implements ActionListener {
 
             ctrlWaam.iniciar();
             mostrarFrmWaam(frmWaam);
+            frmMenu.setVisible(false);
+        }
+        if (e.getSource().equals(frmMenu.btnMenuDepot)) {
+            depotCabecer depot = new depotCabecer();
+
+            QueryDepot queryDepot = new QueryDepot();
+            frmDepot frmDepot = new frmDepot();
+
+            CtrlDepot ctrlDepot = new CtrlDepot(depot, queryDepot, frmDepot, user);
+
+            ctrlDepot.iniciar();
+            mostrarFrmDepot(frmDepot);
             frmMenu.setVisible(false);
         }
        }
