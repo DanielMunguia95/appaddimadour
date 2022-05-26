@@ -11,14 +11,13 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-
 /**
  *
  * @author Altair
  */
-public class QueryPoli extends QueryLabo {
+public class QueryLaboPoli extends QueryLabo {
 
-    public boolean saveLaboTon(LaboPoli laboPoli) {
+    public boolean saveLaboPoli(LaboPoli laboPoli) {
         Connection con = getConexion();
         boolean rs = false;
         PreparedStatement ps = null;
@@ -32,8 +31,8 @@ public class QueryPoli extends QueryLabo {
             String sql = "INSERT INTO appaddimadour.polissage"
                     + " (idLabo, fait1, gamme1, fait2, gamme2, fait3,"
                     + " gamme3, fait4, gamme4, fait5, gamme5, fait6, gamme6,"
-                    + " observation1, observation2, observation3, observation4, observation5)"
-                    + " VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+                    + " observation1, observation2, observation3, observation4, observation5, observation6)"
+                    + " VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?)";
 
             ps = con.prepareStatement(sql);
 
@@ -136,7 +135,7 @@ public class QueryPoli extends QueryLabo {
         return labo;
     }
 
-    public boolean updateLaboTon(LaboPoli laboPoli) {
+    public boolean updateLaboPoli(LaboPoli laboPoli) {
         Connection con = getConexion();
         boolean rs = false;
         PreparedStatement ps = null;
@@ -198,7 +197,7 @@ public class QueryPoli extends QueryLabo {
         return false;
     }
 
-    public boolean deleteLaboTon(String nameLabo) {
+    public boolean deleteLaboPoli(String nameLabo) {
 
         Connection con = getConexion();
         boolean delete = false;
