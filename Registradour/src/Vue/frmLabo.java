@@ -208,6 +208,10 @@ public class frmLabo extends javax.swing.JFrame {
         jTextField95 = new javax.swing.JTextField();
         jLabel28 = new javax.swing.JLabel();
         lblObjectif1 = new javax.swing.JLabel();
+	Panel6cmbLabo = new javax.swing.JComboBox<>();
+        Panel6txtLaboRef1 = new javax.swing.JTextField();
+        Panel6lblReference = new javax.swing.JLabel();
+        Panel6lblCommentaire = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTxtObjectfis1 = new javax.swing.JTextArea();
 
