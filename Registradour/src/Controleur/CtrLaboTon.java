@@ -80,6 +80,7 @@ public class CtrLaboTon extends CtrlLabo implements ActionListener {
 
         if (e.getSource().equals(frmLabo.Panel2_Tron_btnConsulter)) {
 
+            limpiar();
             int index = frmLabo.Panel2_Tron_cmbIdFiche.getSelectedIndex();
             String selecLabo = frmLabo.Panel2_Tron_cmbIdFiche.getItemAt(index);
 

@@ -166,7 +166,7 @@ public class frmLabo extends javax.swing.JFrame {
         Panel5txtReactif3 = new javax.swing.JTextField();
         Panel5txtReactif5 = new javax.swing.JTextField();
         Panel5txtReactif2 = new javax.swing.JTextField();
-        jComboBox4 = new javax.swing.JComboBox<>();
+        Panel5cmbLabo = new javax.swing.JComboBox<>();
         Panel5txtTemp2 = new javax.swing.JTextField();
         Panel5txtTemp1 = new javax.swing.JTextField();
         Panel5lblTemp = new javax.swing.JLabel();
@@ -187,31 +187,51 @@ public class frmLabo extends javax.swing.JFrame {
         Panel5btnEnregistrer = new javax.swing.JButton();
         Panel5btnSupprimmer = new javax.swing.JButton();
         jPanel6 = new javax.swing.JPanel();
-        jLabel23 = new javax.swing.JLabel();
-        jTextField76 = new javax.swing.JTextField();
-        jTextField77 = new javax.swing.JTextField();
-        jLabel26 = new javax.swing.JLabel();
-        jTextField79 = new javax.swing.JTextField();
+        Panel6lblMacro = new javax.swing.JLabel();
+        Panel6lblNomAss = new javax.swing.JLabel();
         jLabel27 = new javax.swing.JLabel();
-        jTextField80 = new javax.swing.JTextField();
-        jTextField83 = new javax.swing.JTextField();
-        jTextField84 = new javax.swing.JTextField();
-        jTextField85 = new javax.swing.JTextField();
-        jTextField87 = new javax.swing.JTextField();
-        jTextField88 = new javax.swing.JTextField();
-        jTextField89 = new javax.swing.JTextField();
-        jComboBox5 = new javax.swing.JComboBox<>();
-        jTextField91 = new javax.swing.JTextField();
-        jTextField92 = new javax.swing.JTextField();
-        jTextField93 = new javax.swing.JTextField();
-        jTextField94 = new javax.swing.JTextField();
-        jTextField95 = new javax.swing.JTextField();
-        jLabel28 = new javax.swing.JLabel();
-        lblObjectif1 = new javax.swing.JLabel();
+        Panel6cmbLabo = new javax.swing.JComboBox<>();
+        Panel6txtLaboRef1 = new javax.swing.JTextField();
+        Panel6lblReference = new javax.swing.JLabel();
+        Panel6lblCommentaire = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTxtObjectfis1 = new javax.swing.JTextArea();
+        Panel6txtObservCommentaire = new javax.swing.JTextArea();
+        Panel6btnModifier = new javax.swing.JButton();
+        Panel6txtLaboRef2 = new javax.swing.JTextField();
+        Panel6txtLaboRef4 = new javax.swing.JTextField();
+        Panel6txtLaboRef3 = new javax.swing.JTextField();
+        Panel6txtLaboRef6 = new javax.swing.JTextField();
+        Panel6txtLaboMacro1 = new javax.swing.JTextField();
+        Panel6txtLaboNomAss1 = new javax.swing.JTextField();
+        Panel6txtLaboMacro2 = new javax.swing.JTextField();
+        Panel6txtLaboMacro4 = new javax.swing.JTextField();
+        Panel6txtLaboMacro3 = new javax.swing.JTextField();
+        Panel6txtLaboMacro5 = new javax.swing.JTextField();
+        Panel6txtLaboNomAss2 = new javax.swing.JTextField();
+        Panel6txtLaboNomAss3 = new javax.swing.JTextField();
+        Panel6txtLaboNomAss4 = new javax.swing.JTextField();
+        Panel6txtLaboNomAss5 = new javax.swing.JTextField();
+        Panel6txtLaboRef5 = new javax.swing.JTextField();
+        Panel6txtLaboMacro6 = new javax.swing.JTextField();
+        Panel6txtLaboNomAss6 = new javax.swing.JTextField();
+        Panel6btnConsulter1 = new javax.swing.JButton();
+        Panel6btnSupprimer = new javax.swing.JButton();
+        Panel6btnEnregistre = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        Panel6txtLaboNomDossier = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(1000, 800));
+        setPreferredSize(new java.awt.Dimension(1000, 800));
+        setSize(new java.awt.Dimension(0, 0));
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jtbPrincipalPanel.setMaximumSize(new java.awt.Dimension(1000, 800));
+        jtbPrincipalPanel.setMinimumSize(new java.awt.Dimension(1000, 800));
+        jtbPrincipalPanel.setPreferredSize(new java.awt.Dimension(1000, 800));
+
+        jPanel1.setMaximumSize(new java.awt.Dimension(1000, 800));
+        jPanel1.setPreferredSize(new java.awt.Dimension(1000, 800));
 
         lblNumDaffaire.setText("Numéro d'affaire");
 
@@ -320,133 +340,138 @@ public class frmLabo extends javax.swing.JFrame {
                 .addGap(21, 21, 21)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel29, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(54, 54, 54)
+                        .addComponent(txtNomLabo, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(92, 92, 92)
+                        .addComponent(lblMate)
+                        .addGap(91, 91, 91)
+                        .addComponent(txtMate, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(lblOperateur)
+                        .addGap(77, 77, 77)
+                        .addComponent(txtOperateur, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(92, 92, 92)
+                        .addComponent(lblNumeroPlaque)
+                        .addGap(46, 46, 46)
+                        .addComponent(txtNumeroPlaque, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(lblDate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(lblOperateur, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(lblDate, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(lblHeure)
-                            .addComponent(lblFicheEssaiAss)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(jLabel29, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(lblNumFiche, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtOperateur)
-                            .addComponent(jDatePanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 168, Short.MAX_VALUE)
-                            .addComponent(txtFicheEssaiAss)
-                            .addComponent(txtNumFiche)
-                            .addComponent(txtHeure)
-                            .addComponent(txtNomLabo))
+                            .addComponent(lblNumFiche))
+                        .addGap(54, 54, 54)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jDatePanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtHeure, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtNumFiche, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(92, 92, 92)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addComponent(lblMate)
-                                    .addGap(64, 64, 64))
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(lblRefMate, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(lblNumeroPlaque))
-                                    .addGap(18, 18, 18)))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(lblNumDaffaire)
-                                .addGap(37, 37, 37)))
+                            .addComponent(lblRefMate, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblNumDaffaire))
+                        .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtNumeroPlaque, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtMate, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtRefMate, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtNumDaffaire, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(lblObjectif, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 479, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(lblObjectif2)
-                                .addGap(18, 18, 18)
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 479, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(lblFicheEssaiAss)
+                        .addGap(12, 12, 12)
+                        .addComponent(txtFicheEssaiAss, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(lblObjectif2)
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 479, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(12, 12, 12)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnPanel1_Save, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnMettreAJour1, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cmbLabo, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cmbLabo, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(lblObjectif)
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 479, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(12, 12, 12)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btnPanel1_Consulter, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnSupprimmer, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnPanel1_Save, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(339, Short.MAX_VALUE))
+                            .addComponent(btnMettreAJour1, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnSupprimmer, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(254, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(15, 15, 15)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel29)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(txtNomLabo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblMate)
-                    .addComponent(txtMate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtMate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(4, 4, 4)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel29)
+                            .addComponent(lblMate))))
+                .addGap(22, 22, 22)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(32, 32, 32)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtNumeroPlaque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblNumeroPlaque))
-                        .addGap(8, 8, 8))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtOperateur, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblOperateur))
-                        .addGap(18, 18, 18)))
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGap(4, 4, 4)
+                        .addComponent(lblOperateur))
+                    .addComponent(txtOperateur, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblDate)
-                            .addComponent(jDatePanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblHeure)
-                            .addComponent(txtHeure, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblNumFiche)
-                            .addComponent(txtNumFiche, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(27, 27, 27)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblFicheEssaiAss)
-                            .addComponent(txtFicheEssaiAss, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(29, 29, 29))
+                        .addGap(14, 14, 14)
+                        .addComponent(lblNumeroPlaque))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtRefMate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblRefMate))
+                        .addGap(10, 10, 10)
+                        .addComponent(txtNumeroPlaque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(8, 8, 8)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(lblDate)
                         .addGap(26, 26, 26)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtNumDaffaire, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblNumDaffaire))
-                        .addGap(104, 104, 104)))
+                        .addComponent(lblHeure)
+                        .addGap(30, 30, 30)
+                        .addComponent(lblNumFiche))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jDatePanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(txtHeure, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(txtNumFiche, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(24, 24, 24)
+                        .addComponent(lblRefMate)
+                        .addGap(34, 34, 34)
+                        .addComponent(lblNumDaffaire))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(txtRefMate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(26, 26, 26)
+                        .addComponent(txtNumDaffaire, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(27, 27, 27)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addComponent(btnPanel1_Save)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel25)
-                            .addGap(18, 18, 18)
-                            .addComponent(cmbLabo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(lblObjectif2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 82, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(lblObjectif))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(4, 4, 4)
+                        .addComponent(lblFicheEssaiAss))
+                    .addComponent(txtFicheEssaiAss, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(29, 29, 29)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblObjectif2)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(btnPanel1_Save)
+                        .addGap(16, 16, 16)
+                        .addComponent(jLabel25)
+                        .addGap(18, 18, 18)
+                        .addComponent(cmbLabo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(54, 54, 54)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblObjectif)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(btnPanel1_Consulter)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(8, 8, 8)
                         .addComponent(btnMettreAJour1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(btnSupprimmer)
-                        .addContainerGap())))
+                        .addGap(12, 12, 12)
+                        .addComponent(btnSupprimmer)))
+                .addContainerGap(158, Short.MAX_VALUE))
         );
 
         jtbPrincipalPanel.addTab("Labo", jPanel1);
@@ -692,7 +717,7 @@ public class frmLabo extends javax.swing.JFrame {
                     .addComponent(Panel2_Tron_btnConsulter, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Panel2_Tron_btnEnregistrer, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Panel2_Tron_btnMettre))
-                .addGap(71, 322, Short.MAX_VALUE))
+                .addGap(71, 237, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -978,7 +1003,7 @@ public class frmLabo extends javax.swing.JFrame {
                                 .addComponent(Panel3btnMettre))))
                     .addComponent(Panel3_cmbLabo, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Panel3btnSupprimmer, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(298, Short.MAX_VALUE))
+                .addContainerGap(213, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1027,7 +1052,7 @@ public class frmLabo extends javax.swing.JFrame {
                     .addComponent(Panel3txtObservation6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Panel3lblObservation)
                     .addComponent(Panel3btnSupprimmer))
-                .addContainerGap(328, Short.MAX_VALUE))
+                .addContainerGap(458, Short.MAX_VALUE))
         );
 
         jtbPrincipalPanel.addTab("Enrobage ", jPanel3);
@@ -1171,7 +1196,7 @@ public class frmLabo extends javax.swing.JFrame {
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addComponent(Panel4cmbLabo, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(710, Short.MAX_VALUE))
+                        .addContainerGap(625, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel4Layout.createSequentialGroup()
@@ -1218,7 +1243,7 @@ public class frmLabo extends javax.swing.JFrame {
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(Panel4btnSupprimmer, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(Panel4btnMettre, javax.swing.GroupLayout.Alignment.TRAILING))
-                        .addContainerGap(186, Short.MAX_VALUE))))
+                        .addContainerGap(131, Short.MAX_VALUE))))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1258,7 +1283,7 @@ public class frmLabo extends javax.swing.JFrame {
                             .addComponent(Panel4txtObservation5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(Panel4txtObservation6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(383, Short.MAX_VALUE))
+                        .addContainerGap(513, Short.MAX_VALUE))
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGap(92, 92, 92)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -1397,7 +1422,7 @@ public class frmLabo extends javax.swing.JFrame {
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addComponent(jLabel19)
                         .addGap(89, 89, 89)
-                        .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(Panel5cmbLabo, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(Panel5lblTemp)
@@ -1450,7 +1475,7 @@ public class frmLabo extends javax.swing.JFrame {
                                 .addComponent(Panel5btnEnregistrer)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(Panel5btnSupprimmer)))))
-                .addContainerGap(141, Short.MAX_VALUE))
+                .addContainerGap(56, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1458,7 +1483,7 @@ public class frmLabo extends javax.swing.JFrame {
                 .addGap(37, 37, 37)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel19)
-                    .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Panel5cmbLabo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(56, 56, 56)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Panel5lblReactif1)
@@ -1495,126 +1520,148 @@ public class frmLabo extends javax.swing.JFrame {
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(Panel5btnEnregistrer)
                             .addComponent(Panel5btnSupprimmer))))
-                .addContainerGap(404, Short.MAX_VALUE))
+                .addContainerGap(534, Short.MAX_VALUE))
         );
 
         jtbPrincipalPanel.addTab("Attaque chimique", jPanel5);
 
-        jLabel23.setText("Macro-micrographie/ mesure");
+        Panel6lblMacro.setText("Macro-micrographie/ mesure");
 
-        jTextField76.setText("jTextField2");
-        jTextField76.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField76ActionPerformed(evt);
-            }
-        });
-
-        jTextField77.setText("jTextField2");
-        jTextField77.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField77ActionPerformed(evt);
-            }
-        });
-
-        jLabel26.setText("Nom Associé");
-
-        jTextField79.setText("jTextField2");
+        Panel6lblNomAss.setText("Nom Associé");
 
         jLabel27.setText("Labo");
 
-        jTextField80.setText("jTextField2");
-        jTextField80.addActionListener(new java.awt.event.ActionListener() {
+        Panel6txtLaboRef1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField80ActionPerformed(evt);
+                Panel6txtLaboRef1ActionPerformed(evt);
             }
         });
 
-        jTextField83.setText("jTextField2");
-        jTextField83.addActionListener(new java.awt.event.ActionListener() {
+        Panel6lblReference.setText("Références");
+
+        Panel6lblCommentaire.setText("Commentaires");
+
+        Panel6txtObservCommentaire.setColumns(20);
+        Panel6txtObservCommentaire.setRows(5);
+        jScrollPane2.setViewportView(Panel6txtObservCommentaire);
+
+        Panel6btnModifier.setText("Modifier");
+
+        Panel6txtLaboRef2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField83ActionPerformed(evt);
+                Panel6txtLaboRef2ActionPerformed(evt);
             }
         });
 
-        jTextField84.setText("jTextField2");
-        jTextField84.addActionListener(new java.awt.event.ActionListener() {
+        Panel6txtLaboRef4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField84ActionPerformed(evt);
+                Panel6txtLaboRef4ActionPerformed(evt);
             }
         });
 
-        jTextField85.setText("jTextField2");
-        jTextField85.addActionListener(new java.awt.event.ActionListener() {
+        Panel6txtLaboRef3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField85ActionPerformed(evt);
+                Panel6txtLaboRef3ActionPerformed(evt);
             }
         });
 
-        jTextField87.setText("jTextField2");
-        jTextField87.addActionListener(new java.awt.event.ActionListener() {
+        Panel6txtLaboRef6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField87ActionPerformed(evt);
+                Panel6txtLaboRef6ActionPerformed(evt);
             }
         });
 
-        jTextField88.setText("jTextField2");
-        jTextField88.addActionListener(new java.awt.event.ActionListener() {
+        Panel6txtLaboMacro1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField88ActionPerformed(evt);
+                Panel6txtLaboMacro1ActionPerformed(evt);
             }
         });
 
-        jTextField89.setText("jTextField2");
-        jTextField89.addActionListener(new java.awt.event.ActionListener() {
+        Panel6txtLaboNomAss1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField89ActionPerformed(evt);
+                Panel6txtLaboNomAss1ActionPerformed(evt);
             }
         });
 
-        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        jTextField91.setText("jTextField2");
-        jTextField91.addActionListener(new java.awt.event.ActionListener() {
+        Panel6txtLaboMacro2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField91ActionPerformed(evt);
+                Panel6txtLaboMacro2ActionPerformed(evt);
             }
         });
 
-        jTextField92.setText("jTextField2");
-        jTextField92.addActionListener(new java.awt.event.ActionListener() {
+        Panel6txtLaboMacro4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField92ActionPerformed(evt);
+                Panel6txtLaboMacro4ActionPerformed(evt);
             }
         });
 
-        jTextField93.setText("jTextField2");
-        jTextField93.addActionListener(new java.awt.event.ActionListener() {
+        Panel6txtLaboMacro3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField93ActionPerformed(evt);
+                Panel6txtLaboMacro3ActionPerformed(evt);
             }
         });
 
-        jTextField94.setText("jTextField2");
-        jTextField94.addActionListener(new java.awt.event.ActionListener() {
+        Panel6txtLaboMacro5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField94ActionPerformed(evt);
+                Panel6txtLaboMacro5ActionPerformed(evt);
             }
         });
 
-        jTextField95.setText("jTextField2");
-        jTextField95.addActionListener(new java.awt.event.ActionListener() {
+        Panel6txtLaboNomAss2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField95ActionPerformed(evt);
+                Panel6txtLaboNomAss2ActionPerformed(evt);
             }
         });
 
-        jLabel28.setText("Références");
+        Panel6txtLaboNomAss3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Panel6txtLaboNomAss3ActionPerformed(evt);
+            }
+        });
 
-        lblObjectif1.setText("Commentaires");
+        Panel6txtLaboNomAss4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Panel6txtLaboNomAss4ActionPerformed(evt);
+            }
+        });
 
-        jTxtObjectfis1.setColumns(20);
-        jTxtObjectfis1.setRows(5);
-        jScrollPane2.setViewportView(jTxtObjectfis1);
+        Panel6txtLaboNomAss5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Panel6txtLaboNomAss5ActionPerformed(evt);
+            }
+        });
+
+        Panel6txtLaboRef5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Panel6txtLaboRef5ActionPerformed(evt);
+            }
+        });
+
+        Panel6txtLaboMacro6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Panel6txtLaboMacro6ActionPerformed(evt);
+            }
+        });
+
+        Panel6txtLaboNomAss6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Panel6txtLaboNomAss6ActionPerformed(evt);
+            }
+        });
+
+        Panel6btnConsulter1.setText("Consulter");
+
+        Panel6btnSupprimer.setText("Supprimmer");
+
+        Panel6btnEnregistre.setText("Enregistrer");
+
+        jLabel2.setText("Nom dossier");
+
+        Panel6txtLaboNomDossier.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Panel6txtLaboNomDossierActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -1622,56 +1669,76 @@ public class frmLabo extends javax.swing.JFrame {
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addGap(60, 60, 60)
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addComponent(jLabel27)
+                        .addGap(44, 44, 44)
+                        .addComponent(Panel6cmbLabo, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel6Layout.createSequentialGroup()
                         .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Panel6lblMacro)
+                            .addComponent(Panel6lblReference)
+                            .addComponent(Panel6lblNomAss)
+                            .addComponent(Panel6lblCommentaire)
+                            .addComponent(jLabel2))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel6Layout.createSequentialGroup()
+                                .addComponent(Panel6txtLaboMacro1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(Panel6txtLaboMacro2, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel6Layout.createSequentialGroup()
                                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel26)
-                                    .addComponent(jLabel23)
-                                    .addComponent(jLabel28))
-                                .addGap(12, 12, 12)
+                                    .addGroup(jPanel6Layout.createSequentialGroup()
+                                        .addComponent(Panel6txtLaboNomAss1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addGroup(jPanel6Layout.createSequentialGroup()
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(Panel6txtLaboNomAss2, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(Panel6txtLaboNomAss3, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(Panel6txtLaboNomAss4, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(Panel6txtLaboNomAss5, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(Panel6txtLaboNomAss6, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(Panel6btnModifier, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(jPanel6Layout.createSequentialGroup()
+                                                .addGap(90, 90, 90)
+                                                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                                    .addGroup(jPanel6Layout.createSequentialGroup()
+                                                        .addComponent(Panel6txtLaboMacro3, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addGap(12, 12, 12)
+                                                        .addComponent(Panel6txtLaboMacro4, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                    .addGroup(jPanel6Layout.createSequentialGroup()
+                                                        .addComponent(Panel6txtLaboRef3, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                        .addComponent(Panel6txtLaboRef4, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addGroup(jPanel6Layout.createSequentialGroup()
+                                                        .addComponent(Panel6txtLaboMacro5, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                        .addComponent(Panel6txtLaboMacro6, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                    .addGroup(jPanel6Layout.createSequentialGroup()
+                                                        .addComponent(Panel6txtLaboRef5, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                        .addComponent(Panel6txtLaboRef6, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addGap(50, 50, 50)
+                                                        .addComponent(Panel6btnConsulter1))))))
+                                    .addGroup(jPanel6Layout.createSequentialGroup()
+                                        .addComponent(Panel6txtLaboRef1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(Panel6txtLaboRef2, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(18, 18, 18)
                                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel6Layout.createSequentialGroup()
-                                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(jTextField77, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)
-                                            .addComponent(jTextField79, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(jTextField89, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jTextField76, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(jTextField85, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jTextField80, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(jTextField83, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jTextField84, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(jTextField87, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jTextField88, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addGroup(jPanel6Layout.createSequentialGroup()
-                                        .addComponent(jTextField95, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextField93, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextField91, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextField92, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextField94, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addGroup(jPanel6Layout.createSequentialGroup()
-                                .addComponent(jLabel27)
-                                .addGap(44, 44, 44)
-                                .addComponent(jComboBox5, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(81, 81, 81))
-                    .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addComponent(lblObjectif1)
-                        .addGap(54, 54, 54)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 479, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(396, Short.MAX_VALUE))
+                                    .addComponent(Panel6btnSupprimer)
+                                    .addComponent(Panel6btnEnregistre)))
+                            .addComponent(Panel6txtLaboNomDossier, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 414, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(37, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1679,54 +1746,52 @@ public class frmLabo extends javax.swing.JFrame {
                 .addGap(37, 37, 37)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel27)
-                    .addComponent(jComboBox5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(49, 49, 49)
+                    .addComponent(Panel6cmbLabo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(55, 55, 55)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Panel6txtLaboRef1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Panel6lblReference, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Panel6txtLaboRef2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Panel6txtLaboRef3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Panel6txtLaboRef4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Panel6txtLaboRef5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Panel6txtLaboRef6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Panel6btnConsulter1)
+                    .addComponent(Panel6btnEnregistre))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Panel6lblMacro)
+                    .addComponent(Panel6txtLaboMacro1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Panel6txtLaboMacro2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Panel6txtLaboMacro4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Panel6txtLaboMacro3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Panel6txtLaboMacro5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Panel6txtLaboMacro6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(32, 32, 32)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Panel6lblNomAss)
+                    .addComponent(Panel6txtLaboNomAss1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Panel6txtLaboNomAss2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Panel6txtLaboNomAss3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Panel6txtLaboNomAss4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Panel6txtLaboNomAss5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Panel6txtLaboNomAss6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Panel6btnModifier)
+                    .addComponent(Panel6btnSupprimer))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 187, Short.MAX_VALUE)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel28, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 159, Short.MAX_VALUE)
-                    .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jTextField95, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jTextField93, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jTextField91, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jTextField92, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jTextField94, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel23)
-                    .addComponent(jTextField79, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField89, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField85, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField83, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField87, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel26)
-                    .addComponent(jTextField77, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField76, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField80, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField84, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField88, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(66, 66, 66)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(Panel6txtLaboNomDossier, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(38, 38, 38)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblObjectif1))
-                .addGap(94, 94, 94))
+                    .addComponent(Panel6lblCommentaire))
+                .addGap(121, 121, 121))
         );
 
         jtbPrincipalPanel.addTab("Observation ", jPanel6);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jtbPrincipalPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jtbPrincipalPanel)
-                .addContainerGap())
-        );
+        getContentPane().add(jtbPrincipalPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 18, 1020, 630));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -2004,62 +2069,6 @@ public class frmLabo extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_Panel5txtObservation3ActionPerformed
 
-    private void jTextField76ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField76ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField76ActionPerformed
-
-    private void jTextField77ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField77ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField77ActionPerformed
-
-    private void jTextField80ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField80ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField80ActionPerformed
-
-    private void jTextField83ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField83ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField83ActionPerformed
-
-    private void jTextField84ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField84ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField84ActionPerformed
-
-    private void jTextField85ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField85ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField85ActionPerformed
-
-    private void jTextField87ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField87ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField87ActionPerformed
-
-    private void jTextField88ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField88ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField88ActionPerformed
-
-    private void jTextField89ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField89ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField89ActionPerformed
-
-    private void jTextField91ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField91ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField91ActionPerformed
-
-    private void jTextField92ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField92ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField92ActionPerformed
-
-    private void jTextField93ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField93ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField93ActionPerformed
-
-    private void jTextField94ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField94ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField94ActionPerformed
-
-    private void jTextField95ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField95ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField95ActionPerformed
-
     private void txtRefMateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtRefMateActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtRefMateActionPerformed
@@ -2139,6 +2148,82 @@ public class frmLabo extends javax.swing.JFrame {
     private void Panel5txtObservation6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Panel5txtObservation6ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_Panel5txtObservation6ActionPerformed
+
+    private void Panel6txtLaboRef1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Panel6txtLaboRef1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Panel6txtLaboRef1ActionPerformed
+
+    private void Panel6txtLaboRef2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Panel6txtLaboRef2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Panel6txtLaboRef2ActionPerformed
+
+    private void Panel6txtLaboRef4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Panel6txtLaboRef4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Panel6txtLaboRef4ActionPerformed
+
+    private void Panel6txtLaboRef3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Panel6txtLaboRef3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Panel6txtLaboRef3ActionPerformed
+
+    private void Panel6txtLaboRef6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Panel6txtLaboRef6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Panel6txtLaboRef6ActionPerformed
+
+    private void Panel6txtLaboMacro1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Panel6txtLaboMacro1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Panel6txtLaboMacro1ActionPerformed
+
+    private void Panel6txtLaboNomAss1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Panel6txtLaboNomAss1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Panel6txtLaboNomAss1ActionPerformed
+
+    private void Panel6txtLaboMacro2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Panel6txtLaboMacro2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Panel6txtLaboMacro2ActionPerformed
+
+    private void Panel6txtLaboMacro4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Panel6txtLaboMacro4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Panel6txtLaboMacro4ActionPerformed
+
+    private void Panel6txtLaboMacro3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Panel6txtLaboMacro3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Panel6txtLaboMacro3ActionPerformed
+
+    private void Panel6txtLaboMacro5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Panel6txtLaboMacro5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Panel6txtLaboMacro5ActionPerformed
+
+    private void Panel6txtLaboNomAss2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Panel6txtLaboNomAss2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Panel6txtLaboNomAss2ActionPerformed
+
+    private void Panel6txtLaboNomAss3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Panel6txtLaboNomAss3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Panel6txtLaboNomAss3ActionPerformed
+
+    private void Panel6txtLaboNomAss4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Panel6txtLaboNomAss4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Panel6txtLaboNomAss4ActionPerformed
+
+    private void Panel6txtLaboNomAss5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Panel6txtLaboNomAss5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Panel6txtLaboNomAss5ActionPerformed
+
+    private void Panel6txtLaboRef5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Panel6txtLaboRef5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Panel6txtLaboRef5ActionPerformed
+
+    private void Panel6txtLaboMacro6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Panel6txtLaboMacro6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Panel6txtLaboMacro6ActionPerformed
+
+    private void Panel6txtLaboNomAss6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Panel6txtLaboNomAss6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Panel6txtLaboNomAss6ActionPerformed
+
+    private void Panel6txtLaboNomDossierActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Panel6txtLaboNomDossierActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Panel6txtLaboNomDossierActionPerformed
 
     /**
      * @param args the command line arguments
@@ -2271,6 +2356,7 @@ public class frmLabo extends javax.swing.JFrame {
     public javax.swing.JButton Panel5btnEnregistrer;
     public javax.swing.JButton Panel5btnMettre;
     public javax.swing.JButton Panel5btnSupprimmer;
+    public javax.swing.JComboBox<String> Panel5cmbLabo;
     public javax.swing.JLabel Panel5lblReactif1;
     public javax.swing.JLabel Panel5lblTemp;
     public javax.swing.JTextField Panel5txtObservation1;
@@ -2291,25 +2377,50 @@ public class frmLabo extends javax.swing.JFrame {
     public javax.swing.JTextField Panel5txtTemp4;
     public javax.swing.JTextField Panel5txtTemp5;
     public javax.swing.JTextField Panel5txtTemp6;
+    public javax.swing.JButton Panel6btnConsulter1;
+    public javax.swing.JButton Panel6btnEnregistre;
+    public javax.swing.JButton Panel6btnModifier;
+    public javax.swing.JButton Panel6btnSupprimer;
+    public javax.swing.JComboBox<String> Panel6cmbLabo;
+    public javax.swing.JLabel Panel6lblCommentaire;
+    private javax.swing.JLabel Panel6lblMacro;
+    private javax.swing.JLabel Panel6lblNomAss;
     public javax.swing.JLabel Panel6lblObservation;
+    private javax.swing.JLabel Panel6lblReference;
+    public javax.swing.JTextField Panel6txtLaboMacro1;
+    public javax.swing.JTextField Panel6txtLaboMacro2;
+    public javax.swing.JTextField Panel6txtLaboMacro3;
+    public javax.swing.JTextField Panel6txtLaboMacro4;
+    public javax.swing.JTextField Panel6txtLaboMacro5;
+    public javax.swing.JTextField Panel6txtLaboMacro6;
+    public javax.swing.JTextField Panel6txtLaboNomAss1;
+    public javax.swing.JTextField Panel6txtLaboNomAss2;
+    public javax.swing.JTextField Panel6txtLaboNomAss3;
+    public javax.swing.JTextField Panel6txtLaboNomAss4;
+    public javax.swing.JTextField Panel6txtLaboNomAss5;
+    public javax.swing.JTextField Panel6txtLaboNomAss6;
+    public javax.swing.JTextField Panel6txtLaboNomDossier;
+    public javax.swing.JTextField Panel6txtLaboRef1;
+    public javax.swing.JTextField Panel6txtLaboRef2;
+    public javax.swing.JTextField Panel6txtLaboRef3;
+    public javax.swing.JTextField Panel6txtLaboRef4;
+    public javax.swing.JTextField Panel6txtLaboRef5;
+    public javax.swing.JTextField Panel6txtLaboRef6;
+    public javax.swing.JTextArea Panel6txtObservCommentaire;
     public javax.swing.JButton btnMettreAJour1;
     public javax.swing.JButton btnPanel1_Consulter;
     public javax.swing.JButton btnPanel1_Save;
     public javax.swing.JButton btnSupprimmer;
     public javax.swing.JComboBox<String> cmbLabo;
-    private javax.swing.JComboBox<String> jComboBox4;
-    private javax.swing.JComboBox<String> jComboBox5;
     public com.toedter.calendar.JDateChooser jDatePanel1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
-    private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
     public javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
@@ -2320,23 +2431,7 @@ public class frmLabo extends javax.swing.JFrame {
     public javax.swing.JScrollPane jScrollPane1;
     public javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JTextField jTextField76;
-    private javax.swing.JTextField jTextField77;
-    private javax.swing.JTextField jTextField79;
-    private javax.swing.JTextField jTextField80;
-    private javax.swing.JTextField jTextField83;
-    private javax.swing.JTextField jTextField84;
-    private javax.swing.JTextField jTextField85;
-    private javax.swing.JTextField jTextField87;
-    private javax.swing.JTextField jTextField88;
-    private javax.swing.JTextField jTextField89;
-    private javax.swing.JTextField jTextField91;
-    private javax.swing.JTextField jTextField92;
-    private javax.swing.JTextField jTextField93;
-    private javax.swing.JTextField jTextField94;
-    private javax.swing.JTextField jTextField95;
     public javax.swing.JTextArea jTxtObjectfis;
-    public javax.swing.JTextArea jTxtObjectfis1;
     public javax.swing.JTabbedPane jtbPrincipalPanel;
     public javax.swing.JTextArea jtxtResultats;
     public javax.swing.JLabel lblDate;
@@ -2347,7 +2442,6 @@ public class frmLabo extends javax.swing.JFrame {
     public javax.swing.JLabel lblNumFiche;
     public javax.swing.JLabel lblNumeroPlaque;
     public javax.swing.JLabel lblObjectif;
-    public javax.swing.JLabel lblObjectif1;
     public javax.swing.JLabel lblObjectif2;
     public javax.swing.JLabel lblOperateur;
     public javax.swing.JLabel lblRefMate;

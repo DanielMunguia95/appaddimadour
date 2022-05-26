@@ -37,8 +37,11 @@ public class CtrlLaboEnrobage extends CtrlLabo implements ActionListener {
 
     }
 
+  
+    
+    
     @Override
-    public void iniciar() {
+    public void limpiar() {
         //super.iniciar();
 
         frmLabo.Panel3txtNEnrobage1.setText(null);
