@@ -166,7 +166,7 @@ public class frmLabo extends javax.swing.JFrame {
         Panel5txtReactif3 = new javax.swing.JTextField();
         Panel5txtReactif5 = new javax.swing.JTextField();
         Panel5txtReactif2 = new javax.swing.JTextField();
-        jComboBox4 = new javax.swing.JComboBox<String>();
+        Panel5cmbLabo = new javax.swing.JComboBox<>();
         Panel5txtTemp2 = new javax.swing.JTextField();
         Panel5txtTemp1 = new javax.swing.JTextField();
         Panel5lblTemp = new javax.swing.JLabel();

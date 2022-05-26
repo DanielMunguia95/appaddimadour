@@ -14,6 +14,12 @@
             <file>file:/C:/Users/admon/Desktop/Munguia/Registradour/src/Modele/DB/QueryDepot.java</file>
             <file>file:/C:/Users/admon/Desktop/Munguia/Registradour/src/Controleur/CtrlWaaParametros.java</file>
             <file>file:/C:/Users/admon/Desktop/Munguia/Registradour/src/Controleur/CtrLaboTon.java</file>
+	    <file>file:/C:/Users/Altair/Documents/NetBeansProjects/Registradour/src/Modele/DB/QueryLaboObservation.java</file>
+            <file>file:/C:/Users/Altair/Documents/NetBeansProjects/Registradour/src/Controleur/CtrLaboTon.java</file>
+            <file>file:/C:/Users/Altair/Documents/NetBeansProjects/Registradour/src/Controleur/CtrlLaboAttaque.java</file>
+            <file>file:/C:/Users/Altair/Documents/NetBeansProjects/Registradour/src/Controleur/CtrlLaboObservation.java</file>
+            <file>file:/C:/Users/Altair/Documents/NetBeansProjects/Registradour/src/Controleur/CtrlLabo.java</file>
+            <file>file:/C:/Users/Altair/Documents/NetBeansProjects/Registradour/src/Vue/frmLabo.java</file>
         </group>
     </open-files>
 </project-private>
