@@ -33,7 +33,9 @@
               <Component id="btnMenuWaam" max="32767" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="btnMenuDepot" max="32767" attributes="0"/>
-              <EmptySpace min="-2" pref="113" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="btnMenuLmd" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -47,6 +49,7 @@
                   <Component id="btnMenuLabo" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="btnMenuWaam" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="btnMenuDepot" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnMenuLmd" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="199" max="32767" attributes="0"/>
           </Group>
@@ -84,6 +87,17 @@
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMenuDepotActionPerformed"/>
+      </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnMenuLmd">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Lmd"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMenuLmdActionPerformed"/>
       </Events>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>

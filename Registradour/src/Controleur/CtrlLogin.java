@@ -11,6 +11,7 @@ import Vue.frmWam;
 import Vue.frmDepot;
 import Vue.frmLogin1;
 import Vue.frmMenu;
+import Vue.frmLMD;
 import javax.swing.JOptionPane;
 
 /**
@@ -83,6 +84,11 @@ public class CtrlLogin implements ActionListener {
     
     public static void mostrarFrmDepot(frmDepot frmDepot) {
         frmDepot.setVisible(true);
+
+    }
+    
+    public static void mostrarFrmLmd(frmLMD frmLmd) {
+        frmLmd.setVisible(true);
 
     }
 
