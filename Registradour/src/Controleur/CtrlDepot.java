@@ -15,6 +15,9 @@ import java.awt.event.ActionListener;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import Modele.depotCabecer;
+import Vue.frmMenu;
+
 import java.util.List;
 import javax.swing.JOptionPane;
 
@@ -40,6 +43,7 @@ public class CtrlDepot implements ActionListener {
         this.frmDepot.btnPanel1_Consulter.addActionListener(this);
         this.frmDepot.btnMettreAJour1.addActionListener(this);
         this.frmDepot.btnSupprimmer.addActionListener(this);
+        this.frmDepot.btnDepoReturner.addActionListener(this);
     }
     
     public void iniciar() {
@@ -224,10 +228,21 @@ public class CtrlDepot implements ActionListener {
                 }
                 this.limpiar();
 
+            if (e.getSource() == frmDepot.btnDepoReturner) {
+                getMenu();
+                frmDepot.setVisible(false);
             }
 
         } catch (Exception a) {
             a.printStackTrace();
         }
     }
+
+    public void getMenu() {
+        frmMenu frmMenu = new frmMenu();
+        CtrlMenu ctrMenu = new CtrlMenu(frmMenu, user);
+        ctrMenu.iniciar();
+        frmMenu.setVisible(true);
+    }
+
 }
