@@ -58,14 +58,18 @@ public class QueryLabo extends Connexion {
 
                 int iInsCnt = ps.executeUpdate();
                 if (iInsCnt > 0) {
+                    
+                               
                     System.out.println("Insert Success");
                     return rs=true;
                 } else {
                     System.out.println("Insert Fail");
                     return rs=false;
                 }
-            } else {
+            } else { 
                 System.out.println("ya existe un registro con ese num fiche");
+                return rs=false;
+               
             }
 
         } catch (SQLException e) {
@@ -237,7 +241,9 @@ public class QueryLabo extends Connexion {
                     return false;
                 }
             }else{
-                System.out.println("ya existe un registro con ese num fiche");
+                 System.out.println("ya existe un registro con ese num fiche");
+                    return false;
+               
             }
 
         } catch (SQLException e) {

@@ -110,7 +110,7 @@
                                                   <Component id="btnPanel1_Consulter" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
                                                   <Component id="jScrollPane1" alignment="0" min="-2" pref="503" max="-2" attributes="0"/>
                                               </Group>
-                                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                              <EmptySpace min="0" pref="5" max="32767" attributes="0"/>
                                           </Group>
                                       </Group>
                                   </Group>
@@ -121,25 +121,25 @@
                               </Group>
                           </Group>
                       </Group>
+                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="txtMaterial" alignment="0" max="32767" attributes="0"/>
+                          <Component id="txtBoquillaUtilizada" alignment="0" max="32767" attributes="0"/>
+                          <Component id="txtTamSust" alignment="0" max="32767" attributes="0"/>
+                          <Component id="txtTamHab" alignment="0" max="32767" attributes="0"/>
+                          <Component id="txtOperador" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jScrollPane3" alignment="0" pref="474" max="32767" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="txtMaterial" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="txtBoquillaUtilizada" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="txtTamSust" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="txtTamHab" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="txtOperador" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="jScrollPane3" alignment="0" pref="469" max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="btnMettreAJour1" pref="127" max="32767" attributes="0"/>
+                                  <Component id="btnPanel1_Guardar" max="32767" attributes="0"/>
                               </Group>
-                          </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="btnPanel1_Guardar" min="-2" pref="114" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="btnMettreAJour1" pref="228" max="32767" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="btnSupprimmer" min="-2" pref="111" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="btnSupprimmer" pref="127" max="32767" attributes="0"/>
+                                  <Component id="btnReturner" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -268,24 +268,26 @@
                       </Group>
                       <EmptySpace min="-2" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="txtCentroLaser" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="txtCentroLaser" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnPanel1_Guardar" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnSupprimmer" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="btnReturner" min="-2" max="-2" attributes="0"/>
+                          </Group>
                           <Group type="102" attributes="0">
                               <Component id="jLabel17" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                                      <Component id="btnPanel1_Guardar" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="btnSupprimmer" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="btnMettreAJour1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                                      <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="txtLlenadoCaj" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  </Group>
+                              <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtLlenadoCaj" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnMettreAJour1" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
-                      <EmptySpace pref="178" max="32767" attributes="0"/>
+                      <EmptySpace pref="249" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -561,6 +563,14 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Croquis"/>
               </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="btnReturner">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Returner"/>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="129"/>
+              </AuxValues>
             </Component>
           </SubComponents>
         </Container>

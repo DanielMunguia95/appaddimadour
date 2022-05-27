@@ -68,12 +68,13 @@ public class frmWam extends javax.swing.JFrame {
         txtLlenadoCaj = new javax.swing.JTextField();
         jLabel17 = new javax.swing.JLabel();
         btnPanel1_Guardar = new javax.swing.JButton();
-        cmbWaam = new javax.swing.JComboBox<String>();
+        cmbWaam = new javax.swing.JComboBox<>();
         btnPanel1_Consulter = new javax.swing.JButton();
         btnMettreAJour1 = new javax.swing.JButton();
         btnSupprimmer = new javax.swing.JButton();
+        btnReturner = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
-        cmbWaamParametros = new javax.swing.JComboBox<String>();
+        cmbWaamParametros = new javax.swing.JComboBox<>();
         btnPanel2_Consulter = new javax.swing.JButton();
         jLabel18 = new javax.swing.JLabel();
         txtleySinergica1 = new javax.swing.JTextField();
@@ -244,7 +245,7 @@ public class frmWam extends javax.swing.JFrame {
         jLabel39 = new javax.swing.JLabel();
         btnPanel3_Consulter = new javax.swing.JButton();
         btnPanel3_btnMettreAJour = new javax.swing.JButton();
-        cmbWaamResultados = new javax.swing.JComboBox<String>();
+        cmbWaamResultados = new javax.swing.JComboBox<>();
         jLabel40 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -302,7 +303,7 @@ public class frmWam extends javax.swing.JFrame {
         btnPanel1_Guardar.setActionCommand("Enregistrer");
         btnPanel1_Guardar.setLabel("Enregistrer");
 
-        cmbWaam.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select Item" }));
+        cmbWaam.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select Item" }));
 
         btnPanel1_Consulter.setText("Consulter");
         btnPanel1_Consulter.addActionListener(new java.awt.event.ActionListener() {
@@ -314,6 +315,8 @@ public class frmWam extends javax.swing.JFrame {
         btnMettreAJour1.setText("Mettre à jour");
 
         btnSupprimmer.setText("Supprimmer");
+
+        btnReturner.setText("Returner");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -343,7 +346,7 @@ public class frmWam extends javax.swing.JFrame {
                             .addComponent(cmbWaam, 0, 169, Short.MAX_VALUE)
                             .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 96, Short.MAX_VALUE)
+                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 96, Short.MAX_VALUE)
                             .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(26, 26, 26)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -367,7 +370,7 @@ public class frmWam extends javax.swing.JFrame {
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 503, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(btnPanel1_Consulter, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(0, 0, Short.MAX_VALUE)))))
+                                .addGap(0, 26, Short.MAX_VALUE)))))
                 .addGap(26, 26, 26)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(txtMaterial)
@@ -375,13 +378,16 @@ public class frmWam extends javax.swing.JFrame {
                     .addComponent(txtTamSust)
                     .addComponent(txtTamHab)
                     .addComponent(txtOperador)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(btnPanel1_Guardar, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnMettreAJour1, javax.swing.GroupLayout.DEFAULT_SIZE, 235, Short.MAX_VALUE)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnSupprimmer, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jScrollPane3))
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 517, Short.MAX_VALUE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(btnPanel1_Guardar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnMettreAJour1, javax.swing.GroupLayout.DEFAULT_SIZE, 127, Short.MAX_VALUE))
+                        .addGap(56, 56, 56)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(btnSupprimmer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnReturner, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -454,7 +460,7 @@ public class frmWam extends javax.swing.JFrame {
                             .addComponent(jLabel7))
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 79, Short.MAX_VALUE)
                                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(40, 40, 40))
                             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -474,23 +480,26 @@ public class frmWam extends javax.swing.JFrame {
                         .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(btnPanel1_Guardar)
-                        .addComponent(txtOperVer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(btnSupprimmer)
-                        .addComponent(btnMettreAJour1))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnPanel1_Guardar)
+                            .addComponent(txtOperVer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnSupprimmer))
+                        .addGap(18, 18, 18)
+                        .addComponent(btnReturner))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel10)
                         .addGap(30, 30, 30)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel11)
-                            .addComponent(txtLlenadoCaj, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(txtLlenadoCaj, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnMettreAJour1))))
                 .addContainerGap())
         );
 
         jTabbedPane1.addTab("WAAM", jPanel1);
 
-        cmbWaamParametros.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select Item" }));
+        cmbWaamParametros.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select Item" }));
 
         btnPanel2_Consulter.setText("Consulter");
 
@@ -1097,7 +1106,7 @@ public class frmWam extends javax.swing.JFrame {
 
         btnPanel3_btnMettreAJour.setText("Mettre à jour");
 
-        cmbWaamResultados.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Selected Item" }));
+        cmbWaamResultados.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selected Item" }));
 
         jLabel40.setText("Numéro fiche\t");
 
@@ -1247,6 +1256,7 @@ public class frmWam extends javax.swing.JFrame {
     public javax.swing.JButton btnPanel2_btnMettreAJour;
     public javax.swing.JButton btnPanel3_Consulter;
     public javax.swing.JButton btnPanel3_btnMettreAJour;
+    public javax.swing.JButton btnReturner;
     public javax.swing.JButton btnSupprimmer;
     public javax.swing.JComboBox<String> cmbWaam;
     public javax.swing.JComboBox<String> cmbWaamParametros;

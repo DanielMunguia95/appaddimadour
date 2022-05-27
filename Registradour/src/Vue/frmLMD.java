@@ -30,7 +30,7 @@ public class frmLMD extends javax.swing.JFrame {
 
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
-        cmbLMD = new javax.swing.JComboBox<String>();
+        cmbLMD = new javax.swing.JComboBox<>();
         btnPanel1_Consulter = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -73,6 +73,7 @@ public class frmLMD extends javax.swing.JFrame {
         txtMetas = new javax.swing.JTextArea();
         jLabel17 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
+        btnReturner = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jLabel34 = new javax.swing.JLabel();
         txtboquillaPza1 = new javax.swing.JTextField();
@@ -87,7 +88,7 @@ public class frmLMD extends javax.swing.JFrame {
         txtboquillaPza10 = new javax.swing.JTextField();
         txtboquillaPzaTotal = new javax.swing.JTextField();
         jLabel30 = new javax.swing.JLabel();
-        cmblmdParametros = new javax.swing.JComboBox<String>();
+        cmblmdParametros = new javax.swing.JComboBox<>();
         btnPanel2_Consulter = new javax.swing.JButton();
         jLabel19 = new javax.swing.JLabel();
         txtlvelMaquina1 = new javax.swing.JTextField();
@@ -303,7 +304,7 @@ public class frmLMD extends javax.swing.JFrame {
         btnPanel2_btnMettreAJour = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jLabel39 = new javax.swing.JLabel();
-        cmbLMDResultados = new javax.swing.JComboBox<String>();
+        cmbLMDResultados = new javax.swing.JComboBox<>();
         jLabel36 = new javax.swing.JLabel();
         jLabel37 = new javax.swing.JLabel();
         btnPanel3_Consulter = new javax.swing.JButton();
@@ -319,7 +320,7 @@ public class frmLMD extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        cmbLMD.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select Item" }));
+        cmbLMD.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select Item" }));
 
         btnPanel1_Consulter.setText("Consulter");
         btnPanel1_Consulter.addActionListener(new java.awt.event.ActionListener() {
@@ -387,6 +388,8 @@ public class frmLMD extends javax.swing.JFrame {
 
         jLabel18.setText("Croquis");
 
+        btnReturner.setText("Returner");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -440,27 +443,27 @@ public class frmLMD extends javax.swing.JFrame {
                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(btnPanel1_Consulter, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 503, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGap(0, 0, Short.MAX_VALUE))))
+                                        .addGap(0, 5, Short.MAX_VALUE))))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 503, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addGap(26, 26, 26)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtMaterial)
+                    .addComponent(txtBoquillaUtilizada)
+                    .addComponent(txtTamSust)
+                    .addComponent(txtTamHab)
+                    .addComponent(txtOperador)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 474, Short.MAX_VALUE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(26, 26, 26)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtMaterial)
-                            .addComponent(txtBoquillaUtilizada)
-                            .addComponent(txtTamSust)
-                            .addComponent(txtTamHab)
-                            .addComponent(txtOperador)
-                            .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 469, Short.MAX_VALUE)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnPanel1_Guardar, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnMettreAJour1, javax.swing.GroupLayout.DEFAULT_SIZE, 228, Short.MAX_VALUE)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnSupprimmer, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(btnMettreAJour1, javax.swing.GroupLayout.DEFAULT_SIZE, 127, Short.MAX_VALUE)
+                            .addComponent(btnPanel1_Guardar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(30, 30, 30)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(btnSupprimmer, javax.swing.GroupLayout.DEFAULT_SIZE, 127, Short.MAX_VALUE)
+                            .addComponent(btnReturner, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -554,19 +557,21 @@ public class frmLMD extends javax.swing.JFrame {
                                 .addComponent(jLabel10)))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtCentroLaser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtCentroLaser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnPanel1_Guardar)
+                            .addComponent(btnSupprimmer))
+                        .addGap(18, 18, 18)
+                        .addComponent(btnReturner))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel17)
-                        .addGap(29, 29, 29)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(btnPanel1_Guardar)
-                                .addComponent(btnSupprimmer)
-                                .addComponent(btnMettreAJour1))
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jLabel11)
-                                .addComponent(txtLlenadoCaj, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(178, Short.MAX_VALUE))
+                        .addGap(24, 24, 24)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel11)
+                            .addComponent(txtLlenadoCaj, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnMettreAJour1))))
+                .addContainerGap(249, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("LMD", jPanel1);
@@ -576,7 +581,7 @@ public class frmLMD extends javax.swing.JFrame {
         jLabel30.setText("TOTAL");
         jLabel30.setToolTipText("");
 
-        cmblmdParametros.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select Item" }));
+        cmblmdParametros.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select Item" }));
 
         btnPanel2_Consulter.setText("Consulter");
 
@@ -1435,7 +1440,7 @@ public class frmLMD extends javax.swing.JFrame {
         jLabel39.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel39.setText("Post-traitements");
 
-        cmbLMDResultados.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Selected Item" }));
+        cmbLMDResultados.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selected Item" }));
 
         jLabel36.setText("Traitement thermique\t\t");
 
@@ -1614,6 +1619,7 @@ public class frmLMD extends javax.swing.JFrame {
     public javax.swing.JButton btnPanel2_btnMettreAJour;
     public javax.swing.JButton btnPanel3_Consulter;
     public javax.swing.JButton btnPanel3_btnMettreAJour;
+    public transient javax.swing.JButton btnReturner;
     public javax.swing.JButton btnSupprimmer;
     public javax.swing.JComboBox<String> cmbLMD;
     public javax.swing.JComboBox<String> cmbLMDResultados;
