@@ -5,11 +5,14 @@
  */
 
 package Controleur;
+
+import Modele.LmdCabecer;
 import Modele.DB.QueryLmd;
 import Modele.DB.QueryLmdParametros;
 import Modele.DB.QueryLmdResultado;
 import Modele.LmdCabecer;
 import Vue.frmLMD;
+import Vue.frmMenu;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.text.SimpleDateFormat;
@@ -38,6 +41,7 @@ public class CtrlLmd  implements ActionListener {
         this.frmLMD.btnPanel1_Consulter.addActionListener(this);
         this.frmLMD.btnMettreAJour1.addActionListener(this);
         this.frmLMD.btnSupprimmer.addActionListener(this);
+        this.frmLMD.btnReturner.addActionListener(this);
     }
     
     public void iniciar() {
@@ -216,13 +220,18 @@ public class CtrlLmd  implements ActionListener {
                 //queryLmd.updateLmd(lmd);
                 if (queryLmd.updateLmd(lmd)) {
                     JOptionPane.showMessageDialog(frmLMD, "Élément mis à jour avec succès");
+ 		this.limpiar();
+            }
 
-                } else {
-                    JOptionPane.showMessageDialog(frmLMD, "Élément pas mis à jour correctement");
+            if (e.getSource() == frmLMD.btnReturner) {
 
-                }
-                this.limpiar();
+                frmMenu frmMenu = new frmMenu();
 
+                CtrlMenu ctrMenu = new CtrlMenu(frmMenu, user);
+                ctrMenu.iniciar();
+                frmMenu.setVisible(true);
+
+                frmLMD.setVisible(false);
             }
 
         } catch (Exception a) {

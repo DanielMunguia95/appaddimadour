@@ -9,6 +9,8 @@ import Modele.DB.QueryWaam;
 import Modele.DB.QueryWaamParametros;
 import Modele.DB.QueryWaamResultado;
 import Modele.WaamCabecer;
+
+import Vue.frmMenu;
 import Vue.frmWam;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -40,6 +42,7 @@ public class CtrlWaam implements ActionListener {
         this.frmWam.btnPanel1_Consulter.addActionListener(this);
         this.frmWam.btnMettreAJour1.addActionListener(this);
         this.frmWam.btnSupprimmer.addActionListener(this);
+          this.frmWam.btnReturner.addActionListener(this);
     }
     
     public void iniciar() {
@@ -222,6 +225,18 @@ public class CtrlWaam implements ActionListener {
                 this.limpiar();
 
             }
+             if (e.getSource() == frmWam.btnReturner) {
+
+                frmMenu frmMenu = new frmMenu();
+
+                CtrlMenu ctrMenu = new CtrlMenu(frmMenu, user);
+                ctrMenu.iniciar();
+                frmMenu.setVisible(true);
+
+                frmWam.setVisible(false);
+
+            }
+            
 
         } catch (Exception a) {
             a.printStackTrace();

@@ -9,6 +9,10 @@ import Modele.DB.QueryLogin;
 import Vue.frmLogin1;
 
 import Controleur.CtrlLogin;
+import com.formdev.flatlaf.FlatDarculaLaf;
+import com.formdev.flatlaf.FlatDarkLaf;
+import com.formdev.flatlaf.FlatIntelliJLaf;
+import javax.swing.UIManager;
 
 /**
  *
@@ -22,6 +26,8 @@ public class Registradour {
     public static void main(String[] args) {
 
         try {
+            
+            UIManager.setLookAndFeel(new FlatDarculaLaf());
             Login login = new Login();
 
             QueryLogin queryLogin = new QueryLogin();

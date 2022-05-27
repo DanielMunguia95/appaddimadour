@@ -51,9 +51,8 @@ public class CtrlLogin implements ActionListener {
             user = frmLogin1.txtUser.getText();
             login.setPassword(frmLogin1.txtPassword.getText());
 
-            if (true) {
-                JOptionPane.showConfirmDialog(null, "Usuario logeado");
-              
+            if (queryL.getUser(login)) {
+                JOptionPane.showMessageDialog(frmLogin1, "Bienvenue" + user);
                 frmMenu frmMenu=new frmMenu();
                 
                 CtrlMenu ctrMenu=new CtrlMenu(frmMenu, user);
@@ -65,8 +64,8 @@ public class CtrlLogin implements ActionListener {
                 //enviar a la siguiente pantalla
                 limpiar();
             } else {
-                JOptionPane.showConfirmDialog(null, "El usuario no existe");
-                limpiar();
+                JOptionPane.showMessageDialog(frmLogin1, "Le nom d'utilisateur n'existe pas" + user);
+                           limpiar();
             }
         }
 
