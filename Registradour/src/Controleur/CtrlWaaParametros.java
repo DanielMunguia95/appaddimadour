@@ -5,9 +5,9 @@
  */
 
 package Controleur;
-import Modele.WaamCabecer;
-import Modele.DB.QueryWaamParametros;
 import Modele.DB.QueryWaam;
+import Modele.DB.QueryWaamParametros;
+import Modele.WaamCabecer;
 import Vue.frmWam;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -16,6 +16,7 @@ import java.util.ArrayList;
 import java.util.Date;
 
 import java.util.List;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -233,7 +234,7 @@ public class CtrlWaaParametros implements ActionListener {
 
                     waam = queryWaamParametros.getWaam(selecWaamParametros);
                     
-                   frmWam.txtalturaArco1.setText(waam.getAlturaArco1());
+                   //frmWam.txtalturaArco1.setText(waam.getAlturaArco1());
                    
                    frmWam.txtalturaArco1.setText(waam.getAlturaArco1());
                    frmWam.txtalturaArco10.setText(waam.getAlturaArco10());
@@ -372,7 +373,7 @@ public class CtrlWaaParametros implements ActionListener {
                    frmWam.txtz9.setText(waam.getZ9());
                    frmWam.txtzTotal.setText(waam.getzTotal());
                 } else {
-                    System.out.println("Selecciona un Numéro fiche");
+                     JOptionPane.showMessageDialog(frmWam, "Choisis une option");
                 }
             }
             
@@ -532,9 +533,16 @@ public class CtrlWaaParametros implements ActionListener {
                 String selecWaamParametros = frmWam.cmbWaamParametros.getItemAt(index);
                 waam.setNumeroFiche(selecWaamParametros);
                 
-                queryWaamParametros.updateWaam(waam);
-                this.limpiar();
+                //queryWaamParametros.updateWaam(waam);
+                
+                if (queryWaamParametros.updateWaam(waam)) {
+                    JOptionPane.showMessageDialog(frmWam, "Élément mis à jour avec succès");
 
+                } else {
+                    JOptionPane.showMessageDialog(frmWam, "Élément pas mis à jour correctement");
+
+                }
+                this.limpiar();
             }
 
         } catch (Exception a) {

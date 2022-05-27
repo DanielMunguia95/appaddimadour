@@ -15,6 +15,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import javax.swing.JOptionPane;
 /**
  *
  * @author admon
@@ -86,7 +87,7 @@ public class CtrlDepotResultado implements ActionListener {
                    frmDepot.txtresultados1.setText(depot.getResultados());
                     System.out.println(depot.getResultados());
                 } else {
-                    System.out.println("Selecciona un Numéro fiche");
+                    JOptionPane.showMessageDialog(frmDepot, "Choisis une option");
                 }
             }
             
@@ -101,7 +102,14 @@ public class CtrlDepotResultado implements ActionListener {
                 String selecWaamParametros = frmDepot.cmbDepotResultados.getItemAt(index);
                 depot.setNumeroFiche(selecWaamParametros);
                 
-                queryDepotResultado.updateDepot(depot);
+                //queryDepotResultado.updateDepot(depot);
+                if (queryDepotResultado.updateDepot(depot)) {
+                    JOptionPane.showMessageDialog(frmDepot, "Élément mis à jour avec succès");
+
+                } else {
+                    JOptionPane.showMessageDialog(frmDepot, "Élément pas mis à jour correctement");
+
+                }
                 this.limpiar();
 
             }

@@ -3,8 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Controleur;
 
+package Controleur;
 import Modele.DB.QueryDepot;
 import Modele.DB.QueryDepotParametros;
 import Modele.DB.QueryDepotResultado;
@@ -19,20 +19,20 @@ import Modele.depotCabecer;
 import Vue.frmMenu;
 
 import java.util.List;
+import javax.swing.JOptionPane;
 
 /**
  *
  * @author admon
  */
 public class CtrlDepot implements ActionListener {
-
     private depotCabecer depot;
     private QueryDepot queryDepot;
     private QueryDepotParametros queryDepotParametros;
     private QueryDepotResultado queryDepotResultado;
     private frmDepot frmDepot;
     private String user;
-
+    
     public CtrlDepot(depotCabecer depot, QueryDepot queryDepot, frmDepot frmDepot, String user) {
 
         this.depot = depot;
@@ -45,7 +45,7 @@ public class CtrlDepot implements ActionListener {
         this.frmDepot.btnSupprimmer.addActionListener(this);
         this.frmDepot.btnDepoReturner.addActionListener(this);
     }
-
+    
     public void iniciar() {
         //SE AGREGAN LAS PROPIEDADES DE LOS COMPONENTES
         frmDepot.setTitle("Depot");
@@ -59,10 +59,11 @@ public class CtrlDepot implements ActionListener {
 //        
         QueryDepotResultado queryDepotResultado = new QueryDepotResultado();
         CtrlDepotResultado ctrlDepotResultado = new CtrlDepotResultado(depot, queryDepotResultado, frmDepot, user);
-
+        
         //getAllLabs();
-    }
 
+    }
+    
     public void limpiar() {
 
         frmDepot.txtDia.setDate(null);
@@ -85,7 +86,7 @@ public class CtrlDepot implements ActionListener {
 
         getAllLabs();
     }
-
+    
     public void getAllLabs() {
         List<String> labs = new ArrayList<>();
         try {
@@ -115,24 +116,31 @@ public class CtrlDepot implements ActionListener {
                 String date1 = formato.format(frmDepot.txtDia.getDate() == null ? new Date() : frmDepot.txtDia.getDate());
 
                 depot.setDate(date1);
-                depot.setHeure(frmDepot.txtHora.getText() == null ? "" : frmDepot.txtHora.getText());
-                depot.setMachine(frmDepot.txtMaquina.getText() == null ? "" : frmDepot.txtMaquina.getText());
-                depot.setNumeroFiche(frmDepot.txtNumPag.getText() == null ? "" : frmDepot.txtNumPag.getText());
-                depot.setNumeroCaso(frmDepot.txtNumCas.getText() == null ? "" : frmDepot.txtNumCas.getText());
-                depot.setNumeroPlaca(frmDepot.txtNumPla.getText() == null ? "" : frmDepot.txtNumPla.getText());
-                depot.setRefMateriales(frmDepot.txtRefMat.getText() == null ? "" : frmDepot.txtRefMat.getText());
-                depot.setPreProceso(frmDepot.txtPreProc.getText() == null ? "" : frmDepot.txtPreProc.getText());
-                depot.setMetas(frmDepot.txtMetas.getText() == null ? "" : frmDepot.txtMetas.getText());
-                depot.setOpeVerificacion(frmDepot.txtOperVer.getText() == null ? "" : frmDepot.txtOperVer.getText());
-                depot.setLlenGas(frmDepot.txtLlenadoCaj.getText() == null ? "" : frmDepot.txtLlenadoCaj.getText());
-                depot.setOperador(frmDepot.txtOperador.getText() == null ? "" : frmDepot.txtOperador.getText());
-                depot.setMaterial(frmDepot.txtMaterial.getText() == null ? "" : frmDepot.txtMaterial.getText());
-                depot.setTamClave(frmDepot.txtTamCable.getText() == null ? "" : frmDepot.txtTamCable.getText());
-                depot.setTamSustrato(frmDepot.txtTamSust.getText() == null ? "" : frmDepot.txtTamSust.getText());
-                depot.setTamHabitacion(frmDepot.txtTamHab.getText() == null ? "" : frmDepot.txtTamHab.getText());
-                depot.setCroquis(frmDepot.txtCroquis.getText() == null ? "" : frmDepot.txtCroquis.getText());
+                depot.setHeure(frmDepot.txtHora.getText()== null ? "" : frmDepot.txtHora.getText());
+                depot.setMachine(frmDepot.txtMaquina.getText()== null ? "" : frmDepot.txtMaquina.getText());
+                depot.setNumeroFiche(frmDepot.txtNumPag.getText()== null ? "" : frmDepot.txtNumPag.getText());
+                depot.setNumeroCaso(frmDepot.txtNumCas.getText()== null ? "" : frmDepot.txtNumCas.getText());
+                depot.setNumeroPlaca(frmDepot.txtNumPla.getText()== null ? "" : frmDepot.txtNumPla.getText());
+                depot.setRefMateriales(frmDepot.txtRefMat.getText()== null ? "" : frmDepot.txtRefMat.getText());
+                depot.setPreProceso(frmDepot.txtPreProc.getText()== null ? "" : frmDepot.txtPreProc.getText());
+                depot.setMetas(frmDepot.txtMetas.getText()== null ? "" : frmDepot.txtMetas.getText());
+                depot.setOpeVerificacion(frmDepot.txtOperVer.getText()== null ? "" : frmDepot.txtOperVer.getText());
+                depot.setLlenGas(frmDepot.txtLlenadoCaj.getText()== null ? "" : frmDepot.txtLlenadoCaj.getText());
+                depot.setOperador(frmDepot.txtOperador.getText()== null ? "" : frmDepot.txtOperador.getText());
+                depot.setMaterial(frmDepot.txtMaterial.getText()== null ? "" : frmDepot.txtMaterial.getText());
+                depot.setTamClave(frmDepot.txtTamCable.getText()== null ? "" : frmDepot.txtTamCable.getText());
+                depot.setTamSustrato(frmDepot.txtTamSust.getText()== null ? "" : frmDepot.txtTamSust.getText());
+                depot.setTamHabitacion(frmDepot.txtTamHab.getText()== null ? "" : frmDepot.txtTamHab.getText());
+                depot.setCroquis(frmDepot.txtCroquis.getText()== null ? "" : frmDepot.txtCroquis.getText());
 
-                queryDepot.saveDepot(depot);
+                //queryDepot.saveDepot(depot);
+                if (queryDepot.saveDepot(depot)) {
+                    JOptionPane.showMessageDialog(frmDepot, "Élément enregistré avec succès");
+
+                } else {
+                    JOptionPane.showMessageDialog(frmDepot, "Élément mal enregistré");
+
+                }
                 this.limpiar();
 
             }
@@ -141,7 +149,7 @@ public class CtrlDepot implements ActionListener {
 
                 /*int index = frmLabo.cmbLabo.getSelectedIndex();
                 String selecLabo = frmLabo.cmbLabo.getItemAt(index);
-                 */
+                */
                 int index = frmDepot.cmbDepot.getSelectedIndex();
                 String cmbDepot = frmDepot.cmbDepot.getItemAt(index);
 
@@ -169,7 +177,7 @@ public class CtrlDepot implements ActionListener {
                     frmDepot.txtTamHab.setText(depot.getTamHabitacion());
                     frmDepot.txtCroquis.setText(depot.getCroquis());
                 } else {
-                    System.out.println("Selecciona un Numéro fiche");
+                    JOptionPane.showMessageDialog(frmDepot, "Choisis une option");
                 }
             }
             if (e.getSource() == frmDepot.btnSupprimmer) {
@@ -179,10 +187,14 @@ public class CtrlDepot implements ActionListener {
 
                 delete = queryDepot.deleteDepot(selecWaam);
                 if (delete) {
-                    System.out.println("Elemento elimando");
+                    JOptionPane.showMessageDialog(frmDepot, "Élément supprimé");
+                  
                 } else {
-                    System.out.println("No puede eliminar5");
+
+                    JOptionPane.showMessageDialog(frmDepot, "Impossible de supprimer l'élément");
+                  
                 }
+                
                 this.limpiar();
             }
             if (e.getSource() == frmDepot.btnMettreAJour1) {
@@ -190,26 +202,31 @@ public class CtrlDepot implements ActionListener {
                 SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
                 String date1 = formato.format(frmDepot.txtDia.getDate() == null ? new Date() : frmDepot.txtDia.getDate());
                 depot.setDate(date1);
-                depot.setHeure(frmDepot.txtHora.getText() == null ? "" : frmDepot.txtHora.getText());
-                depot.setMachine(frmDepot.txtMaquina.getText() == null ? "" : frmDepot.txtMaquina.getText());
-                depot.setNumeroFiche(frmDepot.txtNumPag.getText() == null ? "" : frmDepot.txtNumPag.getText());
-                depot.setNumeroCaso(frmDepot.txtNumCas.getText() == null ? "" : frmDepot.txtNumCas.getText());
-                depot.setNumeroPlaca(frmDepot.txtNumPla.getText() == null ? "" : frmDepot.txtNumPla.getText());
-                depot.setRefMateriales(frmDepot.txtRefMat.getText() == null ? "" : frmDepot.txtRefMat.getText());
-                depot.setRefMateriales(frmDepot.txtPreProc.getText() == null ? "" : frmDepot.txtPreProc.getText());
-                depot.setMetas(frmDepot.txtMetas.getText() == null ? "" : frmDepot.txtMetas.getText());
-                depot.setOpeVerificacion(frmDepot.txtOperVer.getText() == null ? "" : frmDepot.txtOperVer.getText());
-                depot.setLlenGas(frmDepot.txtLlenadoCaj.getText() == null ? "" : frmDepot.txtLlenadoCaj.getText());
-                depot.setOperador(frmDepot.txtOperador.getText() == null ? "" : frmDepot.txtOperador.getText());
-                depot.setMaterial(frmDepot.txtMaterial.getText() == null ? "" : frmDepot.txtMaterial.getText());
-                depot.setTamClave(frmDepot.txtTamCable.getText() == null ? "" : frmDepot.txtTamCable.getText());
-                depot.setTamSustrato(frmDepot.txtTamSust.getText() == null ? "" : frmDepot.txtTamSust.getText());
-                depot.setTamHabitacion(frmDepot.txtTamHab.getText() == null ? "" : frmDepot.txtTamHab.getText());
-                depot.setCroquis(frmDepot.txtCroquis.getText() == null ? "" : frmDepot.txtCroquis.getText());
-                queryDepot.updateDepot(depot);
-                this.limpiar();
+                depot.setHeure(frmDepot.txtHora.getText()== null ? "" : frmDepot.txtHora.getText());
+                depot.setMachine(frmDepot.txtMaquina.getText()== null ? "" : frmDepot.txtMaquina.getText());
+                depot.setNumeroFiche(frmDepot.txtNumPag.getText()== null ? "" : frmDepot.txtNumPag.getText());
+                depot.setNumeroCaso(frmDepot.txtNumCas.getText()== null ? "" : frmDepot.txtNumCas.getText());
+                depot.setNumeroPlaca(frmDepot.txtNumPla.getText()== null ? "" : frmDepot.txtNumPla.getText());
+                depot.setRefMateriales(frmDepot.txtRefMat.getText()== null ? "" : frmDepot.txtRefMat.getText());
+                depot.setRefMateriales(frmDepot.txtPreProc.getText()== null ? "" : frmDepot.txtPreProc.getText());
+                depot.setMetas(frmDepot.txtMetas.getText()== null ? "" : frmDepot.txtMetas.getText());
+                depot.setOpeVerificacion(frmDepot.txtOperVer.getText()== null ? "" : frmDepot.txtOperVer.getText());
+                depot.setLlenGas(frmDepot.txtLlenadoCaj.getText()== null ? "" : frmDepot.txtLlenadoCaj.getText());
+                depot.setOperador(frmDepot.txtOperador.getText()== null ? "" : frmDepot.txtOperador.getText());
+                depot.setMaterial(frmDepot.txtMaterial.getText()== null ? "" : frmDepot.txtMaterial.getText());
+                depot.setTamClave(frmDepot.txtTamCable.getText()== null ? "" : frmDepot.txtTamCable.getText());
+                depot.setTamSustrato(frmDepot.txtTamSust.getText()== null ? "" : frmDepot.txtTamSust.getText());
+                depot.setTamHabitacion(frmDepot.txtTamHab.getText()== null ? "" : frmDepot.txtTamHab.getText());
+                depot.setCroquis(frmDepot.txtCroquis.getText()== null ? "" : frmDepot.txtCroquis.getText());
+                //queryDepot.updateDepot(depot);   
+                if (queryDepot.updateDepot(depot)) {
+                    JOptionPane.showMessageDialog(frmDepot, "Élément mis à jour avec succès");
 
-            }
+                } else {
+                    JOptionPane.showMessageDialog(frmDepot, "Élément pas mis à jour correctement");
+
+                }
+                this.limpiar();
 
             if (e.getSource() == frmDepot.btnDepoReturner) {
                 getMenu();
