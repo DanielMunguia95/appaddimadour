@@ -10,6 +10,7 @@ import Modele.LaboAttaque;
 import Vue.frmLabo;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -41,28 +42,34 @@ public class CtrlLaboAttaque extends QueryLabo implements ActionListener {
             int index = frmLabo.Panel4cmbLabo.getSelectedIndex();
             String selecLabo = frmLabo.Panel4cmbLabo.getItemAt(index);
 
-            laboAttaque = queryLaboAttaque.getLabAttaque(selecLabo);
+            if (index != -1) {
+                laboAttaque = queryLaboAttaque.getLabAttaque(selecLabo);
 
-            frmLabo.Panel5txtTemp1.setText(laboAttaque.getTemps1());
-            frmLabo.Panel5txtTemp2.setText(laboAttaque.getTemps2());
-            frmLabo.Panel5txtTemp3.setText(laboAttaque.getTemps3());
-            frmLabo.Panel5txtTemp4.setText(laboAttaque.getTemps4());
-            frmLabo.Panel5txtTemp5.setText(laboAttaque.getTemps5());
-            frmLabo.Panel5txtTemp6.setText(laboAttaque.getTemps6());
+                frmLabo.Panel5txtTemp1.setText(laboAttaque.getTemps1());
+                frmLabo.Panel5txtTemp2.setText(laboAttaque.getTemps2());
+                frmLabo.Panel5txtTemp3.setText(laboAttaque.getTemps3());
+                frmLabo.Panel5txtTemp4.setText(laboAttaque.getTemps4());
+                frmLabo.Panel5txtTemp5.setText(laboAttaque.getTemps5());
+                frmLabo.Panel5txtTemp6.setText(laboAttaque.getTemps6());
 
-            frmLabo.Panel5txtReactif1.setText(laboAttaque.getReactif1());
-            frmLabo.Panel5txtReactif2.setText(laboAttaque.getReactif2());
-            frmLabo.Panel5txtReactif3.setText(laboAttaque.getReactif3());
-            frmLabo.Panel5txtReactif4.setText(laboAttaque.getReactif4());
-            frmLabo.Panel5txtReactif5.setText(laboAttaque.getReactif5());
-            frmLabo.Panel5txtReactif6.setText(laboAttaque.getReactif6());
+                frmLabo.Panel5txtReactif1.setText(laboAttaque.getReactif1());
+                frmLabo.Panel5txtReactif2.setText(laboAttaque.getReactif2());
+                frmLabo.Panel5txtReactif3.setText(laboAttaque.getReactif3());
+                frmLabo.Panel5txtReactif4.setText(laboAttaque.getReactif4());
+                frmLabo.Panel5txtReactif5.setText(laboAttaque.getReactif5());
+                frmLabo.Panel5txtReactif6.setText(laboAttaque.getReactif6());
 
-            frmLabo.Panel5txtObservation1.setText(laboAttaque.getObservation1());
-            frmLabo.Panel5txtObservation2.setText(laboAttaque.getObservation2());
-            frmLabo.Panel5txtObservation3.setText(laboAttaque.getObservation3());
-            frmLabo.Panel5txtObservation4.setText(laboAttaque.getObservation4());
-            frmLabo.Panel5txtObservation5.setText(laboAttaque.getObservation5());
-            frmLabo.Panel5txtObservation6.setText(laboAttaque.getObservation6());
+                frmLabo.Panel5txtObservation1.setText(laboAttaque.getObservation1());
+                frmLabo.Panel5txtObservation2.setText(laboAttaque.getObservation2());
+                frmLabo.Panel5txtObservation3.setText(laboAttaque.getObservation3());
+                frmLabo.Panel5txtObservation4.setText(laboAttaque.getObservation4());
+                frmLabo.Panel5txtObservation5.setText(laboAttaque.getObservation5());
+                frmLabo.Panel5txtObservation6.setText(laboAttaque.getObservation6());
+            } else {
+                System.out.println("Selecciona un lab");
+                JOptionPane.showMessageDialog(frmLabo, "Choisis une option");
+
+            }
         }
         if (e.getSource().equals(frmLabo.Panel5btnEnregistrer)) {
             boolean save = false;
@@ -94,9 +101,9 @@ public class CtrlLaboAttaque extends QueryLabo implements ActionListener {
             save = queryLaboAttaque.saveLaboAttaque(laboAttaque);
 
             if (save) {
-                System.out.println("Attaque INSERTADO");
+                JOptionPane.showMessageDialog(frmLabo, "Élément enregistré avec succès");
             } else {
-                System.out.println("Attaque NO INSERTADO");
+                JOptionPane.showMessageDialog(frmLabo, "Élément mal enregistré");
 
             }
 
@@ -131,9 +138,9 @@ public class CtrlLaboAttaque extends QueryLabo implements ActionListener {
             laboAttaque.setObservation6(frmLabo.Panel5txtObservation6.getText() == null ? "" : frmLabo.Panel5txtObservation6.getText());
 
             if (queryLaboAttaque.updateAttaque(laboAttaque)) {
-                System.out.println("update laboAttaque");
+                JOptionPane.showMessageDialog(frmLabo, "Élément mis à jour avec succès");
             } else {
-                System.out.println("No se puede actualizar laboAttaque");
+                JOptionPane.showMessageDialog(frmLabo, "Élément pas mis à jour correctement");
             }
 
             this.limpiar();
@@ -147,9 +154,9 @@ public class CtrlLaboAttaque extends QueryLabo implements ActionListener {
 
             delete = queryLaboAttaque.deleteLaboAttaque(selecLabo);
             if (delete) {
-                System.out.println("Elemento elimando");
+                JOptionPane.showMessageDialog(frmLabo, "Élément supprimé");
             } else {
-                System.out.println("No puede eliminar5");
+              JOptionPane.showMessageDialog(frmLabo, "Impossible de supprimer l'élément");
             }
             limpiar();
         }

@@ -11,6 +11,7 @@ import Modele.LaboPoli;
 import Vue.frmLabo;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -36,7 +37,6 @@ public class CtrlLaboPoli extends CtrlLabo implements ActionListener {
         this.frmLabo.Panel4btnSupprimmer.addActionListener(this);
     }
 
-    
     public void Iniciar() {
 
         System.out.println("Inicia Poli");
@@ -76,28 +76,32 @@ public class CtrlLaboPoli extends CtrlLabo implements ActionListener {
             int index = frmLabo.Panel4cmbLabo.getSelectedIndex();
             String selecLabo = frmLabo.Panel4cmbLabo.getItemAt(index);
 
-            laboPoli = queryPoli.getLabPoli(selecLabo);
+            if (index != -1) {
+                laboPoli = queryPoli.getLabPoli(selecLabo);
 
-            frmLabo.Panel4txtFait1.setText(laboPoli.getFait1());
-            frmLabo.Panel4txtFait2.setText(laboPoli.getFait2());
-            frmLabo.Panel4txtFait3.setText(laboPoli.getFait3());
-            frmLabo.Panel4txtFait4.setText(laboPoli.getFait4());
-            frmLabo.Panel4txtFait5.setText(laboPoli.getFait5());
-            frmLabo.Panel4txtFait6.setText(laboPoli.getFait6());
+                frmLabo.Panel4txtFait1.setText(laboPoli.getFait1());
+                frmLabo.Panel4txtFait2.setText(laboPoli.getFait2());
+                frmLabo.Panel4txtFait3.setText(laboPoli.getFait3());
+                frmLabo.Panel4txtFait4.setText(laboPoli.getFait4());
+                frmLabo.Panel4txtFait5.setText(laboPoli.getFait5());
+                frmLabo.Panel4txtFait6.setText(laboPoli.getFait6());
 
-            frmLabo.Panel4txtGamme1.setText(laboPoli.getGamme1());
-            frmLabo.Panel4txtGamme2.setText(laboPoli.getGamme2());
-            frmLabo.Panel4txtGamme3.setText(laboPoli.getGamme3());
-            frmLabo.Panel4txtGamme4.setText(laboPoli.getGamme4());
-            frmLabo.Panel4txtGamme5.setText(laboPoli.getGamme5());
-            frmLabo.Panel4txtGamme6.setText(laboPoli.getGamme6());
+                frmLabo.Panel4txtGamme1.setText(laboPoli.getGamme1());
+                frmLabo.Panel4txtGamme2.setText(laboPoli.getGamme2());
+                frmLabo.Panel4txtGamme3.setText(laboPoli.getGamme3());
+                frmLabo.Panel4txtGamme4.setText(laboPoli.getGamme4());
+                frmLabo.Panel4txtGamme5.setText(laboPoli.getGamme5());
+                frmLabo.Panel4txtGamme6.setText(laboPoli.getGamme6());
 
-            frmLabo.Panel4txtObservation1.setText(laboPoli.getObservation1());
-            frmLabo.Panel4txtObservation2.setText(laboPoli.getObservation2());
-            frmLabo.Panel4txtObservation3.setText(laboPoli.getObservation3());
-            frmLabo.Panel4txtObservation4.setText(laboPoli.getObservation4());
-            frmLabo.Panel4txtObservation5.setText(laboPoli.getObservation5());
-            frmLabo.Panel4txtObservation6.setText(laboPoli.getObservation6());
+                frmLabo.Panel4txtObservation1.setText(laboPoli.getObservation1());
+                frmLabo.Panel4txtObservation2.setText(laboPoli.getObservation2());
+                frmLabo.Panel4txtObservation3.setText(laboPoli.getObservation3());
+                frmLabo.Panel4txtObservation4.setText(laboPoli.getObservation4());
+                frmLabo.Panel4txtObservation5.setText(laboPoli.getObservation5());
+                frmLabo.Panel4txtObservation6.setText(laboPoli.getObservation6());
+            } else {
+                JOptionPane.showMessageDialog(frmLabo, "Choisis une option");
+            }
 
         }
 
@@ -131,9 +135,10 @@ public class CtrlLaboPoli extends CtrlLabo implements ActionListener {
             save = queryPoli.saveLaboPoli(laboPoli);
 
             if (save) {
-                System.out.println("LaboTON INSERTADO");
+               JOptionPane.showMessageDialog(frmLabo, "Élément enregistré avec succès");
+
             } else {
-                System.out.println("LaboTON NO INSERTADO");
+                 JOptionPane.showMessageDialog(frmLabo, "Élément mal enregistré");
 
             }
 
@@ -185,9 +190,10 @@ public class CtrlLaboPoli extends CtrlLabo implements ActionListener {
 
             delete = queryPoli.deleteLaboPoli(selecLabo);
             if (delete) {
-                System.out.println("Elemento elimando");
+                JOptionPane.showMessageDialog(frmLabo, "Élément supprimé");
+                  
             } else {
-                System.out.println("No puede eliminar5");
+                  JOptionPane.showMessageDialog(frmLabo, "Impossible de supprimer l'élément");
             }
             limpiar();
 

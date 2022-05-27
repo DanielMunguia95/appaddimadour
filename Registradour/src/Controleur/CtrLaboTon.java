@@ -15,6 +15,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -84,32 +85,37 @@ public class CtrLaboTon extends CtrlLabo implements ActionListener {
             int index = frmLabo.Panel2_Tron_cmbIdFiche.getSelectedIndex();
             String selecLabo = frmLabo.Panel2_Tron_cmbIdFiche.getItemAt(index);
 
-            laboTon = queryLaboTon.getLabTon(selecLabo);
+            if (index != -1) {
+                laboTon = queryLaboTon.getLabTon(selecLabo);
 
-            frmLabo.Panel2_Tron_TxtRef1.setText(laboTon.getRef1());
-            frmLabo.Panel2_Tron_TxtRef2.setText(laboTon.getRef2());
-            frmLabo.Panel2_Tron_TxtRef3.setText(laboTon.getRef3());
-            frmLabo.Panel2_Tron_TxtRef4.setText(laboTon.getRef4());
-            frmLabo.Panel2_Tron_TxtRef5.setText(laboTon.getRef5());
-            frmLabo.Panel2_Tron_TxtRef6.setText(laboTon.getRef6());
-            frmLabo.Panel2_Tron_TxtDisque1.setText(laboTon.getDisque1());
-            frmLabo.Panel2_Tron_TxtDisque2.setText(laboTon.getDisque2());
-            frmLabo.Panel2_Tron_TxtDisque3.setText(laboTon.getDisque3());
-            frmLabo.Panel2_Tron_TxtDisque4.setText(laboTon.getDisque4());
-            frmLabo.Panel2_Tron_TxtDisque5.setText(laboTon.getDisque5());
-            frmLabo.Panel2_Tron_TxtDisque6.setText(laboTon.getDisque6());
-            frmLabo.Panel2_Tron_TxtObser1.setText(laboTon.getObser1());
-            frmLabo.Panel2_Tron_TxtObser2.setText(laboTon.getObser2());
-            frmLabo.Panel2_Tron_TxtObser3.setText(laboTon.getObser3());
-            frmLabo.Panel2_Tron_TxtObser4.setText(laboTon.getObser4());
-            frmLabo.Panel2_Tron_TxtObser5.setText(laboTon.getObser5());
-            frmLabo.Panel2_Tron_TxtObser6.setText(laboTon.getObser6());
-            frmLabo.Panel2_Tron_TxtSchema1.setText(laboTon.getSchema1());
-            frmLabo.Panel2_Tron_TxtSchema2.setText(laboTon.getSchema2());
-            frmLabo.Panel2_Tron_TxtSchema3.setText(laboTon.getSchema3());
-            frmLabo.Panel2_Tron_TxtSchema4.setText(laboTon.getSchema4());
-            frmLabo.Panel2_Tron_TxtSchema5.setText(laboTon.getSchema5());
-            frmLabo.Panel2_Tron_TxtSchema6.setText(laboTon.getSchema6());
+                frmLabo.Panel2_Tron_TxtRef1.setText(laboTon.getRef1());
+                frmLabo.Panel2_Tron_TxtRef2.setText(laboTon.getRef2());
+                frmLabo.Panel2_Tron_TxtRef3.setText(laboTon.getRef3());
+                frmLabo.Panel2_Tron_TxtRef4.setText(laboTon.getRef4());
+                frmLabo.Panel2_Tron_TxtRef5.setText(laboTon.getRef5());
+                frmLabo.Panel2_Tron_TxtRef6.setText(laboTon.getRef6());
+                frmLabo.Panel2_Tron_TxtDisque1.setText(laboTon.getDisque1());
+                frmLabo.Panel2_Tron_TxtDisque2.setText(laboTon.getDisque2());
+                frmLabo.Panel2_Tron_TxtDisque3.setText(laboTon.getDisque3());
+                frmLabo.Panel2_Tron_TxtDisque4.setText(laboTon.getDisque4());
+                frmLabo.Panel2_Tron_TxtDisque5.setText(laboTon.getDisque5());
+                frmLabo.Panel2_Tron_TxtDisque6.setText(laboTon.getDisque6());
+                frmLabo.Panel2_Tron_TxtObser1.setText(laboTon.getObser1());
+                frmLabo.Panel2_Tron_TxtObser2.setText(laboTon.getObser2());
+                frmLabo.Panel2_Tron_TxtObser3.setText(laboTon.getObser3());
+                frmLabo.Panel2_Tron_TxtObser4.setText(laboTon.getObser4());
+                frmLabo.Panel2_Tron_TxtObser5.setText(laboTon.getObser5());
+                frmLabo.Panel2_Tron_TxtObser6.setText(laboTon.getObser6());
+                frmLabo.Panel2_Tron_TxtSchema1.setText(laboTon.getSchema1());
+                frmLabo.Panel2_Tron_TxtSchema2.setText(laboTon.getSchema2());
+                frmLabo.Panel2_Tron_TxtSchema3.setText(laboTon.getSchema3());
+                frmLabo.Panel2_Tron_TxtSchema4.setText(laboTon.getSchema4());
+                frmLabo.Panel2_Tron_TxtSchema5.setText(laboTon.getSchema5());
+                frmLabo.Panel2_Tron_TxtSchema6.setText(laboTon.getSchema6());
+            } else {
+                JOptionPane.showMessageDialog(frmLabo, "Choisis une option");
+
+            }
 
         }
 
@@ -193,9 +199,9 @@ public class CtrLaboTon extends CtrlLabo implements ActionListener {
             laboTon.setObser6(frmLabo.Panel2_Tron_TxtObser6.getText() == null ? "" : frmLabo.Panel2_Tron_TxtObser6.getText());
 
             if (queryLaboTon.updateLaboTon(laboTon)) {
-                System.out.println("updateTON");
+                JOptionPane.showMessageDialog(frmLabo, "Élément mis à jour avec succès");
             } else {
-                System.out.println("No se puede actualizar ton");
+                         JOptionPane.showMessageDialog(frmLabo, "Élément pas mis à jour correctement");
             }
 
             limpiar();
@@ -208,9 +214,9 @@ public class CtrLaboTon extends CtrlLabo implements ActionListener {
 
             delete = queryLaboTon.deleteLaboTon(selecLabo);
             if (delete) {
-                System.out.println("Elemento elimando");
+                JOptionPane.showMessageDialog(frmLabo, "Élément supprimé");
             } else {
-                System.out.println("No puede eliminar5");
+                JOptionPane.showMessageDialog(frmLabo, "Impossible de supprimer l'élément");
             }
             this.limpiar();
         }

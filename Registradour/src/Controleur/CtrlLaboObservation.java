@@ -11,6 +11,7 @@ import Modele.LaboObservation;
 import Vue.frmLabo;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -44,34 +45,38 @@ public class CtrlLaboObservation extends CtrlLabo implements ActionListener {
             int index = frmLabo.Panel6cmbLabo.getSelectedIndex();
             String selecLabo = frmLabo.Panel6cmbLabo.getItemAt(index);
 
-            laboObs = queryLaboObs.getLabObs(selecLabo);
+            if (index != -1) {
+                laboObs = queryLaboObs.getLabObs(selecLabo);
 
-            if (laboObs!=null) {
-                
-            frmLabo.Panel6txtLaboMacro1.setText(laboObs.getMacro1() == null ? "" : laboObs.getMacro1());
-            frmLabo.Panel6txtLaboMacro2.setText(laboObs.getMacro2() == null ? "" : laboObs.getMacro2());
-            frmLabo.Panel6txtLaboMacro3.setText(laboObs.getMacro3() == null ? "" : laboObs.getMacro3());
-            frmLabo.Panel6txtLaboMacro4.setText(laboObs.getMacro4() == null ? "" : laboObs.getMacro4());
-            frmLabo.Panel6txtLaboMacro5.setText(laboObs.getMacro5() == null ? "" : laboObs.getMacro5());
-            frmLabo.Panel6txtLaboMacro6.setText(laboObs.getMacro6() == null ? "" : laboObs.getMacro6());
+                if (laboObs != null) {
 
-            frmLabo.Panel6txtLaboNomAss1.setText(laboObs.getNomAssocie1() == null ? "" : laboObs.getNomAssocie1());
-            frmLabo.Panel6txtLaboNomAss2.setText(laboObs.getNomAssocie2() == null ? "" : laboObs.getNomAssocie2());
-            frmLabo.Panel6txtLaboNomAss3.setText(laboObs.getNomAssocie3() == null ? "" : laboObs.getNomAssocie3());
-            frmLabo.Panel6txtLaboNomAss4.setText(laboObs.getNomAssocie4() == null ? "" : laboObs.getNomAssocie4());
-            frmLabo.Panel6txtLaboNomAss5.setText(laboObs.getNomAssocie5() == null ? "" : laboObs.getNomAssocie5());
-            frmLabo.Panel6txtLaboNomAss6.setText(laboObs.getNomAssocie6() == null ? "" : laboObs.getNomAssocie6());
+                    frmLabo.Panel6txtLaboMacro1.setText(laboObs.getMacro1() == null ? "" : laboObs.getMacro1());
+                    frmLabo.Panel6txtLaboMacro2.setText(laboObs.getMacro2() == null ? "" : laboObs.getMacro2());
+                    frmLabo.Panel6txtLaboMacro3.setText(laboObs.getMacro3() == null ? "" : laboObs.getMacro3());
+                    frmLabo.Panel6txtLaboMacro4.setText(laboObs.getMacro4() == null ? "" : laboObs.getMacro4());
+                    frmLabo.Panel6txtLaboMacro5.setText(laboObs.getMacro5() == null ? "" : laboObs.getMacro5());
+                    frmLabo.Panel6txtLaboMacro6.setText(laboObs.getMacro6() == null ? "" : laboObs.getMacro6());
 
-            frmLabo.Panel6txtLaboRef1.setText(laboObs.getReference1() == null ? "" : laboObs.getReference1());
-            frmLabo.Panel6txtLaboRef2.setText(laboObs.getReference2() == null ? "" : laboObs.getReference2());
-            frmLabo.Panel6txtLaboRef3.setText(laboObs.getReference3() == null ? "" : laboObs.getReference3());
-            frmLabo.Panel6txtLaboRef4.setText(laboObs.getReference4() == null ? "" : laboObs.getReference4());
-            frmLabo.Panel6txtLaboRef5.setText(laboObs.getReference5() == null ? "" : laboObs.getReference5());
-            frmLabo.Panel6txtLaboRef6.setText(laboObs.getReference6() == null ? "" : laboObs.getReference6());
+                    frmLabo.Panel6txtLaboNomAss1.setText(laboObs.getNomAssocie1() == null ? "" : laboObs.getNomAssocie1());
+                    frmLabo.Panel6txtLaboNomAss2.setText(laboObs.getNomAssocie2() == null ? "" : laboObs.getNomAssocie2());
+                    frmLabo.Panel6txtLaboNomAss3.setText(laboObs.getNomAssocie3() == null ? "" : laboObs.getNomAssocie3());
+                    frmLabo.Panel6txtLaboNomAss4.setText(laboObs.getNomAssocie4() == null ? "" : laboObs.getNomAssocie4());
+                    frmLabo.Panel6txtLaboNomAss5.setText(laboObs.getNomAssocie5() == null ? "" : laboObs.getNomAssocie5());
+                    frmLabo.Panel6txtLaboNomAss6.setText(laboObs.getNomAssocie6() == null ? "" : laboObs.getNomAssocie6());
 
-            frmLabo.Panel6txtObservCommentaire.setText(laboObs.getCommentaires() == null ? "" : laboObs.getCommentaires());
-            frmLabo.Panel6txtLaboNomDossier.setText(laboObs.getNomDossier() == null ? "" : laboObs.getNomDossier());
+                    frmLabo.Panel6txtLaboRef1.setText(laboObs.getReference1() == null ? "" : laboObs.getReference1());
+                    frmLabo.Panel6txtLaboRef2.setText(laboObs.getReference2() == null ? "" : laboObs.getReference2());
+                    frmLabo.Panel6txtLaboRef3.setText(laboObs.getReference3() == null ? "" : laboObs.getReference3());
+                    frmLabo.Panel6txtLaboRef4.setText(laboObs.getReference4() == null ? "" : laboObs.getReference4());
+                    frmLabo.Panel6txtLaboRef5.setText(laboObs.getReference5() == null ? "" : laboObs.getReference5());
+                    frmLabo.Panel6txtLaboRef6.setText(laboObs.getReference6() == null ? "" : laboObs.getReference6());
 
+                    frmLabo.Panel6txtObservCommentaire.setText(laboObs.getCommentaires() == null ? "" : laboObs.getCommentaires());
+                    frmLabo.Panel6txtLaboNomDossier.setText(laboObs.getNomDossier() == null ? "" : laboObs.getNomDossier());
+
+                }
+            } else {
+                JOptionPane.showMessageDialog(frmLabo, "Choisis une option");
             }
         }
         if (e.getSource().equals(frmLabo.Panel6btnEnregistre)) {
@@ -108,9 +113,9 @@ public class CtrlLaboObservation extends CtrlLabo implements ActionListener {
 
             save = queryLaboObs.saveLaboObservation(laboObs);
             if (save) {
-                System.out.println("LaboTON INSERTADO");
+                JOptionPane.showMessageDialog(frmLabo, "Élément enregistré avec succès");
             } else {
-                System.out.println("LaboTON NO INSERTADO");
+                JOptionPane.showMessageDialog(frmLabo, "Élément mal enregistré");
 
             }
 
@@ -125,9 +130,10 @@ public class CtrlLaboObservation extends CtrlLabo implements ActionListener {
 
             delete = queryLaboObs.deleteLaboObs(selecLabo);
             if (delete) {
-                System.out.println("Elemento elimando");
+                JOptionPane.showMessageDialog(frmLabo, "Élément supprimé");
             } else {
-                System.out.println("No puede eliminar5");
+                JOptionPane.showMessageDialog(frmLabo, "Impossible de supprimer l'élément");
+
             }
             this.limpiar();
         }
@@ -161,9 +167,10 @@ public class CtrlLaboObservation extends CtrlLabo implements ActionListener {
 
             laboObs.setNomDossier(frmLabo.Panel6txtLaboNomDossier.getText() == null ? "" : frmLabo.Panel6txtLaboNomDossier.getText());
             if (queryLaboObs.updateLaboObs(laboObs)) {
-                System.out.println("updateobservations");
+                JOptionPane.showMessageDialog(frmLabo, "Élément mis à jour avec succès");
             } else {
-                System.out.println("No se puede actualizar observations");
+                JOptionPane.showMessageDialog(frmLabo, "Élément pas mis à jour correctement");
+
             }
 
             limpiar();
