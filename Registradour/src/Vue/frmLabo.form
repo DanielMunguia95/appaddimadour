@@ -1,252 +1,2608 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package Controleur;
+<?xml version="1.0" encoding="UTF-8" ?>
 
-import Modele.Labo;
-import Modele.DB.QueryLabo;
-import Modele.DB.QueryLaboAttaque;
-import Modele.DB.QueryLaboEnrobage;
-import Modele.DB.QueryLaboObservation;
-import Modele.DB.QueryLaboTon;
-import Modele.DB.QueryLaboPoli;
-import Modele.LaboAttaque;
-import Modele.LaboEnrobage;
-import Modele.LaboObservation;
-import Modele.LaboPoli;
+<Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+      <Dimension value="[1000, 800]"/>
+    </Property>
+    <Property name="size" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+      <Dimension value="[0, 0]"/>
+    </Property>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,3,29,0,0,4,86"/>
+  </AuxValues>
 
-import Modele.LaboTon;
-import Vue.frmLabo;
-import Vue.frmMenu;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
+  <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+    <Property name="useNullLayout" type="boolean" value="false"/>
+  </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JTabbedPane" name="jtbPrincipalPanel">
+      <Properties>
+        <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[1000, 800]"/>
+        </Property>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[1000, 800]"/>
+        </Property>
+        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[1000, 800]"/>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="6" y="18" width="1020" height="630"/>
+        </Constraint>
+      </Constraints>
 
-import java.util.List;
-import javax.swing.JOptionPane;
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
+      <SubComponents>
+        <Container class="javax.swing.JPanel" name="jPanel1">
+          <Properties>
+            <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[1000, 900]"/>
+            </Property>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[1000, 900]"/>
+            </Property>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="Labo">
+                <Property name="tabTitle" type="java.lang.String" value="Labo"/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
 
-/**
- *
- * @author Altair
- */
-public class CtrlLabo implements ActionListener {
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="21" pref="21" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="lblOperateur" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel29" alignment="0" min="-2" pref="90" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="txtOperateur" min="-2" pref="168" max="-2" attributes="0"/>
+                                          <Component id="txtNomLabo" min="-2" pref="168" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="110" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="lblMate" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace min="91" pref="91" max="-2" attributes="0"/>
+                                              <Component id="txtMate" min="-2" pref="168" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="1" attributes="0">
+                                              <Component id="lblNumeroPlaque" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace min="46" pref="46" max="-2" attributes="0"/>
+                                              <Component id="txtNumeroPlaque" min="-2" pref="168" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="lblDate" min="-2" pref="67" max="-2" attributes="0"/>
+                                          <Component id="lblHeure" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lblNumFiche" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="54" pref="54" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" attributes="0">
+                                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                  <Component id="txtNumFiche" min="-2" pref="168" max="-2" attributes="0"/>
+                                                  <Component id="txtHeure" min="-2" pref="168" max="-2" attributes="0"/>
+                                              </Group>
+                                              <EmptySpace min="92" pref="92" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="lblRefMate" min="-2" pref="132" max="-2" attributes="0"/>
+                                                  <Component id="lblNumDaffaire" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                          <Component id="jDatePanel1" alignment="0" min="-2" pref="168" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="txtRefMate" min="-2" pref="168" max="-2" attributes="0"/>
+                                          <Component id="txtNumDaffaire" min="-2" pref="171" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="lblFicheEssaiAss" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="12" pref="12" max="-2" attributes="0"/>
+                                      <Component id="txtFicheEssaiAss" min="-2" pref="168" max="-2" attributes="0"/>
+                                      <EmptySpace max="32767" attributes="0"/>
+                                      <Component id="jLabel25" min="-2" pref="104" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Component id="btnMettreAJour1" min="-2" pref="140" max="-2" attributes="0"/>
+                                  <Component id="cmbLabo" min="-2" pref="140" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Component id="lblObjectif2" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
+                                      <Component id="jScrollPane1" min="-2" pref="479" max="-2" attributes="0"/>
+                                      <EmptySpace min="55" pref="55" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Component id="btnPanel1_Consulter" max="32767" attributes="0"/>
+                                          <Component id="btnPanel1_Save" pref="114" max="32767" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="btnSupprimmer" pref="142" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <Component id="lblObjectif" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
+                                      <Component id="jScrollPane3" min="-2" pref="479" max="-2" attributes="0"/>
+                                      <EmptySpace max="32767" attributes="0"/>
+                                      <Component id="Panel1btnReturner" min="-2" pref="140" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace min="-2" pref="114" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="Panel1btnReturner" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="15" pref="15" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="txtMate" min="-2" max="-2" attributes="0"/>
+                                          <Group type="102" attributes="0">
+                                              <EmptySpace min="4" pref="4" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="jLabel29" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="lblMate" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                      </Group>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" attributes="0">
+                                              <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                                              <Component id="lblNumeroPlaque" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" attributes="0">
+                                              <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                                              <Component id="txtNumeroPlaque" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                                      <Component id="txtNomLabo" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="lblOperateur" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="txtOperateur" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                              <EmptySpace min="8" pref="8" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" attributes="0">
+                                              <Component id="lblDate" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace min="26" pref="26" max="-2" attributes="0"/>
+                                              <Component id="lblHeure" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace min="30" pref="30" max="-2" attributes="0"/>
+                                              <Component id="lblNumFiche" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" attributes="0">
+                                              <Component id="jDatePanel1" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                                              <Component id="txtHeure" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Component id="txtNumFiche" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" attributes="0">
+                                              <EmptySpace min="24" pref="24" max="-2" attributes="0"/>
+                                              <Component id="lblRefMate" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace min="34" pref="34" max="-2" attributes="0"/>
+                                              <Component id="lblNumDaffaire" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <EmptySpace min="27" pref="27" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" attributes="0">
+                                              <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="3" attributes="0">
+                                                  <Component id="lblFicheEssaiAss" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="txtFicheEssaiAss" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="jLabel25" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="cmbLabo" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
+                                      <Component id="txtRefMate" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="26" pref="26" max="-2" attributes="0"/>
+                                      <Component id="txtNumDaffaire" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="lblObjectif2" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jScrollPane1" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="btnPanel1_Consulter" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="btnMettreAJour1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="btnPanel1_Save" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="btnSupprimmer" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                              <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="lblObjectif" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jScrollPane3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace pref="10" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="lblNumDaffaire">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Num&#xe9;ro d&apos;affaire"/>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblOperateur">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Op&#xe9;rateur"/>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblNumeroPlaque">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Num&#xe9;ro plaque"/>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblRefMate">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="R&#xe9;f&#xe9;rence mati&#xe9;re"/>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblDate">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Date"/>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblHeure">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Heure"/>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblNumFiche">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Num&#xe9;ro fiche"/>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblMate">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Mat&#xe9;riau"/>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtOperateur">
+              <Properties>
+                <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+                  <ComponentRef name="jDatePanel1"/>
+                </Property>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtOperateurActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="com.toedter.calendar.JDateChooser" name="jDatePanel1">
+              <Properties>
+                <Property name="dateFormatString" type="java.lang.String" value="dd/MM/yyyy"/>
+                <Property name="inheritsPopupMenu" type="boolean" value="true"/>
+                <Property name="maxSelectableDate" type="java.util.Date" editor="org.netbeans.beaninfo.editors.DateEditor">
+                  <SerializedValue value="-84,-19,0,5,115,114,0,14,106,97,118,97,46,117,116,105,108,46,68,97,116,101,104,106,-127,1,75,89,116,25,3,0,0,120,112,119,8,0,0,-26,112,123,-16,86,-112,120"/>
+                </Property>
+                <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+                  <ComponentRef name="txtHeure"/>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtNumFiche">
+              <Properties>
+                <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+                  <ComponentRef name="txtFicheEssaiAss"/>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblFicheEssaiAss">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Fiche Essai Associ&#xe9;e"/>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtFicheEssaiAss">
+              <Properties>
+                <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+                  <ComponentRef name="txtMate"/>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtMate">
+              <Properties>
+                <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+                  <ComponentRef name="txtNumeroPlaque"/>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtNumeroPlaque">
+              <Properties>
+                <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+                  <ComponentRef name="txtRefMate"/>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtRefMate">
+              <Properties>
+                <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+                  <ComponentRef name="txtNumDaffaire"/>
+                </Property>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtRefMateActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtNumDaffaire">
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblObjectif">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="R&#xe9;sultats"/>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+              </AuxValues>
 
-    private Labo labo;
-    private QueryLabo queryLabo;
-    private frmLabo frmLabo;
-    private String user;
-    private frmMenu menu;
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+              <SubComponents>
+                <Component class="javax.swing.JTextArea" name="jTxtObjectfis">
+                  <Properties>
+                    <Property name="columns" type="int" value="20"/>
+                    <Property name="rows" type="int" value="5"/>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                  </AuxValues>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Component class="javax.swing.JButton" name="btnPanel1_Save">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Enregistrer "/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPanel1_SaveActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtHeure">
+              <Properties>
+                <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+                  <ComponentRef name="txtNumFiche"/>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="cmbLabo">
+              <Properties>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="1">
+                    <StringItem index="0" value="Select Item"/>
+                  </StringArray>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel25">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Id Fiche"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel29">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Id fiche"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtNomLabo">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtNomLaboActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JButton" name="btnPanel1_Consulter">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Consulter"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPanel1_ConsulterActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JButton" name="btnSupprimmer">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Supprimmer"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSupprimmerActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JButton" name="btnMettreAJour1">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Mettre &#xe0; jour"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMettreAJour1ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Container class="javax.swing.JScrollPane" name="jScrollPane3">
+              <AuxValues>
+                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+              </AuxValues>
 
-    public CtrlLabo(Labo labo, QueryLabo queryLabo, frmLabo frmLabo, String user) {
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+              <SubComponents>
+                <Component class="javax.swing.JTextArea" name="jtxtResultats">
+                  <Properties>
+                    <Property name="columns" type="int" value="20"/>
+                    <Property name="rows" type="int" value="5"/>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                  </AuxValues>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Component class="javax.swing.JLabel" name="lblObjectif2">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Objectifs"/>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JButton" name="Panel1btnReturner">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Returner"/>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="jPanel2">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="Tron&#xe7;onnage ">
+                <Property name="tabTitle" type="java.lang.String" value="Tron&#xe7;onnage "/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
 
-        this.labo = labo;
-        this.queryLabo = queryLabo;
-        this.frmLabo = frmLabo;
-        this.user = user;
-        this.frmLabo.btnPanel1_Save.addActionListener(this);
-        this.frmLabo.btnPanel1_Consulter.addActionListener(this);
-        this.frmLabo.btnMettreAJour1.addActionListener(this);
-        this.frmLabo.btnSupprimmer.addActionListener(this);
-        this.frmLabo.Panel1btnReturner.addActionListener(this);
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="Panel2_Tron_lblObservations" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="Panel2_Tron_TxtObser1" min="-2" pref="60" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="Panel2_Tron_TxtObser2" min="-2" pref="60" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="Panel2_Tron_TxtObser3" min="-2" pref="60" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="Panel2_Tron_TxtObser4" min="-2" pref="60" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="Panel2_Tron_TxtObser5" min="-2" pref="60" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="Panel2_Tron_lblReference" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Panel2_Tron_lblDisque" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Panel2_Tron_lblSchema" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="Panel2_Tron_cmbIdFiche" min="-2" pref="139" max="-2" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Group type="102" attributes="0">
+                                              <Component id="Panel2_Tron_TxtSchema1" min="-2" pref="60" max="-2" attributes="0"/>
+                                              <EmptySpace max="32767" attributes="0"/>
+                                              <Component id="Panel2_Tron_TxtSchema2" min="-2" pref="60" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" attributes="0">
+                                              <Component id="Panel2_Tron_TxtDisque1" min="-2" pref="60" max="-2" attributes="0"/>
+                                              <EmptySpace max="32767" attributes="0"/>
+                                              <Component id="Panel2_Tron_TxtDisque2" min="-2" pref="60" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" attributes="0">
+                                              <Component id="Panel2_Tron_TxtRef1" min="-2" pref="60" max="-2" attributes="0"/>
+                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                              <Component id="Panel2_Tron_TxtRef2" min="-2" pref="60" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" attributes="0">
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Group type="102" attributes="0">
+                                                      <Component id="Panel2_Tron_TxtRef3" min="-2" pref="60" max="-2" attributes="0"/>
+                                                      <EmptySpace max="-2" attributes="0"/>
+                                                      <Component id="Panel2_Tron_TxtRef4" min="-2" pref="60" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="102" attributes="0">
+                                                      <Component id="Panel2_Tron_TxtDisque3" min="-2" pref="60" max="-2" attributes="0"/>
+                                                      <EmptySpace max="-2" attributes="0"/>
+                                                      <Component id="Panel2_Tron_TxtDisque4" min="-2" pref="60" max="-2" attributes="0"/>
+                                                  </Group>
+                                              </Group>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="Panel2_Tron_TxtDisque5" min="-2" pref="60" max="-2" attributes="0"/>
+                                                  <Component id="Panel2_Tron_TxtRef5" min="-2" pref="60" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                          <Group type="102" attributes="0">
+                                              <Component id="Panel2_Tron_TxtSchema3" min="-2" pref="60" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="Panel2_Tron_TxtSchema4" min="-2" pref="60" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="Panel2_Tron_TxtSchema5" min="-2" pref="60" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="Panel2_Tron_TxtSchema6" alignment="0" min="-2" pref="60" max="-2" attributes="0"/>
+                                  <Component id="Panel2_Tron_TxtDisque6" alignment="0" min="-2" pref="60" max="-2" attributes="0"/>
+                                  <Component id="Panel2_Tron_TxtRef6" alignment="0" min="-2" pref="60" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Component id="Panel2_Tron_TxtObser6" alignment="0" min="-2" pref="60" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="71" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="Panel2_Tron_btnSupprimmer" min="-2" pref="124" max="-2" attributes="0"/>
+                          <Component id="Panel2_Tron_btnConsulter" min="-2" pref="124" max="-2" attributes="0"/>
+                          <Component id="Panel2_Tron_btnEnregistrer" min="-2" pref="124" max="-2" attributes="0"/>
+                          <Component id="Panel2_Tron_btnMettre" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="71" pref="257" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="79" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel2_Tron_cmbIdFiche" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="Panel2_Tron_lblReference" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel2_Tron_TxtRef1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel2_Tron_TxtRef2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel2_Tron_TxtRef3" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel2_Tron_TxtRef4" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel2_Tron_TxtRef5" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel2_Tron_TxtRef6" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel2_Tron_btnConsulter" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="Panel2_Tron_TxtDisque1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel2_Tron_TxtDisque2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel2_Tron_TxtDisque3" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel2_Tron_TxtDisque4" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel2_Tron_TxtDisque5" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel2_Tron_lblDisque" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel2_Tron_TxtDisque6" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel2_Tron_btnEnregistrer" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="Panel2_Tron_lblSchema" alignment="3" max="32767" attributes="0"/>
+                          <Component id="Panel2_Tron_TxtSchema1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel2_Tron_TxtSchema2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel2_Tron_TxtSchema3" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel2_Tron_TxtSchema4" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel2_Tron_TxtSchema5" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel2_Tron_TxtSchema6" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel2_Tron_btnMettre" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="Panel2_Tron_lblObservations" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel2_Tron_TxtObser1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel2_Tron_TxtObser2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel2_Tron_TxtObser3" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel2_Tron_TxtObser4" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel2_Tron_TxtObser5" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel2_Tron_TxtObser6" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel2_Tron_btnSupprimmer" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="252" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JComboBox" name="Panel2_Tron_cmbIdFiche">
+              <Properties>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="0"/>
+                </Property>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel2_Tron_cmbIdFicheActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel1">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Id fiche"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="Panel2_Tron_lblReference">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="R&#xe9;f&#xe9;rences"/>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel2_Tron_TxtRef1">
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel2_Tron_TxtRef2">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel2_Tron_TxtRef2ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JLabel" name="Panel2_Tron_lblDisque">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Disque utilis&#xe9;"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="Panel2_Tron_lblSchema">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Sch&#xe9;ma"/>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel2_Tron_TxtRef3">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel2_Tron_TxtRef3ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JLabel" name="Panel2_Tron_lblObservations">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Observations"/>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel2_Tron_TxtDisque1">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel2_Tron_TxtDisque1ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel2_Tron_TxtRef4">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel2_Tron_TxtRef4ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel2_Tron_TxtRef5">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel2_Tron_TxtRef5ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel2_Tron_TxtDisque2">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel2_Tron_TxtDisque2ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel2_Tron_TxtDisque3">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel2_Tron_TxtDisque3ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel2_Tron_TxtDisque4">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel2_Tron_TxtDisque4ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel2_Tron_TxtDisque5">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel2_Tron_TxtDisque5ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel2_Tron_TxtSchema1">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel2_Tron_TxtSchema1ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel2_Tron_TxtSchema2">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel2_Tron_TxtSchema2ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel2_Tron_TxtSchema3">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel2_Tron_TxtSchema3ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel2_Tron_TxtSchema4">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel2_Tron_TxtSchema4ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel2_Tron_TxtSchema5">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel2_Tron_TxtSchema5ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel2_Tron_TxtObser1">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel2_Tron_TxtObser1ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel2_Tron_TxtObser2">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel2_Tron_TxtObser2ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel2_Tron_TxtObser3">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel2_Tron_TxtObser3ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel2_Tron_TxtObser4">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel2_Tron_TxtObser4ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel2_Tron_TxtObser5">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel2_Tron_TxtObser5ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JButton" name="Panel2_Tron_btnConsulter">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Consulter"/>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JButton" name="Panel2_Tron_btnEnregistrer">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Enregistrer"/>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JButton" name="Panel2_Tron_btnMettre">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Mettre &#xe0; jour"/>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JButton" name="Panel2_Tron_btnSupprimmer">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Supprimmer"/>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel2_Tron_TxtRef6">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel2_Tron_TxtRef6ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel2_Tron_TxtDisque6">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel2_Tron_TxtDisque6ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel2_Tron_TxtSchema6">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel2_Tron_TxtSchema6ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel2_Tron_TxtObser6">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel2_Tron_TxtObser6ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="jPanel3">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="Enrobage ">
+                <Property name="tabTitle" type="java.lang.String" value="Enrobage "/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
 
-    }
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="76" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="Panel3lblNumEnrobage" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel3lblReference" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel11" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel3lblObservation" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel3_lblLabo" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="Panel3txtObservation1" min="-2" pref="60" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="Panel3txtObservation2" min="-2" pref="60" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="Panel3txtObservation3" min="-2" pref="60" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="Panel3txtObservation4" min="-2" pref="60" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="Panel3txtObservation5" min="-2" pref="60" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="Panel3txtObservation6" min="-2" pref="60" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="Panel3txtSchema1" min="-2" pref="60" max="-2" attributes="0"/>
+                                  <Component id="Panel3txtRef1" min="-2" pref="60" max="-2" attributes="0"/>
+                                  <Component id="Panel3txtNEnrobage1" min="-2" pref="60" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Component id="Panel3txtRef2" min="-2" pref="60" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="Panel3txtRef3" min="-2" pref="60" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="Panel3txtRef4" min="-2" pref="60" max="-2" attributes="0"/>
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                          <Component id="Panel3txtRef5" min="-2" pref="60" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="Panel3txtRef6" min="-2" pref="60" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="Panel3txtNEnrobage2" min="-2" pref="60" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="Panel3txtNEnrobage3" min="-2" pref="60" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="Panel3txtNEnrobage4" min="-2" pref="60" max="-2" attributes="0"/>
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                          <Component id="Panel3txtNEnrobage5" min="-2" pref="60" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="Panel3txtNEnrobage6" min="-2" pref="60" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="Panel3txtSchema2" min="-2" pref="60" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="Panel3txtSchema3" min="-2" pref="60" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="Panel3txtSchema4" min="-2" pref="60" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="Panel3txtSchema5" min="-2" pref="60" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="Panel3txtSchema6" min="-2" pref="60" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace min="76" pref="76" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                          <Component id="Panel3btnEnregistrer" pref="124" max="32767" attributes="0"/>
+                                          <Component id="Panel3btnConsulter" alignment="0" max="32767" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <EmptySpace max="32767" attributes="0"/>
+                                      <Component id="Panel3btnMettre" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <Component id="Panel3_cmbLabo" alignment="0" min="-2" pref="155" max="-2" attributes="0"/>
+                          <Component id="Panel3btnSupprimmer" alignment="1" min="-2" pref="124" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="233" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="Panel3_cmbLabo" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel3_lblLabo" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="Panel3lblNumEnrobage" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel3txtNEnrobage1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel3txtNEnrobage2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel3txtNEnrobage3" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel3txtNEnrobage4" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel3txtNEnrobage5" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel3txtNEnrobage6" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel3btnConsulter" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="Panel3lblReference" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel3txtRef1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel3txtRef2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel3txtRef3" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel3txtRef4" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel3txtRef5" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel3txtRef6" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel3btnEnregistrer" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel3txtSchema1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel3txtSchema2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel3txtSchema3" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel3txtSchema4" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel3txtSchema5" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel3txtSchema6" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel3btnMettre" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="Panel3txtObservation1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel3txtObservation2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel3txtObservation3" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel3txtObservation4" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel3txtObservation5" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel3txtObservation6" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel3lblObservation" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel3btnSupprimmer" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="458" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JComboBox" name="Panel3_cmbLabo">
+              <Properties>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="0"/>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JLabel" name="Panel3_lblLabo">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Labo"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel3txtObservation1">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel3txtObservation1ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel3txtObservation2">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel3txtObservation2ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel3txtObservation3">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel3txtObservation3ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel3txtObservation4">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel3txtObservation4ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel3txtObservation5">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel3txtObservation5ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel3txtNEnrobage4">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel3txtNEnrobage4ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel3txtNEnrobage5">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel3txtNEnrobage5ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel3txtNEnrobage2">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel3txtNEnrobage2ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel3txtRef2">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel3txtRef2ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JLabel" name="Panel3lblReference">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="R&#xe9;f&#xe9;rences"/>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel3txtRef3">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel3txtRef3ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel3txtRef4">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel3txtRef4ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel3txtRef5">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel3txtRef5ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JLabel" name="Panel3lblNumEnrobage">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="N&#xb0; d&apos;enrobage"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel11">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Sch&#xe9;ma"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel3txtNEnrobage1">
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel3txtNEnrobage3">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel3txtNEnrobage3ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JLabel" name="Panel3lblObservation">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Observations"/>
+                <Property name="toolTipText" type="java.lang.String" value=""/>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel3txtRef1">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel3txtRef1ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel3txtSchema1">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel3txtSchema1ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel3txtSchema2">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel3txtSchema2ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel3txtSchema3">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel3txtSchema3ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel3txtSchema4">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel3txtSchema4ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel3txtSchema5">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel3txtSchema5ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel3txtNEnrobage6">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel3txtNEnrobage6ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel3txtRef6">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel3txtRef6ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel3txtSchema6">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel3txtSchema6ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel3txtObservation6">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel3txtObservation6ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JButton" name="Panel3btnConsulter">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Consulter"/>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JButton" name="Panel3btnMettre">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Mettre &#xe0; jour"/>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JButton" name="Panel3btnEnregistrer">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Enregistrer"/>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JButton" name="Panel3btnSupprimmer">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Supprimmer"/>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="jPanel4">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="Polissage">
+                <Property name="tabTitle" type="java.lang.String" value="Polissage"/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
 
-    public void iniciar() {
-        //sE AGREGAN LAS PROPIEDADES DE LOS COMPONENTES
-        frmLabo.setTitle("Labo");
-        frmLabo.setLocationRelativeTo(null);
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="98" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="Panel4lblLabo" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel14" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Panel4lblGame" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jLabel15" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="Panel4cmbLabo" min="-2" pref="192" max="-2" attributes="0"/>
+                              <EmptySpace pref="625" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="Panel4txtGamme1" min="-2" pref="60" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="Panel4txtGamme2" min="-2" pref="60" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="Panel4txtGamme3" min="-2" pref="60" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="Panel4txtGamme4" min="-2" pref="60" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="Panel4txtGamme5" min="-2" pref="60" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="Panel4txtGamme6" min="-2" pref="60" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="Panel4txtFait1" min="-2" pref="60" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="Panel4txtFait2" min="-2" pref="60" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="Panel4txtFait3" min="-2" pref="60" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="Panel4txtFait4" min="-2" pref="60" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="Panel4txtFait5" min="-2" pref="60" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="Panel4txtFait6" min="-2" pref="60" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="Panel4txtObservation1" min="-2" pref="60" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="Panel4txtObservation2" min="-2" pref="60" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="Panel4txtObservation3" min="-2" pref="60" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="Panel4txtObservation4" min="-2" pref="60" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="Panel4txtObservation5" min="-2" pref="60" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="Panel4txtObservation6" min="-2" pref="60" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="Panel4btnEnregistrer" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Panel4btnConsulter" min="-2" pref="109" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace pref="20" max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="Panel4btnSupprimmer" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Panel4btnMettre" alignment="1" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace pref="145" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="Panel4cmbLabo" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel4lblLabo" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabel14" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Panel4txtFait1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Panel4txtFait2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Panel4txtFait3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Panel4txtFait4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Panel4txtFait5" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Panel4txtFait6" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Panel4btnConsulter" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Panel4btnMettre" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="Panel4lblGame" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Panel4txtGamme1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Panel4txtGamme2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Panel4txtGamme3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Panel4txtGamme4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Panel4txtGamme5" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Panel4txtGamme6" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="Panel4txtObservation1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Panel4txtObservation2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Panel4txtObservation3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Panel4txtObservation4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Panel4txtObservation5" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel15" alignment="3" max="32767" attributes="0"/>
+                                  <Component id="Panel4txtObservation6" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace pref="513" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="92" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="Panel4btnEnregistrer" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Panel4btnSupprimmer" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JTextField" name="Panel4txtObservation4">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel4txtObservation4ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel4txtObservation5">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel4txtObservation5ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel4txtFait4">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel4txtFait4ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel4txtFait5">
+              <Properties>
+                <Property name="toolTipText" type="java.lang.String" value=""/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel4txtFait5ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel4txtFait2">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel4txtFait2ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel4txtGamme2">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel4txtGamme2ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JLabel" name="Panel4lblGame">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Gamme "/>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel4txtGamme3">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel4txtGamme3ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel4txtGamme4">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel4txtGamme4ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel4txtGamme5">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel4txtGamme5ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel14">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Fait"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel15">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Observations"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel4txtFait1">
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel4txtFait3">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel4txtFait3ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="Panel4cmbLabo">
+              <Properties>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="0"/>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel4txtGamme1">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel4txtGamme1ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JLabel" name="Panel4lblLabo">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Labo"/>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel4txtObservation1">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel4txtObservation1ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel4txtObservation2">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel4txtObservation2ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel4txtObservation3">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel4txtObservation3ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel4txtFait6">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel4txtFait6ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel4txtGamme6">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel4txtGamme6ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel4txtObservation6">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel4txtObservation6ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JButton" name="Panel4btnConsulter">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Consulter"/>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JButton" name="Panel4btnEnregistrer">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Enregistrer"/>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JButton" name="Panel4btnSupprimmer">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Supprimmer"/>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JButton" name="Panel4btnMettre">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Mettre &#xe0; jour"/>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="jPanel5">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="Attaque chimique">
+                <Property name="tabTitle" type="java.lang.String" value="Attaque chimique"/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
 
-        QueryLaboTon queryLaboTon = new QueryLaboTon();
-        LaboTon laboTon = new LaboTon();
-        CtrLaboTon ctrLaboTon = new CtrLaboTon(labo, queryLabo, frmLabo, user, laboTon, queryLaboTon);
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="113" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="jLabel19" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="89" max="-2" attributes="0"/>
+                              <Component id="Panel5cmbLabo" min="-2" pref="155" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="Panel5lblTemp" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Panel5lblReactif1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Panel6lblObservation" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="Panel5txtReactif1" min="-2" pref="60" max="-2" attributes="0"/>
+                                  <Component id="Panel5txtTemp1" min="-2" pref="60" max="-2" attributes="0"/>
+                                  <Component id="Panel5txtObservation1" min="-2" pref="60" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="Panel5txtReactif2" min="-2" pref="60" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="Panel5txtReactif3" min="-2" pref="60" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="Panel5txtReactif4" min="-2" pref="60" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="Panel5txtReactif5" min="-2" pref="60" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="Panel5txtReactif6" min="-2" pref="60" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="Panel5txtObservation2" min="-2" pref="60" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="Panel5txtObservation3" min="-2" pref="60" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="Panel5txtObservation4" min="-2" pref="60" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="Panel5txtObservation5" min="-2" pref="60" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="Panel5txtObservation6" min="-2" pref="60" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="Panel5txtTemp2" min="-2" pref="60" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="Panel5txtTemp3" min="-2" pref="60" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="Panel5txtTemp4" min="-2" pref="60" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="Panel5txtTemp5" min="-2" pref="60" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="Panel5txtTemp6" min="-2" pref="60" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Component id="Panel5btnConsulter" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="Panel5btnMettre" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <Component id="Panel5btnEnregistrer" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="Panel5btnSupprimmer" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace pref="92" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabel19" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel5cmbLabo" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="Panel5lblReactif1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel5txtReactif1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel5txtReactif2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel5txtReactif3" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel5txtReactif4" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel5txtReactif5" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel5txtReactif6" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel5btnConsulter" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel5btnMettre" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="Panel5txtTemp3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Panel5txtTemp2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Panel5txtTemp1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Panel5txtTemp4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Panel5txtTemp5" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Panel5lblTemp" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Panel5txtTemp6" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="Panel5txtObservation1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Panel5txtObservation2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Panel5txtObservation3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Panel5txtObservation4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Panel5txtObservation5" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Panel6lblObservation" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Panel5txtObservation6" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="Panel5btnEnregistrer" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Panel5btnSupprimmer" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace pref="534" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JTextField" name="Panel5txtReactif1">
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel5txtObservation4">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel5txtObservation4ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel5txtObservation5">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel5txtObservation5ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel5txtReactif4">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel5txtReactif4ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel5txtReactif3">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel5txtReactif3ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel5txtReactif5">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel5txtReactif5ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel5txtReactif2">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel5txtReactif2ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="Panel5cmbLabo">
+              <Properties>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="0"/>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel5txtTemp2">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel5txtTemp2ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel5txtTemp1">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel5txtTemp1ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JLabel" name="Panel5lblTemp">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Temps (s)"/>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel19">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Labo"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel5txtTemp3">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel5txtTemp3ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel5txtObservation1">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel5txtObservation1ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel5txtTemp4">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel5txtTemp4ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel5txtTemp5">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel5txtTemp5ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel5txtObservation2">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel5txtObservation2ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JLabel" name="Panel5lblReactif1">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="R&#xe9;actif"/>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JLabel" name="Panel6lblObservation">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Observations"/>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel5txtObservation3">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel5txtObservation3ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel5txtReactif6">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel5txtReactif6ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel5txtTemp6">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel5txtTemp6ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel5txtObservation6">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel5txtObservation6ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JButton" name="Panel5btnConsulter">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Consulter"/>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JButton" name="Panel5btnMettre">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Mettre &#xe0; jour"/>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JButton" name="Panel5btnEnregistrer">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Enregistrer"/>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JButton" name="Panel5btnSupprimmer">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Supprimmer"/>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="jPanel6">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="Observation ">
+                <Property name="tabTitle" type="java.lang.String" value="Observation "/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
 
-        ctrLaboTon.Iniciar();
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="jLabel27" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
+                              <Component id="Panel6cmbLabo" min="-2" pref="179" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="Panel6lblMacro" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Panel6lblReference" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Panel6lblNomAss" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Panel6lblCommentaire" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Component id="Panel6txtLaboMacro1" min="-2" pref="60" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="Panel6txtLaboMacro2" min="-2" pref="60" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="Panel6txtLaboNomAss1" min="-2" pref="60" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                  <Group type="102" attributes="0">
+                                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                      <Component id="Panel6txtLaboNomAss2" min="-2" pref="60" max="-2" attributes="0"/>
+                                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                      <Component id="Panel6txtLaboNomAss3" min="-2" pref="60" max="-2" attributes="0"/>
+                                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                      <Component id="Panel6txtLaboNomAss4" min="-2" pref="60" max="-2" attributes="0"/>
+                                                      <EmptySpace max="-2" attributes="0"/>
+                                                      <Component id="Panel6txtLaboNomAss5" min="-2" pref="60" max="-2" attributes="0"/>
+                                                      <EmptySpace max="-2" attributes="0"/>
+                                                      <Component id="Panel6txtLaboNomAss6" min="-2" pref="60" max="-2" attributes="0"/>
+                                                      <EmptySpace max="32767" attributes="0"/>
+                                                      <Component id="Panel6btnModifier" min="-2" pref="100" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="102" attributes="0">
+                                                      <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
+                                                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                                          <Group type="102" attributes="0">
+                                                              <Component id="Panel6txtLaboMacro3" min="-2" pref="60" max="-2" attributes="0"/>
+                                                              <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                                                              <Component id="Panel6txtLaboMacro4" min="-2" pref="60" max="-2" attributes="0"/>
+                                                          </Group>
+                                                          <Group type="102" attributes="0">
+                                                              <Component id="Panel6txtLaboRef3" min="-2" pref="60" max="-2" attributes="0"/>
+                                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                              <Component id="Panel6txtLaboRef4" min="-2" pref="60" max="-2" attributes="0"/>
+                                                          </Group>
+                                                      </Group>
+                                                      <EmptySpace max="-2" attributes="0"/>
+                                                      <Group type="103" groupAlignment="0" attributes="0">
+                                                          <Group type="102" attributes="0">
+                                                              <Component id="Panel6txtLaboMacro5" min="-2" pref="60" max="-2" attributes="0"/>
+                                                              <EmptySpace max="-2" attributes="0"/>
+                                                              <Component id="Panel6txtLaboMacro6" min="-2" pref="60" max="-2" attributes="0"/>
+                                                          </Group>
+                                                          <Group type="102" attributes="0">
+                                                              <Component id="Panel6txtLaboRef5" min="-2" pref="60" max="-2" attributes="0"/>
+                                                              <EmptySpace max="-2" attributes="0"/>
+                                                              <Component id="Panel6txtLaboRef6" min="-2" pref="60" max="-2" attributes="0"/>
+                                                              <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
+                                                              <Component id="Panel6btnConsulter1" min="-2" max="-2" attributes="0"/>
+                                                          </Group>
+                                                      </Group>
+                                                  </Group>
+                                              </Group>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="Panel6txtLaboRef1" min="-2" pref="60" max="-2" attributes="0"/>
+                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                              <Component id="Panel6txtLaboRef2" min="-2" pref="60" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="Panel6btnSupprimer" min="-2" max="-2" attributes="0"/>
+                                          <Component id="Panel6btnEnregistre" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Component id="Panel6txtLaboNomDossier" alignment="0" min="-2" pref="132" max="-2" attributes="0"/>
+                                  <Component id="jScrollPane2" alignment="0" min="-2" pref="414" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace pref="73" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabel27" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel6cmbLabo" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="Panel6txtLaboRef1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel6lblReference" alignment="3" min="-2" pref="42" max="-2" attributes="0"/>
+                          <Component id="Panel6txtLaboRef2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel6txtLaboRef3" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel6txtLaboRef4" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel6txtLaboRef5" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel6txtLaboRef6" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel6btnConsulter1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel6btnEnregistre" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="Panel6lblMacro" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel6txtLaboMacro1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel6txtLaboMacro2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel6txtLaboMacro4" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel6txtLaboMacro3" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel6txtLaboMacro5" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel6txtLaboMacro6" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="Panel6lblNomAss" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel6txtLaboNomAss1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel6txtLaboNomAss2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel6txtLaboNomAss3" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel6txtLaboNomAss4" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel6txtLaboNomAss5" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel6txtLaboNomAss6" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel6btnModifier" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel6btnSupprimer" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="187" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jLabel2" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel6txtLaboNomDossier" alignment="1" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jScrollPane2" min="-2" max="-2" attributes="0"/>
+                          <Component id="Panel6lblCommentaire" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="121" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="Panel6lblMacro">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Macro-micrographie/ mesure"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="Panel6lblNomAss">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Nom Associ&#xe9;"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel27">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Labo"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="Panel6cmbLabo">
+              <Properties>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="0"/>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel6txtLaboRef1">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel6txtLaboRef1ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JLabel" name="Panel6lblReference">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="R&#xe9;f&#xe9;rences"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="Panel6lblCommentaire">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Commentaires"/>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Container class="javax.swing.JScrollPane" name="jScrollPane2">
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+              </AuxValues>
 
-        LaboEnrobage laboEnrobage = new LaboEnrobage();
-        QueryLaboEnrobage queryLaboEnrobage = new QueryLaboEnrobage();
-        CtrlLaboEnrobage ctrLaboEnrobage = new CtrlLaboEnrobage(labo, queryLabo, frmLabo, user, laboEnrobage, queryLaboEnrobage);
-
-        LaboPoli laboPoli = new LaboPoli();
-        QueryLaboPoli queryPoli = new QueryLaboPoli();
-        CtrlLaboPoli ctrLaboPoli = new CtrlLaboPoli(laboPoli, queryPoli, frmLabo, user, labo, queryLabo);
-
-        LaboAttaque laboAtt = new LaboAttaque();
-        QueryLaboAttaque queryAtt = new QueryLaboAttaque();
-        CtrlLaboAttaque ctrLaboAtt = new CtrlLaboAttaque(laboAtt, queryAtt, frmLabo, user);
-
-        LaboObservation laboObs = new LaboObservation();
-        QueryLaboObservation queryObs = new QueryLaboObservation();
-        CtrlLaboObservation ctrLaboObs = new CtrlLaboObservation(laboObs, queryObs, frmLabo, user, labo, queryLabo);
-
-        getAllLabs();
-
-    }
-
-    public void limpiar() {
-
-        frmLabo.jDatePanel1.setDate(null);
-        frmLabo.txtNomLabo.setText(null);
-        frmLabo.txtHeure.setText(null);
-        frmLabo.txtOperateur.setText(null);
-        frmLabo.txtNumFiche.setText(null);
-        frmLabo.txtFicheEssaiAss.setText(null);
-        frmLabo.txtMate.setText(null);
-        frmLabo.txtNumeroPlaque.setText(null);
-        frmLabo.txtRefMate.setText(null);
-        frmLabo.txtNumDaffaire.setText(null);
-        frmLabo.jTxtObjectfis.setText(null);
-        frmLabo.jtxtResultats.setText(null);
-
-        getAllLabs();
-    }
-
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        try {
-            if (e.getSource() == frmLabo.btnPanel1_Save) {
-                SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
-                String date1 = formato.format(frmLabo.jDatePanel1.getDate() == null ? new Date() : frmLabo.jDatePanel1.getDate());
-
-                labo.setDateLabo(date1);
-                labo.setNomLLabo(frmLabo.txtNomLabo.getText() == null ? "" : frmLabo.txtNomLabo.getText());
-                labo.setHeureLabo(frmLabo.txtHeure.getText() == null ? "" : frmLabo.txtHeure.getText());
-                labo.setOperateur(frmLabo.txtOperateur.getText() == null ? "" : frmLabo.txtOperateur.getText());
-                labo.setNumeroFiche(frmLabo.txtNumFiche.getText() == null ? "" : frmLabo.txtNumFiche.getText());
-                labo.setFicheEssaiAssociee(frmLabo.txtFicheEssaiAss.getText() == null ? "" : frmLabo.txtFicheEssaiAss.getText());
-                labo.setMateriau(frmLabo.txtMate.getText() == null ? "" : frmLabo.txtMate.getText());
-                labo.setNumeroPlaque(frmLabo.txtNumeroPlaque.getText() == null ? "" : frmLabo.txtNumeroPlaque.getText());
-                labo.setReferenceMatiere(frmLabo.txtRefMate.getText() == null ? "" : frmLabo.txtRefMate.getText());
-                labo.setNumerodAffaire(frmLabo.txtNumDaffaire.getText() == null ? "" : frmLabo.txtNumDaffaire.getText());
-                labo.setObjectifs(frmLabo.jTxtObjectfis.getText() == null ? "" : frmLabo.jTxtObjectfis.getText());
-                labo.setResultats(frmLabo.jtxtResultats.getText() == null ? "" : frmLabo.jTxtObjectfis.getText());
-
-                if (queryLabo.saveLabo(labo)) {
-                    JOptionPane.showMessageDialog(frmLabo, "Élément enregistré avec succès");
-
-                } else {
-                    JOptionPane.showMessageDialog(frmLabo, "Élément mal enregistré");
-
-                }
-                this.limpiar();
-
-            }
-
-            if (e.getSource() == frmLabo.btnPanel1_Consulter) {
-
-                int index = frmLabo.cmbLabo.getSelectedIndex();
-                String selecLabo = frmLabo.cmbLabo.getItemAt(index);
-
-                if (index != -1) {
-
-                    labo = queryLabo.getLabo(selecLabo);
-
-                    SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
-                    Date dataFormateada = formato.parse(labo.getDateLabo());
-                    frmLabo.jDatePanel1.setDate(dataFormateada);
-                    frmLabo.txtNomLabo.setText(labo.getNomLLabo());
-                    frmLabo.txtHeure.setText(labo.getHeureLabo());
-                    frmLabo.txtOperateur.setText(labo.getOperateur());
-                    frmLabo.txtNumFiche.setText(labo.getNumeroFiche());
-                    frmLabo.txtFicheEssaiAss.setText(labo.getFicheEssaiAssociee());
-                    frmLabo.txtMate.setText(labo.getMateriau());
-                    frmLabo.txtNumeroPlaque.setText(labo.getNumeroPlaque());
-                    frmLabo.txtRefMate.setText(labo.getReferenceMatiere());
-                    frmLabo.txtNumDaffaire.setText(labo.getNumerodAffaire());
-                    frmLabo.jTxtObjectfis.setText(labo.getObjectifs());
-                    frmLabo.jtxtResultats.setText(labo.getResultats());
-                } else {
-                    System.out.println("Selecciona un lab");
-                    JOptionPane.showMessageDialog(frmLabo, "Choisis une option");
-
-                }
-            }
-            if (e.getSource() == frmLabo.btnSupprimmer) {
-                boolean delete = false;
-                int index = frmLabo.cmbLabo.getSelectedIndex();
-                String selecLabo = frmLabo.cmbLabo.getItemAt(index);
-
-                delete = queryLabo.deleteLabo(selecLabo);
-                if (delete) {
-                    JOptionPane.showMessageDialog(frmLabo, "Élément supprimé");
-                  
-                } else {
-
-                    JOptionPane.showMessageDialog(frmLabo, "Impossible de supprimer l'élément");
-                  
-                }
-                this.limpiar();
-            }
-            if (e.getSource() == frmLabo.btnMettreAJour1) {
-
-                SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
-                String date1 = formato.format(frmLabo.jDatePanel1.getDate() == null ? new Date() : frmLabo.jDatePanel1.getDate());
-
-                labo.setDateLabo(date1);
-                labo.setNomLLabo(frmLabo.txtNomLabo.getText() == null ? "" : frmLabo.txtNomLabo.getText());
-                labo.setHeureLabo(frmLabo.txtHeure.getText() == null ? "" : frmLabo.txtHeure.getText());
-                labo.setOperateur(frmLabo.txtOperateur.getText() == null ? "" : frmLabo.txtOperateur.getText());
-                labo.setNumeroFiche(frmLabo.txtNumFiche.getText() == null ? "" : frmLabo.txtNumFiche.getText());
-                labo.setFicheEssaiAssociee(frmLabo.txtFicheEssaiAss.getText() == null ? "" : frmLabo.txtFicheEssaiAss.getText());
-                labo.setMateriau(frmLabo.txtMate.getText() == null ? "" : frmLabo.txtMate.getText());
-                labo.setNumeroPlaque(frmLabo.txtNumeroPlaque.getText() == null ? "" : frmLabo.txtNumeroPlaque.getText());
-                labo.setReferenceMatiere(frmLabo.txtRefMate.getText() == null ? "" : frmLabo.txtRefMate.getText());
-                labo.setNumerodAffaire(frmLabo.txtNumDaffaire.getText() == null ? "" : frmLabo.txtNumDaffaire.getText());
-                labo.setObjectifs(frmLabo.jTxtObjectfis.getText() == null ? "" : frmLabo.jTxtObjectfis.getText());
-                labo.setResultats(frmLabo.jtxtResultats.getText() == null ? "" : frmLabo.jtxtResultats.getText());
-
-                if (queryLabo.updateLabo(labo)) {
-                    JOptionPane.showMessageDialog(frmLabo, "Élément mis à jour avec succès");
-
-                } else {
-                    JOptionPane.showMessageDialog(frmLabo, "Élément pas mis à jour correctement");
-
-                }
-
-                this.limpiar();
-
-            }
-
-            if (e.getSource() == frmLabo.Panel1btnReturner) {
-                getMenu();
-                frmLabo.setVisible(false);
-            }
-
-        } catch (Exception a) {
-            a.printStackTrace();
-        }
-    }
-
-    public void getAllLabs() {
-        List<String> labs = new ArrayList<>();
-        try {
-            labs = queryLabo.getAllLabo();
-            frmLabo.cmbLabo.removeAllItems();
-            frmLabo.Panel2_Tron_cmbIdFiche.removeAllItems();
-            frmLabo.Panel3_cmbLabo.removeAllItems();
-            if (labs != null) {
-                labs.forEach(z -> frmLabo.cmbLabo.addItem(z));
-                labs.forEach(x -> frmLabo.Panel2_Tron_cmbIdFiche.addItem(x));
-                labs.forEach(y -> frmLabo.Panel3_cmbLabo.addItem(y));
-                labs.forEach(y -> frmLabo.Panel4cmbLabo.addItem(y));
-                labs.forEach(y -> frmLabo.Panel5cmbLabo.addItem(y));
-                labs.forEach(y -> frmLabo.Panel6cmbLabo.addItem(y));
-            } else {
-
-                frmLabo.cmbLabo.addItem("Acune valeur");
-            }
-
-        } catch (Exception e) {
-        }
-
-    }
-
-    public void getMenu() {
-        frmMenu frmMenu = new frmMenu();
-        CtrlMenu ctrMenu = new CtrlMenu(frmMenu, user);
-        ctrMenu.iniciar();
-        frmMenu.setVisible(true);
-    }
-}
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+              <SubComponents>
+                <Component class="javax.swing.JTextArea" name="Panel6txtObservCommentaire">
+                  <Properties>
+                    <Property name="columns" type="int" value="20"/>
+                    <Property name="rows" type="int" value="5"/>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                  </AuxValues>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Component class="javax.swing.JButton" name="Panel6btnModifier">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Modifier"/>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel6txtLaboRef2">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel6txtLaboRef2ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel6txtLaboRef4">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel6txtLaboRef4ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel6txtLaboRef3">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel6txtLaboRef3ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel6txtLaboRef6">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel6txtLaboRef6ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel6txtLaboMacro1">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel6txtLaboMacro1ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel6txtLaboNomAss1">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel6txtLaboNomAss1ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel6txtLaboMacro2">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel6txtLaboMacro2ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel6txtLaboMacro4">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel6txtLaboMacro4ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel6txtLaboMacro3">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel6txtLaboMacro3ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel6txtLaboMacro5">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel6txtLaboMacro5ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel6txtLaboNomAss2">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel6txtLaboNomAss2ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel6txtLaboNomAss3">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel6txtLaboNomAss3ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel6txtLaboNomAss4">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel6txtLaboNomAss4ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel6txtLaboNomAss5">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel6txtLaboNomAss5ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel6txtLaboRef5">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel6txtLaboRef5ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel6txtLaboMacro6">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel6txtLaboMacro6ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel6txtLaboNomAss6">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel6txtLaboNomAss6ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JButton" name="Panel6btnConsulter1">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Consulter"/>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JButton" name="Panel6btnSupprimer">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Supprimmer"/>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JButton" name="Panel6btnEnregistre">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Enregistrer"/>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel2">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Nom dossier"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="Panel6txtLaboNomDossier">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Panel6txtLaboNomDossierActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+          </SubComponents>
+        </Container>
+      </SubComponents>
+    </Container>
+  </SubComponents>
+</Form>
