@@ -4,18 +4,22 @@
  */
 package Controleur;
 
-import Modele.Labo;
 import Modele.DB.QueryLabo;
 import Modele.DB.QueryLaboAttaque;
 import Modele.DB.QueryLaboEnrobage;
 import Modele.DB.QueryLaboObservation;
 import Modele.DB.QueryLaboTon;
+<<<<<<< HEAD
+import Modele.Labo;
+import Modele.LaboEnrobage;
+=======
 import Modele.DB.QueryLaboPoli;
 import Modele.LaboAttaque;
 import Modele.LaboEnrobage;
 import Modele.LaboObservation;
 import Modele.LaboPoli;
 
+>>>>>>> 1f07208e5194fad6a5fa4193557c7706eb5a6c99
 import Modele.LaboTon;
 import Vue.frmLabo;
 import java.awt.event.ActionEvent;
@@ -23,8 +27,8 @@ import java.awt.event.ActionListener;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
-
 import java.util.List;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -118,8 +122,20 @@ public class CtrlLabo implements ActionListener {
                 labo.setNumerodAffaire(frmLabo.txtNumDaffaire.getText() == null ? "" : frmLabo.txtNumDaffaire.getText());
                 labo.setObjectifs(frmLabo.jTxtObjectfis.getText() == null ? "" : frmLabo.jTxtObjectfis.getText());
                 labo.setResultats(frmLabo.jtxtResultats.getText() == null ? "" : frmLabo.jTxtObjectfis.getText());
+<<<<<<< HEAD
+
+                //queryLabo.saveLabo(labo);
+                if (queryLabo.saveLabo(labo)) {
+                    JOptionPane.showMessageDialog(frmLabo, "Élément enregistré avec succès");
+
+                } else {
+                    JOptionPane.showMessageDialog(frmLabo, "Élément mal enregistré");
+
+                }
+=======
                 
                 queryLabo.saveLabo(labo);
+>>>>>>> 1f07208e5194fad6a5fa4193557c7706eb5a6c99
                 this.limpiar();
                 
             }
@@ -148,7 +164,7 @@ public class CtrlLabo implements ActionListener {
                     frmLabo.jTxtObjectfis.setText(labo.getObjectifs());
                     frmLabo.jtxtResultats.setText(labo.getResultats());
                 } else {
-                    System.out.println("Selecciona un lab");
+                    JOptionPane.showMessageDialog(frmLabo, "Choisis une option");
                 }
             }
             if (e.getSource() == frmLabo.btnSupprimmer) {
@@ -157,10 +173,18 @@ public class CtrlLabo implements ActionListener {
                 String selecLabo = frmLabo.cmbLabo.getItemAt(index);
                 
                 delete = queryLabo.deleteLabo(selecLabo);
+//                if (delete) {
+//                    System.out.println("Elemento elimando");
+//                } else {
+//                    System.out.println("No puede eliminar5");
+//                }
                 if (delete) {
-                    System.out.println("Elemento elimando");
+                    JOptionPane.showMessageDialog(frmLabo, "Élément supprimé");
+                  
                 } else {
-                    System.out.println("No puede eliminar5");
+
+                    JOptionPane.showMessageDialog(frmLabo, "Impossible de supprimer l'élément");
+                  
                 }
                 this.limpiar();
             }
@@ -181,7 +205,14 @@ public class CtrlLabo implements ActionListener {
                 labo.setNumerodAffaire(frmLabo.txtNumDaffaire.getText() == null ? "" : frmLabo.txtNumDaffaire.getText());
                 labo.setObjectifs(frmLabo.jTxtObjectfis.getText() == null ? "" : frmLabo.jTxtObjectfis.getText());
                 labo.setResultats(frmLabo.jtxtResultats.getText() == null ? "" : frmLabo.jtxtResultats.getText());
-                queryLabo.updateLabo(labo);
+                //queryLabo.updateLabo(labo);
+                if (queryLabo.updateLabo(labo)) {
+                    JOptionPane.showMessageDialog(frmLabo, "Élément mis à jour avec succès");
+
+                } else {
+                    JOptionPane.showMessageDialog(frmLabo, "Élément pas mis à jour correctement");
+
+                }
                 this.limpiar();
                 
             }

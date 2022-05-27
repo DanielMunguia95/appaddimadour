@@ -5,12 +5,12 @@
  */
 
 package Controleur;
-import Modele.WaamCabecer;
-import Modele.DB.QueryWaamResultado;
 import Modele.DB.QueryWaam;
 //import Modele.DB.QueryLaboEnrobage;
 //import Modele.DB.QueryLaboTon;
 //import Modele.LaboEnrobage;
+import Modele.DB.QueryWaamResultado;
+import Modele.WaamCabecer;
 import Vue.frmWam;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -19,6 +19,7 @@ import java.util.ArrayList;
 import java.util.Date;
 
 import java.util.List;
+import javax.swing.JOptionPane;
 /**
  *
  * @author admon
@@ -89,7 +90,7 @@ public class CtrlWaamResultados implements ActionListener {
                    frmWam.txtmecanizado.setText(waam.getMecanizado());
                    frmWam.txtresultados.setText(waam.getResultados());
                 } else {
-                    System.out.println("Selecciona un Numéro fiche");
+                        JOptionPane.showMessageDialog(frmWam, "Choisis une option");
                 }
             }
             
@@ -104,7 +105,14 @@ public class CtrlWaamResultados implements ActionListener {
                 String selecWaamParametros = frmWam.cmbWaamResultados.getItemAt(index);
                 waam.setNumeroFiche(selecWaamParametros);
                 
-                queryWaamResultado.updateWaam(waam);
+                //queryWaamResultado.updateWaam(waam);
+                if (queryWaamResultado.updateWaam(waam)) {
+                    JOptionPane.showMessageDialog(frmWam, "Élément mis à jour avec succès");
+
+                } else {
+                    JOptionPane.showMessageDialog(frmWam, "Élément pas mis à jour correctement");
+
+                }
                 this.limpiar();
 
             }

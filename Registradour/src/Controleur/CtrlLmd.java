@@ -5,19 +5,18 @@
  */
 
 package Controleur;
-import Modele.LmdCabecer;
 import Modele.DB.QueryLmd;
 import Modele.DB.QueryLmdParametros;
 import Modele.DB.QueryLmdResultado;
-
+import Modele.LmdCabecer;
 import Vue.frmLMD;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
-
 import java.util.List;
+import javax.swing.JOptionPane;
 /**
  *
  * @author admon
@@ -45,15 +44,14 @@ public class CtrlLmd  implements ActionListener {
         //SE AGREGAN LAS PROPIEDADES DE LOS COMPONENTES
         frmLMD.setTitle("LMD");
         frmLMD.setLocationRelativeTo(null);
-        getAllLabs();
 
-        //LOS DEMÁS TABS SE INICIAN AQUÍ 
-//        QueryLmdParametros queryLmdParametros = new QueryLmdParametros();
-//        LmdCabecer lmdCabecer = new LmdCabecer();
-//        CtrlLmdParametros ctrlLmdParametros = new CtrlLmdParametros(lmd, queryLmdParametros, frmLMD, user);
+//        LOS DEMÁS TABS SE INICIAN AQUÍ 
+        QueryLmdParametros queryLmdParametros = new QueryLmdParametros();
+        CtrlLmdParametros ctrlLmdParametros = new CtrlLmdParametros(lmd, queryLmdParametros, frmLMD, user);
 //        
-//        QueryLmdResultado queryLmdResultado = new QueryLmdResultado();
-//        CtrlLmdResultado ctrlLmdResultado = new CtrlLmdResultado(lmd, QueryLmdResultado, frmLMD, user);
+        QueryLmdResultado queryLmdResultado = new QueryLmdResultado();
+        CtrlLmdResultado ctrlLmdResultado = new CtrlLmdResultado(lmd, queryLmdResultado, frmLMD, user);
+        getAllLabs();
     }
     
     public void getAllLabs() {
@@ -96,6 +94,7 @@ public class CtrlLmd  implements ActionListener {
         frmLMD.txtTamSust.setText(null);
         frmLMD.txtTamHab.setText(null);
         frmLMD.txtCroquis.setText(null);
+        frmLMD.txtBoquillaUtilizada.setText(null);
 
         getAllLabs();
     }
@@ -124,7 +123,14 @@ public class CtrlLmd  implements ActionListener {
                 lmd.setTamHabitacion(frmLMD.txtTamHab.getText()== null ? "" : frmLMD.txtTamHab.getText());
                 lmd.setCroquis(frmLMD.txtCroquis.getText()== null ? "" : frmLMD.txtCroquis.getText());
 
-                queryLmd.saveLmd(lmd);
+                //queryLmd.saveLmd(lmd);
+                if (queryLmd.saveLmd(lmd)) {
+                    JOptionPane.showMessageDialog(frmLMD, "Élément enregistré avec succès");
+
+                } else {
+                    JOptionPane.showMessageDialog(frmLMD, "Élément mal enregistré");
+
+                }
                 this.limpiar();
 
             }
@@ -151,16 +157,16 @@ public class CtrlLmd  implements ActionListener {
                     frmLMD.txtRefMat.setText(lmd.getRefMateriales());
                     frmLMD.txtPreProc.setText(lmd.getPreProceso());
                     frmLMD.txtMetas.setText(lmd.getMetas());
-                    //frmLMD.txttamHabutacio.setText(waam.getOpeVerificacion());
+                    frmLMD.txtCentroLaser.setText(lmd.getCentroLaser());
                     frmLMD.txtLlenadoCaj.setText(lmd.getLlenGas());
                     frmLMD.txtOperador.setText(lmd.getOperador());
                     frmLMD.txtMaterial.setText(lmd.getMaterial());
-                    //frmLMD.txtTamCable.setText(waam.getTamClave());
+                    frmLMD.txtBoquillaUtilizada.setText(lmd.getBoquillaUtilizada());
                     frmLMD.txtTamSust.setText(lmd.getTamSustrato());
                     frmLMD.txtTamHab.setText(lmd.getTamHabitacion());
                     frmLMD.txtCroquis.setText(lmd.getCroquis());
                 } else {
-                    System.out.println("Selecciona un Numéro fiche");
+                        JOptionPane.showMessageDialog(frmLMD, "Choisis une option");
                 }
             }
             
@@ -169,12 +175,20 @@ public class CtrlLmd  implements ActionListener {
                 int index = frmLMD.cmbLMD.getSelectedIndex();
                 String selecWaam = frmLMD.cmbLMD.getItemAt(index);
 
-                delete = queryLmd.deleteLmd(selecWaam);
+                //delete = queryLmd.deleteLmd(selecWaam);
                 if (delete) {
-                    System.out.println("Elemento elimando");
+                    JOptionPane.showMessageDialog(frmLMD, "Élément supprimé");
+                  
                 } else {
-                    System.out.println("No puede eliminar5");
+
+                    JOptionPane.showMessageDialog(frmLMD, "Impossible de supprimer l'élément");
+                  
                 }
+//                if (delete) {
+//                    System.out.println("Elemento elimando");
+//                } else {
+//                    System.out.println("No puede eliminar5");
+//                }
                 this.limpiar();
             }
 
@@ -191,15 +205,22 @@ public class CtrlLmd  implements ActionListener {
                 lmd.setRefMateriales(frmLMD.txtRefMat.getText()== null ? "" : frmLMD.txtRefMat.getText());
                 lmd.setRefMateriales(frmLMD.txtPreProc.getText()== null ? "" : frmLMD.txtPreProc.getText());
                 lmd.setMetas(frmLMD.txtMetas.getText()== null ? "" : frmLMD.txtMetas.getText());
-                //lmd.setOpeVerificacion(frmLMD.txtOperVer.getText()== null ? "" : frmLMD.txtOperVer.getText());
+                lmd.setCentroLaser(frmLMD.txtCentroLaser.getText()== null ? "" : frmLMD.txtCentroLaser.getText());
                 lmd.setLlenGas(frmLMD.txtLlenadoCaj.getText()== null ? "" : frmLMD.txtLlenadoCaj.getText());
                 lmd.setOperador(frmLMD.txtOperador.getText()== null ? "" : frmLMD.txtOperador.getText());
                 lmd.setMaterial(frmLMD.txtMaterial.getText()== null ? "" : frmLMD.txtMaterial.getText());
-                //lmd.setTamClave(frmLMD.txtTamCable.getText()== null ? "" : frmLMD.txtTamCable.getText());
+                //lmd.setCentroLaser(frmLMD.txtTamCable.getText()== null ? "" : frmLMD.txtTamCable.getText());
                 lmd.setTamSustrato(frmLMD.txtTamSust.getText()== null ? "" : frmLMD.txtTamSust.getText());
                 lmd.setTamHabitacion(frmLMD.txtTamHab.getText()== null ? "" : frmLMD.txtTamHab.getText());
                 lmd.setCroquis(frmLMD.txtCroquis.getText()== null ? "" : frmLMD.txtCroquis.getText());
-                queryLmd.updateLmd(lmd);
+                //queryLmd.updateLmd(lmd);
+                if (queryLmd.updateLmd(lmd)) {
+                    JOptionPane.showMessageDialog(frmLMD, "Élément mis à jour avec succès");
+
+                } else {
+                    JOptionPane.showMessageDialog(frmLMD, "Élément pas mis à jour correctement");
+
+                }
                 this.limpiar();
 
             }

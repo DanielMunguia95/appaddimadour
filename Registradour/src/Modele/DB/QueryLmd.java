@@ -61,23 +61,23 @@ public class QueryLmd extends Connexion {
                 ps.setString(1, lmd.getDate()== null ? "" : lmd.getDate());
                 ps.setString(2, lmd.getHeure()== null ? "" : lmd.getHeure());
                 ps.setString(3, lmd.getMachine()== null ? "" : lmd.getMachine());
-                ps.setString(4, lmd.getHeure()== null ? "" : lmd.getHeure());
-                ps.setString(5, lmd.getNumeroFiche()== null ? "" : lmd.getNumeroFiche());
-                ps.setString(6, lmd.getNumeroCaso()== null ? "" : lmd.getNumeroCaso());
-                ps.setString(7, lmd.getNumeroPlaca()== null ? "" : lmd.getNumeroPlaca());
-                ps.setString(8, lmd.getRefMateriales()== null ? "" : lmd.getRefMateriales());
-                ps.setString(9, lmd.getPreProceso()== null ? "" : lmd.getPreProceso());
-                ps.setString(10, lmd.getMetas()== null ? "" : lmd.getMetas());
-                ps.setString(11, lmd.getOpeVerificacion()== null ? "" : lmd.getOpeVerificacion());
-                ps.setString(12, lmd.getLlenGas()== null ? "" : lmd.getLlenGas());
-                ps.setString(13, lmd.getOperador()== null ? "" : lmd.getOperador());
-                ps.setString(14, lmd.getMaterial()== null ? "" : lmd.getMaterial());
-                ps.setString(15, lmd.getBoquillaUtilizada()== null ? "" : lmd.getBoquillaUtilizada());
-                ps.setString(16, lmd.getTamSustrato()== null ? "" : lmd.getTamSustrato());
-                ps.setString(17, lmd.getTamHabitacion()== null ? "" : lmd.getTamHabitacion());
-                ps.setString(18, lmd.getCroquis()== null ? "" : lmd.getCroquis());
-                ps.setString(19, lmd.getCentroLaser()== null ? "" : lmd.getCentroLaser());
-                ps.setString(20, lmd.getSalidaPolvoCabeza()== null ? "" : lmd.getSalidaPolvoCabeza());
+                ps.setString(4, lmd.getNumeroFiche()== null ? "" : lmd.getNumeroFiche());
+                ps.setString(5, lmd.getNumeroCaso()== null ? "" : lmd.getNumeroCaso());
+                ps.setString(6, lmd.getNumeroPlaca()== null ? "" : lmd.getNumeroPlaca());
+                ps.setString(7, lmd.getRefMateriales()== null ? "" : lmd.getRefMateriales());
+                ps.setString(8, lmd.getPreProceso()== null ? "" : lmd.getPreProceso());
+                ps.setString(9, lmd.getMetas()== null ? "" : lmd.getMetas());
+                ps.setString(10, lmd.getOpeVerificacion()== null ? "" : lmd.getOpeVerificacion());
+                ps.setString(11, lmd.getLlenGas()== null ? "" : lmd.getLlenGas());
+                ps.setString(12, lmd.getOperador()== null ? "" : lmd.getOperador());
+                ps.setString(13, lmd.getMaterial()== null ? "" : lmd.getMaterial());
+                ps.setString(14, lmd.getBoquillaUtilizada()== null ? "" : lmd.getBoquillaUtilizada());
+                ps.setString(15, lmd.getTamSustrato()== null ? "" : lmd.getTamSustrato());
+                ps.setString(16, lmd.getTamHabitacion()== null ? "" : lmd.getTamHabitacion());
+                ps.setString(17, lmd.getCroquis()== null ? "" : lmd.getCroquis());
+                ps.setString(18, lmd.getCentroLaser()== null ? "" : lmd.getCentroLaser());
+                ps.setString(19, lmd.getSalidaPolvoCabeza()== null ? "" : lmd.getSalidaPolvoCabeza());
+                ps.setString(20, lmd.getPreProceso()== null ? "" : lmd.getPreProceso());
                 ps.setString(21, lmd.getPreProceso()== null ? "" : lmd.getPreProceso());
                 
                 //Parametros
@@ -328,7 +328,7 @@ public class QueryLmd extends Connexion {
         Connection con = getConexion();
         ResultSet rs = null;
         PreparedStatement ps = null;
-        String sql = "select nameLabo FROM appaddimadour.lmd where nameLabo=?";
+        String sql = "select numeroFiche FROM appaddimadour.lmd where numeroFiche=?";
         try {
             ps = con.prepareStatement(sql);
             ps.setString(1, nameLmd);
@@ -406,8 +406,9 @@ public class QueryLmd extends Connexion {
         Connection con = getConexion();
         ResultSet rs = null;
         PreparedStatement ps = null;
-        String sql = "SELECT date, heure, machine, numeroFiche, numeroCaso, numeroPlaca, refMateriales, preProceso, metas, opeVerificacion, llenGas, operador, material, boquillaUtilizada, tamSustrato, tamHabitacion, croquis, centroLaser, salidaPolvoCabeza "
-                + "FROM lmd WHERE idLmd = ?";
+        String sql = "SELECT date, heure, machine, numeroFiche, numeroCaso, numeroPlaca, refMateriales, preProceso, metas, opeVerificacion, llenGas, operador, material, boquillaUtilizada, tamSustrato, tamHabitacion, croquis"
+                //+ ", centroLaser, salidaPolvoCabeza "
+                + " FROM lmd WHERE numeroFiche = ?";
                         try {
             ps = con.prepareStatement(sql);
             ps.setString(1, idLmd);
@@ -432,8 +433,8 @@ public class QueryLmd extends Connexion {
                 lmd.setTamSustrato(rs.getString("tamSustrato"));
                 lmd.setTamHabitacion(rs.getString("tamHabitacion"));
                 lmd.setCroquis(rs.getString("croquis"));
-                lmd.setCentroLaser(rs.getString("centroLaser"));
-                lmd.setSalidaPolvoCabeza(rs.getString("salidaPolvoCabeza"));
+//                lmd.setCentroLaser(rs.getString("centroLaser"));
+//                lmd.setSalidaPolvoCabeza(rs.getString("salidaPolvoCabeza"));
             }
 
         } catch (Exception e) {
@@ -454,7 +455,7 @@ public class QueryLmd extends Connexion {
             //if (this.validateNumFiche(Waam.getNumeroFiche()== null ? "" : Waam.getNumeroFiche()) != true) {
                 idLmd = this.getLmdId(Lmd.getNumeroFiche()== null ? "" : Lmd.getNumeroFiche());
                 //idLabo = this.getLaboId(labos.getNomLLabo() == null ? "" : labos.getNomLLabo());
-                String sql = "UPDATE lmd SET date=?,heure=?,machine=?,numeroFiche=?,numeroCaso=?,numeroPlaca=?,refMateriales=?,preProceso=?,metas=?,opeVerificacion=?,llenGas=?,operador=?,material=?,boquillaUtilizada=?,tamSustrato=?,tamHabitacion=?,croquis=?,centroLaser=?,salidaPolvoCabeza=?"
+                String sql = "UPDATE lmd SET date=?,heure=?,machine=?,numeroFiche=?,numeroCaso=?,numeroPlaca=?,refMateriales=?,preProceso=?,metas=?,opeVerificacion=?,llenGas=?,operador=?,material=?,boquillaUtilizada=?,tamSustrato=?,tamHabitacion=?,croquis=?"
                         + " WHERE idLmd = ?";
 
 
@@ -469,17 +470,17 @@ public class QueryLmd extends Connexion {
                 ps.setString(7, Lmd.getRefMateriales());
                 ps.setString(8, Lmd.getPreProceso());
                 ps.setString(9, Lmd.getMetas());
-                ps.setString(10, Lmd.getOpeVerificacion());
+                ps.setString(10, Lmd.getCentroLaser());
                 ps.setString(11, Lmd.getLlenGas());
-                ps.setString(12, Lmd.getOperador());
+                ps.setString(12, Lmd.getLlenGas());
                 ps.setString(13, Lmd.getMaterial());
                 ps.setString(14, Lmd.getBoquillaUtilizada());
                 ps.setString(15, Lmd.getTamSustrato());
                 ps.setString(16, Lmd.getTamHabitacion());
                 ps.setString(17, Lmd.getCroquis());
-                ps.setString(18, Lmd.getCentroLaser());
-                ps.setString(19, Lmd.getSalidaPolvoCabeza());
-                ps.setInt(20, idLmd);
+                //ps.setString(18, Lmd.getCentroLaser());
+                //ps.setString(18, Lmd.getSalidaPolvoCabeza());
+                ps.setInt(18, idLmd);
 
                 int iInsCnt = ps.executeUpdate();
                 if (iInsCnt > 0) {
@@ -537,5 +538,9 @@ public class QueryLmd extends Connexion {
 
         return delete;
 
+    }
+
+    public boolean saveLabo(LmdCabecer lmd) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

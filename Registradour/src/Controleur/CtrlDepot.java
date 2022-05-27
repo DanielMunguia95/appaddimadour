@@ -15,9 +15,8 @@ import java.awt.event.ActionListener;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
-import Modele.depotCabecer;
-
 import java.util.List;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -130,7 +129,14 @@ public class CtrlDepot implements ActionListener {
                 depot.setTamHabitacion(frmDepot.txtTamHab.getText()== null ? "" : frmDepot.txtTamHab.getText());
                 depot.setCroquis(frmDepot.txtCroquis.getText()== null ? "" : frmDepot.txtCroquis.getText());
 
-                queryDepot.saveDepot(depot);
+                //queryDepot.saveDepot(depot);
+                if (queryDepot.saveDepot(depot)) {
+                    JOptionPane.showMessageDialog(frmDepot, "Élément enregistré avec succès");
+
+                } else {
+                    JOptionPane.showMessageDialog(frmDepot, "Élément mal enregistré");
+
+                }
                 this.limpiar();
 
             }
@@ -167,7 +173,7 @@ public class CtrlDepot implements ActionListener {
                     frmDepot.txtTamHab.setText(depot.getTamHabitacion());
                     frmDepot.txtCroquis.setText(depot.getCroquis());
                 } else {
-                    System.out.println("Selecciona un Numéro fiche");
+                    JOptionPane.showMessageDialog(frmDepot, "Choisis une option");
                 }
             }
             if (e.getSource() == frmDepot.btnSupprimmer) {
@@ -177,10 +183,14 @@ public class CtrlDepot implements ActionListener {
 
                 delete = queryDepot.deleteDepot(selecWaam);
                 if (delete) {
-                    System.out.println("Elemento elimando");
+                    JOptionPane.showMessageDialog(frmDepot, "Élément supprimé");
+                  
                 } else {
-                    System.out.println("No puede eliminar5");
+
+                    JOptionPane.showMessageDialog(frmDepot, "Impossible de supprimer l'élément");
+                  
                 }
+                
                 this.limpiar();
             }
             if (e.getSource() == frmDepot.btnMettreAJour1) {
@@ -204,7 +214,14 @@ public class CtrlDepot implements ActionListener {
                 depot.setTamSustrato(frmDepot.txtTamSust.getText()== null ? "" : frmDepot.txtTamSust.getText());
                 depot.setTamHabitacion(frmDepot.txtTamHab.getText()== null ? "" : frmDepot.txtTamHab.getText());
                 depot.setCroquis(frmDepot.txtCroquis.getText()== null ? "" : frmDepot.txtCroquis.getText());
-                queryDepot.updateDepot(depot);                
+                //queryDepot.updateDepot(depot);   
+                if (queryDepot.updateDepot(depot)) {
+                    JOptionPane.showMessageDialog(frmDepot, "Élément mis à jour avec succès");
+
+                } else {
+                    JOptionPane.showMessageDialog(frmDepot, "Élément pas mis à jour correctement");
+
+                }
                 this.limpiar();
 
             }

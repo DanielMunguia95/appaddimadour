@@ -5,15 +5,9 @@
  */
 
 package Controleur;
-import Modele.WaamCabecer;
 import Modele.DB.QueryWaam;
 import Modele.DB.QueryWaamParametros;
 import Modele.DB.QueryWaamResultado;
-import Modele.WaamCabecer;
-//import Modele.DB.QueryLaboEnrobage;
-//import Modele.DB.QueryLaboTon;
-//import Modele.LaboEnrobage;
-
 import Modele.WaamCabecer;
 import Vue.frmWam;
 import java.awt.event.ActionEvent;
@@ -21,8 +15,8 @@ import java.awt.event.ActionListener;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
-
 import java.util.List;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -135,7 +129,14 @@ public class CtrlWaam implements ActionListener {
                 waam.setTamHabitacion(frmWam.txtTamHab.getText()== null ? "" : frmWam.txtTamHab.getText());
                 waam.setCroquis(frmWam.txtCroquis.getText()== null ? "" : frmWam.txtCroquis.getText());
 
-                queryWaam.saveWaam(waam);
+                //queryWaam.saveWaam(waam);
+                if (queryWaam.saveWaam(waam)) {
+                    JOptionPane.showMessageDialog(frmWam, "Élément enregistré avec succès");
+
+                } else {
+                    JOptionPane.showMessageDialog(frmWam, "Élément mal enregistré");
+
+                }
                 this.limpiar();
 
             }
@@ -172,7 +173,7 @@ public class CtrlWaam implements ActionListener {
                     frmWam.txtTamHab.setText(waam.getTamHabitacion());
                     frmWam.txtCroquis.setText(waam.getCroquis());
                 } else {
-                    System.out.println("Selecciona un Numéro fiche");
+                        JOptionPane.showMessageDialog(frmWam, "Choisis une option");
                 }
             }
             if (e.getSource() == frmWam.btnSupprimmer) {
@@ -182,10 +183,18 @@ public class CtrlWaam implements ActionListener {
 
                 delete = queryWaam.deleteWaam(selecWaam);
                 if (delete) {
-                    System.out.println("Elemento elimando");
+                    JOptionPane.showMessageDialog(frmWam, "Élément supprimé");
+                  
                 } else {
-                    System.out.println("No puede eliminar5");
+
+                    JOptionPane.showMessageDialog(frmWam, "Impossible de supprimer l'élément");
+                  
                 }
+//                if (delete) {
+//                    System.out.println("Elemento elimando");
+//                } else {
+//                    System.out.println("No puede eliminar5");
+//                }
                 this.limpiar();
             }
             if (e.getSource() == frmWam.btnMettreAJour1) {

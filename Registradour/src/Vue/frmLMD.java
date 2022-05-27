@@ -102,7 +102,7 @@ public class frmLMD extends javax.swing.JFrame {
         txtlvelMaquina10 = new javax.swing.JTextField();
         txtlvelMaquinaTotal = new javax.swing.JTextField();
         jLabel20 = new javax.swing.JLabel();
-        txthigometria11 = new javax.swing.JTextField();
+        txthigometria1 = new javax.swing.JTextField();
         txthigometria2 = new javax.swing.JTextField();
         txthigometria3 = new javax.swing.JTextField();
         txthigometria4 = new javax.swing.JTextField();
@@ -112,7 +112,7 @@ public class frmLMD extends javax.swing.JFrame {
         txthigometria8 = new javax.swing.JTextField();
         txthigometria9 = new javax.swing.JTextField();
         txthigometria10 = new javax.swing.JTextField();
-        txthigometria12 = new javax.swing.JTextField();
+        txthigometriaTotal = new javax.swing.JTextField();
         txttemporizador5 = new javax.swing.JTextField();
         txttemperatura5 = new javax.swing.JTextField();
         txttemperatura4 = new javax.swing.JTextField();
@@ -148,7 +148,7 @@ public class frmLMD extends javax.swing.JFrame {
         txtseacaboTiempo8 = new javax.swing.JTextField();
         txtseacaboTiempo9 = new javax.swing.JTextField();
         txtseacaboTiempo10 = new javax.swing.JTextField();
-        txtseacaboTiempoTota = new javax.swing.JTextField();
+        txtseacaboTiempoTotal = new javax.swing.JTextField();
         jLabel24 = new javax.swing.JLabel();
         txtd1 = new javax.swing.JTextField();
         txtd2 = new javax.swing.JTextField();
@@ -172,7 +172,7 @@ public class frmLMD extends javax.swing.JFrame {
         txtgranulometria8 = new javax.swing.JTextField();
         txtgranulometria9 = new javax.swing.JTextField();
         txtgranulometria10 = new javax.swing.JTextField();
-        txtTotal = new javax.swing.JTextField();
+        txtgranulometriaTotal = new javax.swing.JTextField();
         jLabel26 = new javax.swing.JLabel();
         txtpotenciaLaser1 = new javax.swing.JTextField();
         txtpotenciaLaser2 = new javax.swing.JTextField();
@@ -808,7 +808,7 @@ public class frmLMD extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(txtgranulometria10, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(txtTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(txtgranulometriaTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addGroup(jPanel2Layout.createSequentialGroup()
                             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -864,7 +864,7 @@ public class frmLMD extends javax.swing.JFrame {
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(txthigometria11, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txthigometria1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(txthigometria2, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
@@ -884,7 +884,7 @@ public class frmLMD extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addComponent(txthigometria10, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(txthigometria12, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(txthigometriaTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -989,7 +989,7 @@ public class frmLMD extends javax.swing.JFrame {
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addComponent(txtseacaboTiempo10, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(txtseacaboTiempoTota, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(txtseacaboTiempoTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addComponent(txtd10, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
@@ -1188,7 +1188,7 @@ public class frmLMD extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel20)
-                    .addComponent(txthigometria11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txthigometria1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txthigometria2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txthigometria3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txthigometria4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1198,7 +1198,7 @@ public class frmLMD extends javax.swing.JFrame {
                     .addComponent(txthigometria8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txthigometria9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txthigometria10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txthigometria12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txthigometriaTotal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
@@ -1242,7 +1242,7 @@ public class frmLMD extends javax.swing.JFrame {
                     .addComponent(txtseacaboTiempo8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtseacaboTiempo9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtseacaboTiempo10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtseacaboTiempoTota, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtseacaboTiempoTotal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtd1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1270,7 +1270,7 @@ public class frmLMD extends javax.swing.JFrame {
                     .addComponent(txtgranulometria8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtgranulometria9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtgranulometria10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtTotal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtgranulometriaTotal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtpotenciaLaser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1693,7 +1693,6 @@ public class frmLMD extends javax.swing.JFrame {
     public javax.swing.JTextField txtRefMat;
     public javax.swing.JTextField txtTamHab;
     public javax.swing.JTextField txtTamSust;
-    public javax.swing.JTextField txtTotal;
     public javax.swing.JTextField txtVIT_TIR1;
     public javax.swing.JTextField txtVIT_TIR10;
     public javax.swing.JTextField txtVIT_TIR2;
@@ -1738,6 +1737,7 @@ public class frmLMD extends javax.swing.JFrame {
     public javax.swing.JTextField txtgranulometria7;
     public javax.swing.JTextField txtgranulometria8;
     public javax.swing.JTextField txtgranulometria9;
+    public javax.swing.JTextField txtgranulometriaTotal;
     public javax.swing.JTextField txth61Dal1;
     public javax.swing.JTextField txth61Dal10;
     public javax.swing.JTextField txth61Dal2;
@@ -1760,9 +1760,8 @@ public class frmLMD extends javax.swing.JFrame {
     public javax.swing.JTextField txth62min8;
     public javax.swing.JTextField txth62min9;
     public javax.swing.JTextField txth62minTotal;
+    public javax.swing.JTextField txthigometria1;
     public javax.swing.JTextField txthigometria10;
-    public javax.swing.JTextField txthigometria11;
-    public javax.swing.JTextField txthigometria12;
     public javax.swing.JTextField txthigometria2;
     public javax.swing.JTextField txthigometria3;
     public javax.swing.JTextField txthigometria4;
@@ -1771,6 +1770,7 @@ public class frmLMD extends javax.swing.JFrame {
     public javax.swing.JTextField txthigometria7;
     public javax.swing.JTextField txthigometria8;
     public javax.swing.JTextField txthigometria9;
+    public javax.swing.JTextField txthigometriaTotal;
     public javax.swing.JTextField txthpor1;
     public javax.swing.JTextField txthpor10;
     public javax.swing.JTextField txthpor2;
@@ -1838,7 +1838,7 @@ public class frmLMD extends javax.swing.JFrame {
     public javax.swing.JTextField txtseacaboTiempo7;
     public javax.swing.JTextField txtseacaboTiempo8;
     public javax.swing.JTextField txtseacaboTiempo9;
-    public javax.swing.JTextField txtseacaboTiempoTota;
+    public javax.swing.JTextField txtseacaboTiempoTotal;
     public javax.swing.JTextField txttemperatura1;
     public javax.swing.JTextField txttemperatura10;
     public javax.swing.JTextField txttemperatura2;
