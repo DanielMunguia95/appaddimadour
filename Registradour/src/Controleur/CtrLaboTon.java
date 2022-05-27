@@ -155,9 +155,10 @@ public class CtrLaboTon extends CtrlLabo implements ActionListener {
 
             save = queryLaboTon.saveLaboTon(laboTon);
             if (save) {
-                System.out.println("LaboTON INSERTADO");
+
+                JOptionPane.showMessageDialog(frmLabo, "Élément enregistré avec succès");
             } else {
-                System.out.println("LaboTON NO INSERTADO");
+                JOptionPane.showMessageDialog(frmLabo, "Élément mal enregistré");
 
             }
 
@@ -201,7 +202,7 @@ public class CtrLaboTon extends CtrlLabo implements ActionListener {
             if (queryLaboTon.updateLaboTon(laboTon)) {
                 JOptionPane.showMessageDialog(frmLabo, "Élément mis à jour avec succès");
             } else {
-                         JOptionPane.showMessageDialog(frmLabo, "Élément pas mis à jour correctement");
+                JOptionPane.showMessageDialog(frmLabo, "Élément pas mis à jour correctement");
             }
 
             limpiar();

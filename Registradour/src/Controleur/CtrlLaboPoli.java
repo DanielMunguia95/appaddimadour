@@ -135,10 +135,10 @@ public class CtrlLaboPoli extends CtrlLabo implements ActionListener {
             save = queryPoli.saveLaboPoli(laboPoli);
 
             if (save) {
-               JOptionPane.showMessageDialog(frmLabo, "Élément enregistré avec succès");
+                JOptionPane.showMessageDialog(frmLabo, "Élément enregistré avec succès");
 
             } else {
-                 JOptionPane.showMessageDialog(frmLabo, "Élément mal enregistré");
+                JOptionPane.showMessageDialog(frmLabo, "Élément mal enregistré");
 
             }
 
@@ -173,9 +173,11 @@ public class CtrlLaboPoli extends CtrlLabo implements ActionListener {
             laboPoli.setObservation6(frmLabo.Panel4txtObservation6.getText() == null ? "" : frmLabo.Panel4txtObservation6.getText());
 
             if (queryPoli.updateLaboPoli(laboPoli)) {
-                System.out.println("update poli");
+                JOptionPane.showMessageDialog(frmLabo, "Élément mis à jour avec succès");
+
             } else {
-                System.out.println("No se puede actualizar poli");
+                JOptionPane.showMessageDialog(frmLabo, "Élément pas mis à jour correctement");
+
             }
 
             this.limpiar();
@@ -191,9 +193,9 @@ public class CtrlLaboPoli extends CtrlLabo implements ActionListener {
             delete = queryPoli.deleteLaboPoli(selecLabo);
             if (delete) {
                 JOptionPane.showMessageDialog(frmLabo, "Élément supprimé");
-                  
+
             } else {
-                  JOptionPane.showMessageDialog(frmLabo, "Impossible de supprimer l'élément");
+                JOptionPane.showMessageDialog(frmLabo, "Impossible de supprimer l'élément");
             }
             limpiar();
 
