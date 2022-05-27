@@ -33,6 +33,7 @@ public class frmMenu extends javax.swing.JFrame {
         btnMenuLmd = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         btnMenuLabo.setText("Labo");
 

@@ -319,6 +319,7 @@ public class frmLMD extends javax.swing.JFrame {
         btnPanel3_btnMettreAJour = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         cmbLMD.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select Item" }));
 

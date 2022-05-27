@@ -249,6 +249,7 @@ public class frmWam extends javax.swing.JFrame {
         jLabel40 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         txtPreProc.setColumns(20);
         txtPreProc.setRows(5);

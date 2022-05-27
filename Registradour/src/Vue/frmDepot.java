@@ -260,6 +260,7 @@ public class frmDepot extends javax.swing.JFrame {
         jScrollPane7.setViewportView(txtresultados);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         jTabbedPane1.setToolTipText("DEPOT");
 

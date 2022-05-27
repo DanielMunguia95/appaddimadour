@@ -33,6 +33,7 @@ public class frmLogin1 extends javax.swing.JFrame {
         txtPassword = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         btnLogin.setText("Login");
 
